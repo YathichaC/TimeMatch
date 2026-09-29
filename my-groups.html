@@ -1,0 +1,779 @@
+<!DOCTYPE html><html lang="th" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#ffffff","outline-variant":"#bec9c8","surface-variant":"#d7e4ec","on-secondary-fixed":"#001d35","secondary-fixed-dim":"#9ecafe","secondary-container":"#9ecafe","surface-container":"#e3f0f8","on-background":"#111d23","tertiary-container":"#3c8254","primary-fixed-dim":"#86d4d3","secondary":"#33618f","inverse-surface":"#263238","on-surface":"#111d23","surface-dim":"#cfdce4","surface-container-low":"#e9f6fd","surface-tint":"#09696a","error":"#ba1a1a","on-secondary-container":"#255582","on-primary-fixed-variant":"#004f50","primary-fixed":"#a2f0f0","primary":"#09696a","tertiary-fixed-dim":"#8ed7a1","on-tertiary":"#ffffff","on-primary-container":"#003030","on-tertiary-fixed":"#00210e","tertiary-fixed":"#a9f3bc","surface-container-high":"#ddeaf2","on-tertiary-container":"#f6fff4","error-container":"#ffdad6","secondary-fixed":"#d1e4ff","background":"#f4faff","surface-bright":"#f4faff","on-primary-fixed":"#002020","on-surface-variant":"#3f4948","on-error":"#ffffff","tertiary":"#20693e","on-secondary":"#ffffff","inverse-primary":"#86d4d3","surface-container-highest":"#d7e4ec","outline":"#6f7979","inverse-on-surface":"#e6f3fb","on-secondary-fixed-variant":"#144976","surface":"#f4faff","on-primary":"#ffffff","primary-container":"#4f9d9d","on-tertiary-fixed-variant":"#00522a","on-error-container":"#93000a"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter":"1rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2.5rem","margin-md":"2rem","gutter-lg":"2rem","margin-lg":"3rem","gutter-md":"1.5rem","space-md":"1rem","space-xs":"0.25rem","margin":"1rem"},fontFamily:{"body-lg":["Inter"],"label-code":["JetBrains Mono"],"headline-lg-mobile":["Plus Jakarta Sans"],"display-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"display":["Plus Jakarta Sans"],"label-tag":["Inter"],"body-sm":["Inter"]},fontSize:{"body-lg":["1rem",{"lineHeight":"1.625rem","letterSpacing":"0em","fontWeight":"400"}],"label-code":["0.8125rem",{"lineHeight":"1.25rem","letterSpacing":"0em","fontWeight":"500"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.01em","fontWeight":"600"}],"display-mobile":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-sm":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"600"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["0.875rem",{"lineHeight":"1.375rem","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"0em","fontWeight":"600"}],"display":["3rem",{"lineHeight":"3.5rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-tag":["0.6875rem",{"lineHeight":"1rem","letterSpacing":"0.04em","fontWeight":"600"}],"body-sm":["0.75rem",{"lineHeight":"1.125rem","letterSpacing":"0.01em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased">
+  
+  
+  <!-- ================= NAVBAR ================= -->
+<header class="fixed top-0 left-0 w-full z-50
+               bg-surface/95 backdrop-blur-xl
+               border-b border-outline-variant/30
+               shadow-[0_1px_8px_rgba(38,50,56,0.04)]">
+
+  <div class="h-16 w-full px-5
+              flex items-center justify-between">
+
+    <!-- LEFT : LOGO -->
+    <a href="index.html"
+       class="flex items-center gap-2 shrink-0">
+
+      <img
+        alt="TimeMatch Logo"
+        class="h-8 w-8 object-contain"
+        src="images/logo.png">
+      <span class="font-headline-sm text-headline-sm
+                   text-on-surface font-bold">
+        TimeMatch
+      </span>
+    </a>
+
+
+    <!-- CENTER : MENU -->
+   <!-- CENTER : MENU -->
+<nav class="hidden md:flex items-center gap-3
+            absolute left-1/2 -translate-x-1/2">
+
+    <a href="home.html"
+       class="nav-link px-5 py-2 rounded-full transition-colors"
+       data-nav="home">
+        หน้าหลัก
+    </a>
+
+    <a href="my-groups.html"
+       class="nav-link px-5 py-2 rounded-full transition-colors"
+       data-nav="my-groups">
+        กลุ่มของฉัน
+    </a>
+
+    <a href="#"
+       class="nav-link px-5 py-2 rounded-full transition-colors"
+       data-nav="how-it-works">
+        วิธีใช้งาน
+    </a>
+
+</nav>
+
+    <!-- RIGHT : NOTIFICATION + PROFILE -->
+    <div class="flex items-center gap-4 shrink-0">
+
+      <!-- NOTIFICATION -->
+      <button
+        type="button"
+        aria-label="Notifications"
+        class="relative w-10 h-10
+               flex items-center justify-center
+               rounded-full
+               text-on-surface-variant
+               hover:text-on-surface
+               hover:bg-surface-container
+               transition-colors">
+
+        <span class="material-symbols-outlined text-[22px]">
+          notifications
+        </span>
+
+        <!-- Notification Dot -->
+        <span class="absolute top-1.5 right-1.5
+                     w-2 h-2 rounded-full
+                     bg-error
+                     ring-2 ring-surface">
+        </span>
+
+      </button>
+
+
+      <!-- PROFILE -->
+      <a href="profile.html"
+         class="flex items-center gap-2
+                px-2 py-1.5 rounded-xl
+                hover:bg-surface-container
+                transition-colors">
+
+        <!-- Profile Image -->
+        <img
+          alt="Profile"
+          class="w-9 h-9 rounded-full object-cover
+                 ring-2 ring-surface-container-high"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1XlSnEB9jG8W6hzP2SDsNo5fMsYan7ciLYMAMFtKI47o6bFNHpvRFvXIz3fUIDOAXBNUWyZBXDD-z2wYdi95qm7KniOrn1pM6FFJJGewawlf-GEnHOmTvwyapRy_IflwSoNDLxys_kvaXeMwTvsN4xCRucsaYjcUeEW3IBJDU450zXyM873CkE084R6Y1-sNAj3oEQardVcCoZiZpMvIViliAeFjocmYk2x8tpkxzblSwPlVpZxOwoeRsyT">
+
+        <!-- Profile Information -->
+        <div class="hidden sm:flex flex-col text-left">
+
+          <span class="font-body-md text-body-md
+                       text-on-surface font-semibold
+                       leading-tight">
+            Chidchanok P.
+          </span>
+
+          <span class="font-label-tag text-label-tag
+                       text-on-surface-variant
+                       leading-tight">
+            CS Student
+          </span>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+<!-- =============== END NAVBAR =============== -->
+<main class="w-full pt-16 bg-surface min-h-[calc(100vh-4rem)]"><div class="flex flex-col w-full">
+<!-- Interactive State Scripts & Micro-interactions -->
+<script>
+    function switchState(stateName) {
+      const normalGrid = document.getElementById('state-normal');
+      const searchEmpty = document.getElementById('state-search-empty');
+      const groupEmpty = document.getElementById('state-no-groups');
+      const tabs = ['btn-view-normal', 'btn-view-search', 'btn-view-empty'];
+
+      tabs.forEach(t => {
+        const el = document.getElementById(t);
+        if (el) {
+          el.classList.remove('bg-surface-container-highest', 'text-on-surface', 'font-semibold', 'shadow-xs');
+          el.classList.add('text-on-surface-variant');
+        }
+      });
+
+      const activeBtn = document.getElementById('btn-view-' + stateName);
+      if (activeBtn) {
+        activeBtn.classList.add('bg-surface-container-highest', 'text-on-surface', 'font-semibold', 'shadow-xs');
+        activeBtn.classList.remove('text-on-surface-variant');
+      }
+
+      if (stateName === 'normal') {
+        normalGrid.classList.remove('hidden');
+        searchEmpty.classList.add('hidden');
+        groupEmpty.classList.add('hidden');
+      } else if (stateName === 'search') {
+        normalGrid.classList.add('hidden');
+        searchEmpty.classList.remove('hidden');
+        groupEmpty.classList.add('hidden');
+      } else if (stateName === 'empty') {
+        normalGrid.classList.add('hidden');
+        searchEmpty.classList.add('hidden');
+        groupEmpty.classList.remove('hidden');
+      }
+    }
+
+    function toggleModal(modalId, show) {
+      const modal = document.getElementById(modalId);
+      if (modal) {
+        if (show) {
+          modal.classList.remove('hidden');
+          modal.classList.add('flex');
+        } else {
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        }
+      }
+    }
+
+    function toggleMenu(menuId, event) {
+      if (event) {
+        event.stopPropagation();
+      }
+      const targetMenu = document.getElementById(menuId);
+      const isCurrentlyOpen = targetMenu && !targetMenu.classList.contains('hidden');
+      
+      closeAllMenus();
+      
+      if (targetMenu && isCurrentlyOpen) {
+        targetMenu.classList.add('hidden');
+      } else if (targetMenu) {
+        targetMenu.classList.remove('hidden');
+      }
+    }
+
+    function closeAllMenus() {
+      document.querySelectorAll('.dropdown-menu-box').forEach(menu => {
+        menu.classList.add('hidden');
+      });
+    }
+
+    // Close dropdowns on outside click
+    document.addEventListener('click', function(event) {
+      if (!event.target.closest('.relative')) {
+        closeAllMenus();
+      }
+    });
+
+    function openDeleteModal(event) {
+      if (event) {
+        event.stopPropagation();
+      }
+      closeAllMenus();
+      toggleModal('modal-delete-group', true);
+    }
+
+    function confirmDeleteGroup() {
+      toggleModal('modal-delete-group', false);
+      const card = document.getElementById('card-software-design');
+      if (card) {
+        card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+        card.style.opacity = '0';
+        card.style.transform = 'scale(0.95)';
+        setTimeout(() => {
+          card.remove();
+        }, 400);
+      }
+
+      // Update counters
+      const badge = document.getElementById('header-groups-count-badge');
+      if (badge) badge.innerText = '4 กลุ่มเรียน';
+
+      const filterAll = document.getElementById('filter-pill-all');
+      if (filterAll) filterAll.innerText = 'ทั้งหมด (4)';
+
+      const filterWait = document.getElementById('filter-pill-wait');
+      if (filterWait) filterWait.innerText = 'รอกรอกเวลา (1)';
+
+      const previewBtn = document.getElementById('btn-view-normal');
+      if (previewBtn) previewBtn.innerText = 'ปกติ (4 กลุ่ม)';
+
+      // Show Toast Notification
+      showToast('ลบกลุ่มเรียบร้อยแล้ว ✓');
+    }
+
+    function showToast(message) {
+      const toast = document.getElementById('toast-notification');
+      const toastMsg = document.getElementById('toast-message');
+      if (toast) {
+        if (toastMsg) toastMsg.innerText = message;
+        toast.classList.remove('hidden', 'opacity-0', 'translate-y-4');
+        toast.classList.add('flex', 'opacity-100', 'translate-y-0');
+        setTimeout(() => {
+          toast.classList.remove('opacity-100', 'translate-y-0');
+          toast.classList.add('opacity-0', 'translate-y-4');
+          setTimeout(() => {
+            toast.classList.remove('flex');
+            toast.classList.add('hidden');
+          }, 300);
+        }, 3000);
+      }
+    }
+
+    function setActiveFilter(btn) {
+      document.querySelectorAll('.filter-pill').forEach(pill => {
+        pill.classList.remove('bg-primary-container', 'text-on-primary', 'font-semibold', 'shadow-xs');
+        pill.classList.add('bg-surface-container-lowest', 'text-on-surface-variant');
+      });
+      btn.classList.add('bg-primary-container', 'text-on-primary', 'font-semibold', 'shadow-xs');
+      btn.classList.remove('bg-surface-container-lowest', 'text-on-surface-variant');
+    }
+  </script>
+<!-- Main Container -->
+<div class="max-w-7xl mx-auto w-full px-gutter md:px-gutter-md lg:px-gutter-lg py-space-xl flex flex-col gap-space-xl">
+<!-- 1. Header Section: Big Friendly Rounded Tone -->
+<section class="flex flex-col md:flex-row md:items-center justify-between gap-space-lg">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-sm">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight font-bold">
+            กลุ่มของฉัน
+          </h1>
+<span aria-hidden="true" class="text-2xl select-none"><br></span>
+
+</div>
+
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-space-sm flex-wrap">
+<button class="flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-surface-container-lowest text-on-surface hover:bg-surface-container-low transition-all font-body-md text-body-md font-medium shadow-sm active:scale-[0.98]" onclick="toggleModal('modal-join-code', true)">
+<span class="material-symbols-outlined text-[18px] text-secondary">vpn_key</span>
+<span class="">เข้าร่วมด้วยโค้ด</span>
+</button>
+<a
+  href="create-group.html"
+  class="flex items-center gap-space-xs px-space-lg py-2.5
+         rounded-xl bg-primary-container hover:bg-primary
+         text-on-primary transition-all
+         font-headline-sm text-body-md font-semibold
+         shadow-sm hover:shadow active:scale-[0.98]">
+
+  <span class="material-symbols-outlined text-[20px]">add</span>
+  <span>สร้างกลุ่มใหม่</span>
+
+</a>
+
+</div>
+</section>
+<!-- 2. Search & Filter Bar + Interactive UI State Switcher -->
+<section class="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-sm md:p-space-md rounded-2xl shadow-sm">
+<!-- Left: Search Box -->
+<div class="relative w-full lg:w-80 flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-[20px] text-outline select-none pointer-events-none">search</span>
+<input class="w-full bg-surface-container-low/60 hover:bg-surface-container-low focus:bg-surface-container-lowest rounded-xl pl-11 pr-space-md py-2.5 font-body-md text-body-md text-on-surface placeholder-on-surface-variant/60 outline-none ring-1 ring-transparent focus:ring-2 focus:ring-primary-container transition-all" placeholder="ค้นหาชื่อกลุ่มหรือรายวิชา..." type="text">
+</div>
+<!-- Center: Filter Pills -->
+<div class="flex items-center gap-space-xs overflow-x-auto pb-1 lg:pb-0 scrollbar-none">
+<button class="filter-pill whitespace-nowrap px-4 py-1.5 rounded-full font-body-md text-body-sm transition-all bg-primary-container text-on-primary font-semibold shadow-xs" id="filter-pill-all" onclick="setActiveFilter(this)">
+          ทั้งหมด (5)
+        </button>
+<button class="filter-pill whitespace-nowrap px-4 py-1.5 rounded-full font-body-md text-body-sm transition-all bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-low" id="filter-pill-wait" onclick="setActiveFilter(this)">
+          รอกรอกเวลา (2)
+        </button>
+<button class="filter-pill whitespace-nowrap px-4 py-1.5 rounded-full font-body-md text-body-sm transition-all bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-low" onclick="setActiveFilter(this)">
+          พร้อมหาเวลา (1)
+        </button>
+<button class="filter-pill whitespace-nowrap px-4 py-1.5 rounded-full font-body-md text-body-sm transition-all bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container-low" onclick="setActiveFilter(this)">
+          นัดหมายแล้ว (2)
+        </button>
+</div>
+<!-- Right: UI State Preview Switcher -->
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-xl self-start lg:self-center">
+<button class="px-space-sm py-1 rounded-lg font-label-tag text-label-tag bg-surface-container-highest text-on-surface font-semibold shadow-xs transition-colors" id="btn-view-normal" onclick="switchState('normal')" title="ดูการ์ดแสดงทั้ง 5 สถานะ">
+          ปกติ (5 กลุ่ม)
+        </button>
+<button class="px-space-sm py-1 rounded-lg font-label-tag text-label-tag text-on-surface-variant hover:text-on-surface transition-colors" id="btn-view-search" onclick="switchState('search')" title="พรีวิวสถานะเมื่อค้นหาไม่พบ">
+          พรีวิว: ค้นหาไม่พบ
+        </button>
+<button class="px-space-sm py-1 rounded-lg font-label-tag text-label-tag text-on-surface-variant hover:text-on-surface transition-colors" id="btn-view-empty" onclick="switchState('empty')" title="พรีวิวสถานะผู้ใช้ใหม่ยังไม่มีกลุ่ม">
+          พรีวิว: ว่างเปล่า
+        </button>
+</div>
+</section>
+<!-- 3. STATE A: Normal 5-Cards Grid Demonstrating UX Contexts -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-space-lg" id="state-normal">
+<!-- CARD 1: WAITING FOR USER (คุณยังไม่กรอกเวลา) - CREATOR CARD -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-visible" id="card-software-design">
+<!-- Top Section -->
+<div class="flex flex-col gap-space-md"><div class="flex flex-col gap-1"><div class="flex items-start justify-between gap-2"><h2 class="font-headline-sm text-headline-sm font-bold text-on-surface leading-snug">Software Design Project</h2><div class="relative shrink-0"><button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" onclick="toggleMenu('menu-card-1', event)" title="ตัวเลือก"><span class="material-symbols-outlined text-[20px]">more_vert</span></button><div class="dropdown-menu-box absolute right-0 top-9 w-56 bg-white rounded-2xl shadow-2xl p-1.5 z-50 flex flex-col border border-slate-100 hidden" id="menu-card-1" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px; border: 1px solid rgb(226, 232, 240); background-color: rgb(255, 255, 255) !important; opacity: 1;">
+  <a
+  href="group-detail.html"
+  class="w-full px-3 py-2 text-left font-body-sm text-body-sm
+         text-on-surface hover:bg-slate-100 rounded-xl
+         flex items-center gap-2 transition-colors">
+
+  <span class="material-symbols-outlined text-[18px] text-secondary">
+    info
+  </span>
+
+  <span>ดูรายละเอียดกลุ่ม</span>
+</a>
+  
+  <a
+  href="edit-group.html"
+  class="w-full px-3 py-2 text-left font-body-sm text-body-sm
+         text-on-surface hover:bg-slate-100 rounded-xl
+         flex items-center gap-2 transition-colors">
+
+  <span class="material-symbols-outlined text-[18px] text-primary">
+    edit
+  </span>
+
+  <span>แก้ไขข้อมูลกลุ่ม</span>
+</a>
+  
+  <a
+  href="manage-members.html"
+  class="w-full px-3 py-2 text-left
+         font-body-sm text-body-sm
+         text-on-surface hover:bg-slate-100
+         rounded-xl flex items-center gap-2
+         transition-colors">
+
+  <span class="material-symbols-outlined text-[18px] text-secondary">
+    group
+  </span>
+
+  <span>จัดการสมาชิก (5)</span>
+</a>
+  
+  <div class="my-1 h-[1px] bg-slate-100"></div><button class="w-full px-3 py-2 text-left font-body-sm text-body-sm text-[#E88C8C] hover:text-red-600 hover:bg-red-50 rounded-xl flex items-center gap-2 transition-colors" onclick="openDeleteModal(event)"><span class="material-symbols-outlined text-[18px] text-[#E88C8C]">delete</span><span class="">ลบกลุ่ม</span></button></div></div></div><div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm mt-0.5"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">group</span><span class="">สมาชิก 5 คน</span><span class="text-outline-variant">•</span><span class="text-primary font-medium">คุณเป็นผู้สร้าง</span></div></div><div class="inline-flex self-start items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-800 ring-1 ring-amber-200/80 font-body-sm text-body-sm font-semibold"><span class="">รอคุณกรอกเวลา</span><span class="">👀</span></div><div class="flex flex-col gap-1.5 pt-1"><div class="flex items-center justify-between font-body-sm text-body-sm"><span class="text-on-surface-variant font-medium">ความคืบหน้า</span><span class="font-headline-sm font-bold text-amber-800">4/5 คนกรอกแล้ว</span></div><div class="w-full h-2.5 bg-surface-container-low rounded-full overflow-hidden"><div class="h-full bg-amber-400 rounded-full transition-all duration-500" style="width: 80%;"></div></div></div><div class="p-space-sm rounded-xl bg-amber-50/70 text-amber-900 font-body-sm text-body-sm flex items-start gap-2"><span class="material-symbols-outlined text-[18px] text-amber-700 shrink-0 mt-0.5">notification_important</span><p class="leading-tight">เหลือคุณคนเดียวแล้ว รีบใส่เลยเพื่อนรออยู่!</p></div></div>
+<!-- Action Button -->
+<div class="pt-space-lg mt-space-md">
+<a class="w-full flex items-center justify-center gap-space-xs py-2.5 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-body-md font-semibold shadow-sm hover:shadow transition-all group-hover:scale-[1.01] active:scale-[0.98]" href="enter-availability.html">
+<span class="">กรอกเวลาว่าง</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 2: WAITING FOR OTHERS (รอเพื่อนคนอื่นกรอก) - MEMBER CARD -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-visible">
+<!-- Top Section -->
+<div class="flex flex-col gap-space-md"><div class="flex flex-col gap-1"><div class="flex items-start justify-between gap-2"><h2 class="font-headline-sm text-headline-sm font-bold text-on-surface leading-snug">Database Assignment</h2><div class="relative shrink-0"><button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" onclick="toggleMenu('menu-card-2', event)" title="ตัวเลือก"><span class="material-symbols-outlined text-[20px]">more_vert</span></button><div class="dropdown-menu-box absolute right-0 top-9 w-48 bg-white rounded-2xl shadow-2xl p-1.5 z-50 flex flex-col border border-slate-100 hidden" id="menu-card-2" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px; border: 1px solid rgb(226, 232, 240); background-color: rgb(255, 255, 255) !important; opacity: 1;"><button class="w-full px-3 py-2 text-left font-body-sm text-body-sm text-on-surface hover:bg-slate-100 rounded-xl flex items-center gap-2 transition-colors" onclick="closeAllMenus()"><span class="material-symbols-outlined text-[18px] text-secondary">info</span><span class="">ดูรายละเอียดกลุ่ม</span></button><div class="my-1 h-[1px] bg-slate-100"></div><button class="w-full px-3 py-2 text-left font-body-sm text-body-sm text-[#E88C8C] hover:text-red-600 hover:bg-red-50 rounded-xl flex items-center gap-2 transition-colors" onclick="closeAllMenus()"><span class="material-symbols-outlined text-[18px] text-[#E88C8C]">logout</span><span class="">ออกจากกลุ่ม</span></button></div></div></div><div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm mt-0.5"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">group</span><span class="">สมาชิก 4 คน</span></div></div><div class="inline-flex self-start items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-amber-700 ring-1 ring-amber-200/80 font-body-sm text-body-sm font-semibold"><span class="">รอเพื่อนอีก 2 คน</span><span class="">⏳</span></div><div class="flex flex-col gap-1.5 pt-1"><div class="flex items-center justify-between font-body-sm text-body-sm"><span class="text-on-surface-variant font-medium">ความคืบหน้า</span><span class="font-headline-sm font-bold text-amber-700">2/4 คนกรอกแล้ว</span></div><div class="w-full h-2.5 bg-surface-container-low rounded-full overflow-hidden"><div class="h-full bg-amber-300 rounded-full transition-all duration-500" style="width: 50%;"></div></div></div><div class="p-space-sm rounded-xl bg-surface-container-low text-on-surface-variant font-body-sm text-body-sm flex items-start gap-2"><span class="material-symbols-outlined text-[18px] text-tertiary-container shrink-0 mt-0.5">task_alt</span><p class="leading-tight">คุณกรอกเรียบร้อยแล้ว รอเพื่อนร่วมทีมส่งเวลา</p></div></div>
+<!-- Action Button -->
+<div class="pt-space-lg mt-space-md">
+<a class="w-full flex items-center justify-center gap-space-xs py-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-headline-sm text-body-md font-medium transition-all active:scale-[0.98]" href="#">
+<span class="">ดูกลุ่ม</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 3: READY TO MATCH (ทุกคนกรอกครบแล้ว พร้อมหาเวลา!) - MEMBER CARD -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-visible">
+<!-- Top Section -->
+<div class="flex flex-col gap-space-md"><div class="flex flex-col gap-1"><div class="flex items-start justify-between gap-2"><h2 class="font-headline-sm text-headline-sm font-bold text-on-surface leading-snug">Mobile Application Project</h2><div class="relative shrink-0"><button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" onclick="toggleMenu('menu-card-3', event)" title="ตัวเลือก"><span class="material-symbols-outlined text-[20px]">more_vert</span></button><div class="dropdown-menu-box hidden absolute right-0 top-9 w-48 bg-white rounded-2xl shadow-2xl p-1.5 z-50 flex flex-col border border-slate-100" id="menu-card-3" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px; border: 1px solid rgb(226, 232, 240); background-color: rgb(255, 255, 255) !important; opacity: 1;">
+  <button class="w-full px-3 py-2 text-left font-body-sm text-body-sm text-on-surface hover:bg-slate-100 rounded-xl flex items-center gap-2 transition-colors" onclick="closeAllMenus()"><span class="material-symbols-outlined text-[18px] text-secondary">info</span><span class="">ดูรายละเอียดกลุ่ม</span>
+  </button>
+  <div class="my-1 h-[1px] bg-slate-100"></div><button class="w-full px-3 py-2 text-left font-body-sm text-body-sm text-[#E88C8C] hover:text-red-600 hover:bg-red-50 rounded-xl flex items-center gap-2 transition-colors" onclick="closeAllMenus()"><span class="material-symbols-outlined text-[18px] text-[#E88C8C]">logout</span><span class="">ออกจากกลุ่ม</span></button></div></div></div><div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm mt-0.5"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">group</span><span class="">สมาชิก 5 คน</span></div></div><div class="inline-flex self-start items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-body-sm text-body-sm font-semibold"><span class="">พร้อมหาเวลาแล้ว</span><span class="">✨</span></div><div class="flex flex-col gap-1.5 pt-1"><div class="flex items-center justify-between font-body-sm text-body-sm"><span class="text-on-surface-variant font-medium">ความคืบหน้า</span><span class="font-headline-sm font-bold text-tertiary">5/5 คนกรอกแล้ว (ครบ!)</span></div><div class="w-full h-2.5 bg-surface-container-low rounded-full overflow-hidden"><div class="h-full bg-tertiary-fixed-dim rounded-full transition-all duration-500" style="width: 100%;"></div></div></div><div class="p-space-sm rounded-xl bg-tertiary-fixed/30 text-on-tertiary-fixed font-body-sm text-body-sm flex items-start gap-2"><span class="material-symbols-outlined text-[18px] text-tertiary shrink-0 mt-0.5">auto_awesome</span><p class="leading-tight">สมาชิกทุกคนส่งเวลาว่างครบแล้ว หาช่วงเวลาที่ลงตัวได้เลย!</p></div></div>
+<!-- Action Button -->
+<div class="pt-space-lg mt-space-md">
+<a class="w-full flex items-center justify-center gap-space-xs py-2.5 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-body-md font-semibold shadow-sm hover:shadow transition-all group-hover:scale-[1.01] active:scale-[0.98]" href="matching-results.html">
+<span class="">✨ หาเวลาที่ตรงกัน</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 4: MATCH FOUND (เจอเวลาที่ตรงกันแล้ว รอยืนยัน) - MEMBER CARD -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-visible">
+<!-- Top Section -->
+<div class="flex flex-col gap-space-md"><div class="flex flex-col gap-1"><div class="flex items-start justify-between gap-2"><h2 class="font-headline-sm text-headline-sm font-bold text-on-surface leading-snug">Seminar Project</h2><div class="relative shrink-0"><button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" onclick="toggleMenu('menu-card-4', event)" title="ตัวเลือก"><span class="material-symbols-outlined text-[20px]">more_vert</span></button><div class="dropdown-menu-box hidden absolute right-0 top-9 w-48 bg-white rounded-2xl shadow-2xl p-1.5 z-50 flex flex-col border border-slate-100" id="menu-card-4" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px; border: 1px solid rgb(226, 232, 240); background-color: rgb(255, 255, 255) !important; opacity: 1;"><button class="w-full px-3 py-2 text-left font-body-sm text-body-sm text-on-surface hover:bg-slate-100 rounded-xl flex items-center gap-2 transition-colors" onclick="closeAllMenus()"><span class="material-symbols-outlined text-[18px] text-secondary">info</span><span class="">ดูรายละเอียดกลุ่ม</span></button><div class="my-1 h-[1px] bg-slate-100"></div><button class="w-full px-3 py-2 text-left font-body-sm text-body-sm text-[#E88C8C] hover:text-red-600 hover:bg-red-50 rounded-xl flex items-center gap-2 transition-colors" onclick="closeAllMenus()"><span class="material-symbols-outlined text-[18px] text-[#E88C8C]">logout</span><span class="">ออกจากกลุ่ม</span></button></div></div></div><div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm mt-0.5"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">group</span><span class="">สมาชิก 3 คน</span></div></div><div class="inline-flex self-start items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-body-sm text-body-sm font-semibold"><span class="">เจอเวลาที่ตรงกันแล้ว</span><span class="">🎉</span></div><div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1"><div class="flex items-center gap-1.5 font-label-tag text-label-tag text-secondary font-semibold uppercase"><span class="material-symbols-outlined text-[16px]">magic_button</span><span class="">ช่วงเวลาแนะนำที่ลงตัว</span></div><p class="font-headline-sm text-body-md font-bold text-on-surface">พุธ 14:00 – 16:00 น.</p><div class="flex items-center gap-1 text-tertiary font-body-sm text-body-sm font-medium"><span class="material-symbols-outlined text-[15px]">check_circle</span><span class="">ว่างตรงกัน 3/3 คน (100%)</span></div></div></div>
+<!-- Action Button -->
+<div class="pt-space-lg mt-space-md">
+<a class="w-full flex items-center justify-center gap-space-xs py-2.5 rounded-xl bg-secondary-container hover:bg-secondary text-on-surface hover:text-on-secondary font-headline-sm text-body-md font-semibold transition-all group-hover:scale-[1.01] active:scale-[0.98]" href="matching-results.html">
+<span class="">ดูผลลัพธ์</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- CARD 5: CONFIRMED MEETING (นัดหมายเสร็จสมบูรณ์แล้ว) - MEMBER CARD -->
+<div class="group relative bg-surface-container-lowest rounded-2xl p-space-lg shadow-sm hover:shadow-md transition-all flex flex-col justify-between overflow-visible">
+<!-- Top Section -->
+<div class="flex flex-col gap-space-md"><div class="flex flex-col gap-1"><div class="flex items-start justify-between gap-2"><h2 class="font-headline-sm text-headline-sm font-bold text-on-surface leading-snug">Web Application Project</h2><div class="relative shrink-0"><button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" onclick="toggleMenu('menu-card-5', event)" title="ตัวเลือก"><span class="material-symbols-outlined text-[20px]">more_vert</span></button><div class="dropdown-menu-box hidden absolute right-0 top-9 w-48 bg-white rounded-2xl shadow-2xl p-1.5 z-50 flex flex-col border border-slate-100" id="menu-card-5" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 25px -5px, rgba(0, 0, 0, 0.1) 0px 8px 10px -6px; border: 1px solid rgb(226, 232, 240); background-color: rgb(255, 255, 255) !important; opacity: 1;"><button class="w-full px-3 py-2 text-left font-body-sm text-body-sm text-on-surface hover:bg-slate-100 rounded-xl flex items-center gap-2 transition-colors" onclick="closeAllMenus()"><span class="material-symbols-outlined text-[18px] text-secondary">info</span><span class="">ดูรายละเอียดกลุ่ม</span></button><div class="my-1 h-[1px] bg-slate-100"></div><button class="w-full px-3 py-2 text-left font-body-sm text-body-sm text-[#E88C8C] hover:text-red-600 hover:bg-red-50 rounded-xl flex items-center gap-2 transition-colors" onclick="closeAllMenus()"><span class="material-symbols-outlined text-[18px] text-[#E88C8C]">logout</span><span class="">ออกจากกลุ่ม</span></button></div></div></div><div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm mt-0.5"><span class="material-symbols-outlined text-[16px] text-on-surface-variant">group</span><span class="">สมาชิก 4 คน</span></div></div><div class="inline-flex self-start items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-body-sm text-body-sm font-semibold"><span class="">นัดหมายแล้ว</span><span class="">✓</span></div><div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-1.5"><div class="flex items-center gap-1.5 font-label-tag text-label-tag text-primary font-semibold uppercase"><span class="material-symbols-outlined text-[16px]">calendar_today</span><span class="">นัดหมายที่ยืนยันแล้ว</span></div><p class="font-headline-sm text-body-md font-bold text-on-surface flex items-center gap-2"><span class="">วันศุกร์ 18 พ.ย.</span><span class="text-outline-variant">•</span><span class="">14:00 – 16:00 น.</span></p><div class="flex items-center gap-1 text-on-surface-variant font-body-sm text-body-sm"></div></div></div>
+<!-- Action Button -->
+<div class="pt-space-lg mt-space-md">
+<a class="w-full flex items-center justify-center gap-space-xs py-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container-highest text-primary font-headline-sm text-body-md font-semibold transition-all group-hover:scale-[1.01] active:scale-[0.98]" href="meeting-details.html">
+<span class="">ดูนัดหมาย</span>
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</a>
+</div>
+</div>
+<!-- Quick Add New Group Card (Friendly Student Workspace Encouragement) -->
+<div class="cursor-pointer group border-2 border-dashed border-outline-variant/50 hover:border-primary rounded-2xl p-space-lg bg-surface/50 hover:bg-surface-container-lowest transition-all flex flex-col items-center justify-center text-center gap-space-md min-h-[340px]" onclick="toggleModal('modal-create-group', true)">
+<div class="w-14 h-14 rounded-2xl bg-surface-container flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-[28px]">add_circle</span>
+</div>
+<div class="flex flex-col gap-1 max-w-xs">
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">
+            มีโปรเจกต์ใหม่เหรอ?
+          </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            กดสร้างกลุ่มใหม่ ส่งลิงก์หรือโค้ดให้เพื่อน แล้วเริ่มหาเวลาทำงานร่วมกันได้เลย ✨
+          </p>
+</div>
+<a href="create-group.html"
+   class="inline-flex items-center gap-1
+          text-primary font-headline-sm text-body-sm
+          font-semibold mt-space-xs">
+
+  <span>+ สร้างกลุ่มเลย</span>
+</a>
+</div>
+</div>
+<!-- STATE B: Search Not Found -->
+<div
+  id="state-search-empty"
+  class="hidden w-full">
+
+  <div class="w-full min-h-[380px]
+              bg-surface-container-lowest
+              rounded-2xl shadow-sm
+              flex flex-col items-center justify-center
+              px-6 py-12 text-center">
+
+    <!-- ICON -->
+    <div class="w-16 h-16
+                rounded-2xl
+                bg-surface-container-low
+                flex items-center justify-center
+                text-3xl
+                mb-5">
+      🔍
+    </div>
+
+    <!-- TITLE -->
+    <h3 class="font-headline-md
+               text-headline-md
+               font-bold
+               text-on-surface
+               mb-2">
+      ไม่เจอกลุ่มที่กำลังหา
+    </h3>
+
+    <!-- DESCRIPTION -->
+    <p class="font-body-md
+              text-body-md
+              text-on-surface-variant
+              max-w-md
+              mx-auto
+              leading-relaxed
+              mb-6">
+      ลองตรวจสอบการสะกดชื่อวิชา
+      หรือเปลี่ยนตัวกรองสถานะดูอีกครั้งนะ
+    </p>
+
+    <!-- ACTIONS -->
+    <div class="flex flex-col sm:flex-row
+                items-center justify-center
+                gap-3">
+
+      <button
+        type="button"
+        onclick="switchState('normal')"
+        class="px-5 py-2.5
+               rounded-xl
+               bg-surface-container-low
+               hover:bg-surface-container
+               text-on-surface
+               font-medium
+               transition-colors">
+        ล้างตัวกรองทั้งหมด
+      </button>
+
+      <button
+        type="button"
+        onclick="toggleModal('modal-join-code', true)"
+        class="px-5 py-2.5
+               rounded-xl
+               bg-primary-container
+               hover:bg-primary
+               text-on-primary
+               font-semibold
+               transition-colors">
+        เข้าร่วมด้วยโค้ดแทน
+      </button>
+
+    </div>
+
+  </div>
+</div>
+<!-- 5. STATE C: Zero Groups / First-time Student User View -->
+<div
+  id="state-no-groups"
+  class="hidden w-full">
+
+  <div class="w-full min-h-[380px]
+              bg-surface-container-lowest
+              rounded-2xl shadow-sm
+              flex flex-col items-center justify-center
+              px-6 py-12 text-center">
+
+    <!-- ICON -->
+    <div class="w-16 h-16
+                rounded-2xl
+                bg-surface-container-low
+                flex items-center justify-center
+                text-3xl
+                mb-5
+                select-none">
+      👀
+    </div>
+
+    <!-- TITLE -->
+    <h3 class="font-headline-md
+               text-headline-md
+               font-bold
+               text-on-surface
+               mb-2">
+      ยังไม่มีกลุ่มเลย
+    </h3>
+
+    <!-- DESCRIPTION -->
+    <p class="font-body-md
+              text-body-md
+              text-on-surface-variant
+              max-w-md
+              mx-auto
+              leading-relaxed
+              mb-6">
+      สร้างกลุ่มงานใหม่ หรือถ้าเพื่อนส่งโค้ดมาให้แล้ว
+      ก็สามารถเข้าร่วมกลุ่มได้ทันที!
+    </p>
+
+    <!-- ACTIONS -->
+    <div class="flex flex-col sm:flex-row
+                items-center justify-center
+                gap-3">
+
+     <!-- CREATE GROUP -->
+<a
+  href="create-group.html"
+  class="w-full sm:w-auto
+         px-5 py-2.5
+         rounded-xl
+         bg-primary-container
+         hover:bg-primary
+         text-on-primary
+         font-semibold
+         shadow-sm
+         transition-colors
+         flex items-center justify-center gap-2">
+
+  <span class="material-symbols-outlined text-[20px]">
+    add
+  </span>
+
+  <span>สร้างกลุ่มใหม่</span>
+</a>
+      <!-- JOIN WITH CODE -->
+      <button
+        type="button"
+        onclick="toggleModal('modal-join-code', true)"
+        class="w-full sm:w-auto
+               px-5 py-2.5
+               rounded-xl
+               bg-surface-container-low
+               hover:bg-surface-container
+               text-on-surface
+               font-medium
+               transition-colors
+               flex items-center justify-center gap-2">
+
+        <span class="material-symbols-outlined text-[18px] text-secondary">
+          vpn_key
+        </span>
+
+        <span>เข้าร่วมด้วยโค้ด</span>
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+<!-- MODAL: Join by Code -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-xs items-center justify-center p-4" id="modal-join-code">
+<div class="bg-surface-container-lowest rounded-2xl shadow-2xl max-w-md w-full p-space-xl flex flex-col gap-space-lg relative animate-in fade-in zoom-in-95 duration-200">
+<!-- Close Button -->
+<button class="absolute top-space-md right-space-md w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors" onclick="toggleModal('modal-join-code', false)">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+<!-- Modal Header -->
+<div class="flex flex-col gap-1 text-center items-center">
+<div class="w-14 h-14 rounded-2xl bg-secondary-fixed flex items-center justify-center text-2xl mb-2">
+          👋
+        </div>
+<h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">
+          มีโค้ดจากเพื่อนแล้วใช่มั้ย?
+        </h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed max-w-xs">
+          ใส่รหัส 6 หลักที่เพื่อนส่งมาให้เพื่อเข้าสู่กลุ่มทำงานร่วมกัน
+        </p>
+</div>
+<!-- Form Input -->
+<div class="flex flex-col gap-2">
+<label class="font-label-tag text-label-tag font-semibold uppercase text-on-surface-variant">
+          รหัสกลุ่ม (Group Code)
+        </label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-space-md text-[20px] text-secondary">tag</span>
+<input class="w-full bg-surface-container-low rounded-xl pl-11 pr-space-md py-3 font-label-code text-body-lg text-on-surface font-semibold tracking-wider placeholder-on-surface-variant/40 outline-none ring-2 ring-primary-container" placeholder="เช่น CS-3018" type="text" value="CS-3018">
+</div>
+<p class="font-body-sm text-body-sm text-tertiary flex items-center gap-1 mt-0.5">
+<span class="material-symbols-outlined text-[15px]">check_circle</span>
+<span class="">พบกลุ่ม: “Mobile Application Project” (5 คน)</span>
+</p>
+</div>
+<!-- Actions -->
+<div class="flex items-center gap-space-sm pt-2">
+<button class="flex-1 py-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-body-md text-body-md font-medium transition-colors" onclick="toggleModal('modal-join-code', false)">
+          ยกเลิก
+        </button>
+<button class="flex-1 py-2.5 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-body-md font-semibold shadow-sm transition-all flex items-center justify-center gap-1.5" onclick="toggleModal('modal-join-code', false)">
+<span class="">เข้าร่วมกลุ่ม</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+
+
+<!-- MODAL: Confirmation Modal - Delete Group (Hidden by default) -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-xs items-center justify-center p-4" id="modal-delete-group">
+<div class="bg-white rounded-3xl shadow-2xl max-w-md w-full p-6 flex flex-col items-center text-center relative animate-in fade-in zoom-in-95 duration-200">
+<!-- Top Warning Trash Icon -->
+<div class="w-14 h-14 rounded-full bg-red-50 text-[#E88C8C] flex items-center justify-center mb-3">
+<span class="material-symbols-outlined text-[28px]">delete</span>
+</div>
+<!-- Title -->
+<h3 class="text-xl font-bold text-slate-800">
+      ลบกลุ่มนี้?
+    </h3>
+<!-- Body Description -->
+<p class="text-sm text-slate-600 mt-2">
+      คุณต้องการลบ ‘Software Design Project’ หรือไม่?
+    </p>
+<!-- Warning Callout -->
+<div class="bg-red-50/70 border border-red-100 text-[#d96565] text-xs p-3 rounded-xl mt-4 text-left flex items-start gap-2 w-full">
+<span class="material-symbols-outlined text-[18px] shrink-0 text-[#d96565]">warning</span>
+<span class="leading-relaxed">เมื่อลบแล้ว สมาชิกจะไม่สามารถเข้าถึงกลุ่ม และข้อมูลเวลาว่างของกลุ่มนี้ได้</span>
+</div>
+<!-- Bottom Action Buttons -->
+<div class="flex items-center justify-end gap-3 mt-6 w-full">
+<button class="flex-1 py-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium transition-colors" onclick="toggleModal('modal-delete-group', false)">
+      ยกเลิก
+    </button>
+<button class="flex-1 bg-[#E88C8C] hover:bg-[#d97777] text-white text-sm font-medium px-5 py-2.5 rounded-xl shadow-sm transition-colors" onclick="confirmDeleteGroup()">
+      ลบกลุ่ม
+    </button>
+</div>
+</div>
+</div>
+<!-- Floating Toast Notification -->
+<div class="hidden fixed bottom-8 left-1/2 -translate-x-1/2 z-50 items-center gap-2 bg-inverse-surface text-inverse-on-surface px-5 py-3 rounded-2xl shadow-xl transition-all duration-300 transform opacity-0 translate-y-4" id="toast-notification">
+<span class="material-symbols-outlined text-[20px] text-tertiary-fixed">check_circle</span>
+<span class="text-sm font-medium" id="toast-message">ลบกลุ่มเรียบร้อยแล้ว ✓</span>
+</div>
+</div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_6px_rgba(38,50,56,0.03)] py-space-lg"><div class="max-w-7xl mx-auto px-gutter md:px-gutter-md lg:px-gutter-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-center md:text-left"><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">TimeMatch • วิทยาลัยการคอมพิวเตอร์ (College of Computing) • วิทยาการคอมพิวเตอร์ (Computer Science) • มหาวิทยาลัยขอนแก่น</p><div class="flex items-center gap-space-md font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" data-path="help-center" href="#">ศูนย์ช่วยเหลือ</a><span class="">•</span><a class="hover:text-primary transition-colors" data-path="terms-of-service" href="#">ข้อกำหนดการใช้งาน</a></div></div></footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    // สีปกติ
+    const inactiveClasses = [
+        "text-[#607D8B]",
+        "hover:text-[#4F9D9D]"
+    ];
+
+    // สีตอนเลือก
+    const activeClasses = [
+        "bg-[#4F9D9D]",
+        "text-white",
+        "font-semibold"
+    ];
+
+    function setActiveNav(activeLink) {
+
+        navLinks.forEach(link => {
+            // ล้าง active
+            link.classList.remove(...activeClasses);
+
+            // ใส่สีปกติ
+            link.classList.add(...inactiveClasses);
+        });
+
+        // ล้างสีปกติจากปุ่มที่เลือก
+        activeLink.classList.remove(...inactiveClasses);
+
+        // ทำเป็นสีเขียว
+        activeLink.classList.add(...activeClasses);
+    }
+
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            setActiveNav(this);
+        });
+    });
+
+
+    // ===== ตรวจว่าตอนนี้อยู่หน้าอะไร =====
+    const currentPage = window.location.pathname.split("/").pop();
+
+    if (currentPage === "home.html") {
+        const home = document.querySelector('[data-nav="home"]');
+        if (home) setActiveNav(home);
+    }
+
+    if (currentPage === "my-groups.html") {
+        const groups = document.querySelector('[data-nav="my-groups"]');
+        if (groups) setActiveNav(groups);
+    }
+
+});
+</script>
+</body></html>

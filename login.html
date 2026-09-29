@@ -1,0 +1,213 @@
+<!DOCTYPE html><html lang="th" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_blank" name="shell-type"><title>TimeMatch - Sign In / Authentication</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;family=Prompt:wght@300;400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#09696a", "on-tertiary-fixed-variant": "#00522a", "on-secondary-fixed": "#001d35", "tertiary-fixed": "#a9f3bc", "secondary-fixed-dim": "#9ecafe", "secondary-container": "#9ecafe", "error-container": "#ffdad6", "on-background": "#111d23", "surface-container": "#e3f0f8", "outline-variant": "#bec9c8", "tertiary-fixed-dim": "#8ed7a1", "on-secondary-container": "#255582", "inverse-surface": "#263238", "on-primary-fixed-variant": "#004f50", "surface-container-lowest": "#ffffff", "surface-variant": "#d7e4ec", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "tertiary-container": "#3c8254", "surface-bright": "#f4faff", "background": "#f4faff", "surface-container-high": "#ddeaf2", "on-secondary-fixed-variant": "#144976", "surface-container-highest": "#d7e4ec", "surface-tint": "#09696a", "inverse-primary": "#86d4d3", "primary-fixed-dim": "#86d4d3", "on-surface-variant": "#3f4948", "on-primary": "#ffffff", "on-primary-container": "#003030", "tertiary": "#20693e", "surface-dim": "#cfdce4", "surface-container-low": "#e9f6fd", "on-error": "#ffffff", "on-secondary": "#ffffff", "on-surface": "#111d23", "surface": "#f4faff", "secondary": "#33618f", "on-tertiary-container": "#f6fff4", "secondary-fixed": "#d1e4ff", "on-tertiary-fixed": "#00210e", "error": "#ba1a1a", "primary-fixed": "#a2f0f0", "outline": "#6f7979", "on-primary-fixed": "#002020", "inverse-on-surface": "#e6f3fb", "primary-container": "#4f9d9d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-lg": "2rem", "space-xs": "0.25rem", "gutter-md": "1.5rem", "margin-md": "2rem", "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem", "margin": "1rem", "gutter": "1rem", "margin-lg": "3rem", "space-xl": "2.5rem" }, "fontFamily": { "headline-md": ["Plus Jakarta Sans"], "body-md": ["Inter"], "body-sm": ["Inter"], "label-code": ["JetBrains Mono"], "label-tag": ["Inter"], "display-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"] }, "fontSize": { "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "0em", "fontWeight": "600" }], "body-md": ["0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "0em", "fontWeight": "400" }], "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-code": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "0em", "fontWeight": "500" }], "label-tag": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-mobile": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-sm": ["1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "0em", "fontWeight": "600" }], "display": ["3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["1rem", { "lineHeight": "1.625rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg-mobile": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col justify-center items-center"><main class="w-full flex-1 flex flex-col justify-center items-center py-space-xl px-gutter"><div class="flex flex-col w-full items-center justify-center relative">
+<div class="absolute -top-32 -left-20 w-96 h-96 rounded-full bg-gradient-to-tr from-primary/10 via-secondary-container/20 to-transparent blur-3xl pointer-events-none"></div>
+<div class="absolute -bottom-24 -right-16 w-80 h-80 rounded-full bg-gradient-to-br from-tertiary-fixed/30 via-primary-container/10 to-transparent blur-2xl pointer-events-none"></div>
+<div class="w-full max-w-md mx-auto relative z-10 px-space-sm sm:px-0">
+<div class="bg-surface-container-lowest rounded-2xl shadow-xl p-space-lg sm:p-space-xl flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<img alt="TimeMatch Logo" class="w-10 h-10 rounded-lg object-contain shadow-sm" src="images/logo.png">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary font-bold tracking-tight">TimeMatch</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant font-medium">วิทยาลัยการคอมพิวเตอร์</span>
+</div>
+</div>
+
+</div>
+<div class="flex flex-col gap-1 mt-1">
+<h1 class="font-headline-lg text-headline-lg font-bold text-on-surface">เข้าสู่ระบบ</h1>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">เข้าสู่ TimeMatch เพื่อค้นหาเวลาว่างที่ตรงกันกับเพื่อนในกลุ่ม</p>
+</div>
+<div class="hidden rounded-xl bg-error-container p-space-sm transition-all duration-200" id="alertBox">
+<div class="flex items-center gap-space-xs text-on-error-container">
+<span class="material-symbols-outlined text-[20px]">error</span>
+<span class="font-body-sm text-body-sm font-medium" id="alertMessage"></span>
+</div>
+</div>
+<form class="flex flex-col gap-space-md mt-1" id="loginForm" onsubmit="event.preventDefault(); validateForm();">
+<div class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<label class="font-body-sm text-body-sm font-medium text-on-surface" for="studentEmail">อีเมลนักศึกษา</label>
+<span class="font-label-code text-label-tag text-outline">@kkumail.com</span>
+</div>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-[20px] pointer-events-none transition-colors" id="emailIcon">alternate_email</span>
+<input autocomplete="username" class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md rounded-xl pl-11 pr-4 py-3 placeholder:text-outline transition-all duration-150 focus:outline-none focus:bg-surface-container-lowest focus:shadow-md" id="studentEmail" placeholder="example@kkumail.com" type="text">
+</div>
+<span class="hidden font-body-sm text-body-sm text-error mt-0.5 pl-1" id="emailError"></span>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="font-body-sm text-body-sm font-medium text-on-surface" for="studentPassword">รหัสผ่าน</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-outline text-[20px] pointer-events-none transition-colors" id="lockIcon">lock_outline</span>
+<input autocomplete="current-password" class="w-full bg-surface-container-low text-on-surface font-body-md text-body-md rounded-xl pl-11 pr-11 py-3 placeholder:text-outline transition-all duration-150 focus:outline-none focus:bg-surface-container-lowest focus:shadow-md" id="studentPassword" placeholder="กรอกรหัสผ่าน" type="password">
+<button aria-label="Toggle password visibility" class="absolute right-3.5 text-outline hover:text-on-surface flex items-center justify-center p-0.5 transition-colors focus:outline-none" id="togglePassword" type="button">
+<span class="material-symbols-outlined text-[20px]" id="eyeIcon">visibility</span>
+</button>
+</div>
+<span class="hidden font-body-sm text-body-sm text-error mt-0.5 pl-1" id="passwordError"></span>
+</div>
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2 cursor-pointer select-none">
+<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" id="rememberMe" type="checkbox">
+<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">จดจำฉัน</span>
+</label>
+<button class="font-body-sm text-body-sm font-medium text-primary hover:text-primary-container transition-colors focus:outline-none" type="button">
+            ลืมรหัสผ่าน?
+          </button>
+</div>
+<button class="w-full bg-primary hover:bg-on-primary-fixed-variant text-on-primary font-headline-sm text-headline-sm py-3 px-4 rounded-xl shadow-md transition-all duration-150 active:scale-[0.99] flex items-center justify-center gap-2 mt-1 focus:outline-none" type="submit">
+<span class="">เข้าสู่ระบบ</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</form>
+
+
+
+
+<div class="flex items-center justify-center gap-1 text-center pt-2">
+    <span class="font-body-md text-body-md text-on-surface-variant">
+        ยังไม่มีบัญชีใช่หรือไม่?
+    </span>
+
+    <a
+        href="register.html"
+        class="font-body-md text-body-md font-semibold text-primary hover:text-primary-container transition-colors focus:outline-none">
+        สมัครสมาชิก
+    </a>
+</div>
+</div>
+</div>
+</div>
+<script>
+  (function initLoginPage() {
+    const passwordInput = document.getElementById('studentPassword');
+    const toggleBtn = document.getElementById('togglePassword');
+    const eyeIcon = document.getElementById('eyeIcon');
+
+    if (toggleBtn && passwordInput && eyeIcon) {
+      toggleBtn.addEventListener('click', () => {
+        const isPassword = passwordInput.getAttribute('type') === 'password';
+        passwordInput.setAttribute('type', isPassword ? 'text' : 'password');
+        eyeIcon.textContent = isPassword ? 'visibility_off' : 'visibility';
+      });
+    }
+  })();
+
+  function clearErrors() {
+    const alertBox = document.getElementById('alertBox');
+    const emailError = document.getElementById('emailError');
+    const passwordError = document.getElementById('passwordError');
+    const emailInput = document.getElementById('studentEmail');
+    const passwordInput = document.getElementById('studentPassword');
+
+    alertBox.classList.add('hidden');
+    emailError.classList.add('hidden');
+    passwordError.classList.add('hidden');
+    emailInput.classList.remove('bg-error-container/30', 'text-error');
+    passwordInput.classList.remove('bg-error-container/30', 'text-error');
+  }
+
+  function fillDemoAccount() {
+    clearErrors();
+    const emailInput = document.getElementById('studentEmail');
+    const passwordInput = document.getElementById('studentPassword');
+    emailInput.value = 'chidchanok.b@kkumail.com';
+    passwordInput.value = 'TimeMatch2025!';
+    
+    emailInput.classList.add('bg-tertiary-fixed/40');
+    passwordInput.classList.add('bg-tertiary-fixed/40');
+    setTimeout(() => {
+      emailInput.classList.remove('bg-tertiary-fixed/40');
+      passwordInput.classList.remove('bg-tertiary-fixed/40');
+    }, 600);
+  }
+
+  function validateForm() {
+    clearErrors();
+    const email = document.getElementById('studentEmail').value.trim();
+    const password = document.getElementById('studentPassword').value;
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!email) {
+      showEmailError('กรุณากรอกอีเมลนักศึกษา');
+      return;
+    }
+    if (!emailRegex.test(email)) {
+      showEmailError('รูปแบบอีเมลไม่ถูกต้อง (เช่น example@kkumail.com)');
+      return;
+    }
+    if (!password) {
+      showPasswordError('กรุณากรอกรหัสผ่าน');
+      return;
+    }
+
+    if (email === 'chidchanok.b@kkumail.com' && password === 'TimeMatch2025!') {
+      const alertBox = document.getElementById('alertBox');
+      const alertMessage = document.getElementById('alertMessage');
+      alertBox.className = 'rounded-xl bg-tertiary-fixed p-space-sm transition-all duration-200';
+      alertMessage.textContent = 'เข้าสู่ระบบสำเร็จ กำลังพาไปยังกระดานตารางเวลา...';
+      alertMessage.className = 'font-body-sm text-body-sm font-semibold text-on-tertiary-fixed-variant';
+      alertBox.classList.remove('hidden');
+    } else {
+      showAlertError('อีเมลหรือรหัสผ่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลอีกครั้ง');
+    }
+  }
+
+  function showEmailError(msg) {
+    const errorEl = document.getElementById('emailError');
+    const inputEl = document.getElementById('studentEmail');
+    errorEl.textContent = msg;
+    errorEl.classList.remove('hidden');
+    inputEl.classList.add('bg-error-container/30', 'text-error');
+    inputEl.focus();
+  }
+
+  function showPasswordError(msg) {
+    const errorEl = document.getElementById('passwordError');
+    const inputEl = document.getElementById('studentPassword');
+    errorEl.textContent = msg;
+    errorEl.classList.remove('hidden');
+    inputEl.classList.add('bg-error-container/30', 'text-error');
+    inputEl.focus();
+  }
+
+  function showAlertError(msg) {
+    const alertBox = document.getElementById('alertBox');
+    const alertMessage = document.getElementById('alertMessage');
+    alertBox.className = 'rounded-xl bg-error-container p-space-sm transition-all duration-200';
+    alertMessage.textContent = msg;
+    alertMessage.className = 'font-body-sm text-body-sm font-medium text-on-error-container';
+    alertBox.classList.remove('hidden');
+  }
+
+  function triggerValidation(type) {
+    clearErrors();
+    const emailInput = document.getElementById('studentEmail');
+    const passwordInput = document.getElementById('studentPassword');
+
+    if (type === 'emptyEmail') {
+      emailInput.value = '';
+      showEmailError('กรุณากรอกอีเมล');
+    } else if (type === 'invalidEmail') {
+      emailInput.value = 'chidchanok.invalid';
+      showEmailError('รูปแบบอีเมลไม่ถูกต้อง');
+    } else if (type === 'emptyPass') {
+      emailInput.value = 'student@kkumail.com';
+      passwordInput.value = '';
+      showPasswordError('กรุณากรอกรหัสผ่าน');
+    } else if (type === 'authFail') {
+      emailInput.value = 'chidchanok.b@kkumail.com';
+      passwordInput.value = 'wrongpassword123';
+      showAlertError('อีเมลหรือรหัสผ่านไม่ถูกต้อง');
+    } else if (type === 'reset') {
+      emailInput.value = '';
+      passwordInput.value = '';
+      clearErrors();
+    }
+  }
+</script></main>
+
+
+
+</body></html>

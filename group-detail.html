@@ -1,0 +1,491 @@
+<!DOCTYPE html><html lang="th" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>TimeMatch</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"tertiary-fixed-dim":"#8ed7a1","on-secondary-fixed-variant":"#144976","on-primary-container":"#003030","outline":"#6f7979","primary-fixed":"#a2f0f0","background":"#f4faff","surface-bright":"#f4faff","on-surface-variant":"#3f4948","on-error":"#ffffff","surface-container-lowest":"#ffffff","on-secondary-container":"#255582","inverse-on-surface":"#e6f3fb","surface-variant":"#d7e4ec","primary-container":"#4f9d9d","on-error-container":"#93000a","inverse-surface":"#263238","on-primary":"#ffffff","surface":"#f4faff","tertiary-fixed":"#a9f3bc","surface-container-high":"#ddeaf2","surface-dim":"#cfdce4","on-primary-fixed-variant":"#004f50","on-tertiary-fixed":"#00210e","inverse-primary":"#86d4d3","secondary-container":"#9ecafe","tertiary-container":"#3c8254","on-secondary":"#ffffff","primary-fixed-dim":"#86d4d3","on-tertiary-container":"#f6fff4","on-secondary-fixed":"#001d35","on-surface":"#111d23","secondary-fixed":"#d1e4ff","surface-tint":"#09696a","error-container":"#ffdad6","on-tertiary-fixed-variant":"#00522a","surface-container-highest":"#d7e4ec","error":"#ba1a1a","surface-container":"#e3f0f8","on-tertiary":"#ffffff","outline-variant":"#bec9c8","tertiary":"#20693e","primary":"#09696a","secondary":"#33618f","on-primary-fixed":"#002020","secondary-fixed-dim":"#9ecafe","surface-container-low":"#e9f6fd","on-background":"#111d23"},borderRadius:{DEFAULT:"0.25rem",lg:"0.5rem",xl:"0.75rem",full:"9999px"},spacing:{"gutter":"1rem","gutter-lg":"2rem","space-xs":"0.25rem","space-md":"1rem","margin-lg":"3rem","margin":"1rem","space-xl":"2.5rem","space-lg":"1.5rem","margin-md":"2rem","gutter-md":"1.5rem","space-sm":"0.5rem"},fontFamily:{"display":["Plus Jakarta Sans"],"label-code":["JetBrains Mono"],"headline-md":["Plus Jakarta Sans"],"headline-lg-mobile":["Plus Jakarta Sans"],"body-sm":["Inter"],"body-lg":["Inter"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"label-tag":["Inter"],"body-md":["Inter"],"display-mobile":["Plus Jakarta Sans"]},fontSize:{"display":["3rem",{lineHeight:"3.5rem",letterSpacing:"-0.02em",fontWeight:"700"}],"label-code":["0.8125rem",{lineHeight:"1.25rem",letterSpacing:"0em",fontWeight:"500"}],"headline-md":["1.25rem",{lineHeight:"1.75rem",letterSpacing:"0em",fontWeight:"600"}],"headline-lg-mobile":["1.5rem",{lineHeight:"2rem",letterSpacing:"-0.01em",fontWeight:"600"}],"body-sm":["0.75rem",{lineHeight:"1.125rem",letterSpacing:"0.01em",fontWeight:"400"}],"body-lg":["1rem",{lineHeight:"1.625rem",letterSpacing:"0em",fontWeight:"400"}],"headline-sm":["1.125rem",{lineHeight:"1.5rem",letterSpacing:"0em",fontWeight:"600"}],"headline-lg":["2rem",{lineHeight:"2.5rem",letterSpacing:"-0.01em",fontWeight:"600"}],"label-tag":["0.6875rem",{lineHeight:"1rem",letterSpacing:"0.04em",fontWeight:"600"}],"body-md":["0.875rem",{lineHeight:"1.375rem",letterSpacing:"0em",fontWeight:"400"}],"display-mobile":["2rem",{lineHeight:"2.5rem",letterSpacing:"-0.01em",fontWeight:"700"}]}}}}</script></head><body class="bg-surface font-body-md text-on-surface antialiased min-h-screen flex flex-col justify-between">
+    
+    <!-- ================= NAVBAR ================= -->
+<header class="fixed top-0 left-0 w-full z-50
+               bg-surface/95 backdrop-blur-xl
+               border-b border-outline-variant/30
+               shadow-[0_1px_8px_rgba(38,50,56,0.04)]">
+
+  <div class="h-16 w-full px-5
+              flex items-center justify-between">
+
+    <!-- LEFT : LOGO -->
+    <a href="index.html"
+       class="flex items-center gap-2 shrink-0">
+
+      <img
+        alt="TimeMatch Logo"
+        class="h-8 w-8 object-contain"
+        src="images/logo.png">
+      <span class="font-headline-sm text-headline-sm
+                   text-on-surface font-bold">
+        TimeMatch
+      </span>
+    </a>
+
+
+    <!-- CENTER : MENU -->
+   <!-- CENTER : MENU -->
+<nav class="hidden md:flex items-center gap-3
+            absolute left-1/2 -translate-x-1/2">
+
+    <a href="home.html"
+       class="nav-link px-5 py-2 rounded-full transition-colors"
+       data-nav="home">
+        หน้าหลัก
+    </a>
+
+    <a href="my-groups.html"
+       class="nav-link px-5 py-2 rounded-full transition-colors"
+       data-nav="my-groups">
+        กลุ่มของฉัน
+    </a>
+
+    <a href="#"
+       class="nav-link px-5 py-2 rounded-full transition-colors"
+       data-nav="how-it-works">
+        วิธีใช้งาน
+    </a>
+
+</nav>
+
+    <!-- RIGHT : NOTIFICATION + PROFILE -->
+    <div class="flex items-center gap-4 shrink-0">
+
+      <!-- NOTIFICATION -->
+      <button
+        type="button"
+        aria-label="Notifications"
+        class="relative w-10 h-10
+               flex items-center justify-center
+               rounded-full
+               text-on-surface-variant
+               hover:text-on-surface
+               hover:bg-surface-container
+               transition-colors">
+
+        <span class="material-symbols-outlined text-[22px]">
+          notifications
+        </span>
+
+        <!-- Notification Dot -->
+        <span class="absolute top-1.5 right-1.5
+                     w-2 h-2 rounded-full
+                     bg-error
+                     ring-2 ring-surface">
+        </span>
+
+      </button>
+
+
+      <!-- PROFILE -->
+      <a href="profile.html"
+         class="flex items-center gap-2
+                px-2 py-1.5 rounded-xl
+                hover:bg-surface-container
+                transition-colors">
+
+        <!-- Profile Image -->
+        <img
+          alt="Profile"
+          class="w-9 h-9 rounded-full object-cover
+                 ring-2 ring-surface-container-high"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1XlSnEB9jG8W6hzP2SDsNo5fMsYan7ciLYMAMFtKI47o6bFNHpvRFvXIz3fUIDOAXBNUWyZBXDD-z2wYdi95qm7KniOrn1pM6FFJJGewawlf-GEnHOmTvwyapRy_IflwSoNDLxys_kvaXeMwTvsN4xCRucsaYjcUeEW3IBJDU450zXyM873CkE084R6Y1-sNAj3oEQardVcCoZiZpMvIViliAeFjocmYk2x8tpkxzblSwPlVpZxOwoeRsyT">
+
+        <!-- Profile Information -->
+        <div class="hidden sm:flex flex-col text-left">
+
+          <span class="font-body-md text-body-md
+                       text-on-surface font-semibold
+                       leading-tight">
+            Chidchanok P.
+          </span>
+
+          <span class="font-label-tag text-label-tag
+                       text-on-surface-variant
+                       leading-tight">
+            CS Student
+          </span>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+<!-- =============== END NAVBAR =============== -->
+
+
+    <main class="w-full pt-16 bg-surface flex-1"><div class="max-w-7xl mx-auto px-gutter lg:px-gutter-lg py-space-lg"><div class="flex flex-col w-full items-center">
+<div class="w-full max-w-[860px] pb-space-xl flex flex-col gap-space-lg">
+<!-- Breadcrumb / Back button -->
+<div class="flex items-center justify-between">
+<a class="group inline-flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-colors py-space-xs" data-path="my-groups" href="my-groups.html">
+<span class="material-symbols-outlined text-[18px] transition-transform group-hover:-translate-x-1">arrow_back</span>
+<span class="font-body-md text-body-md font-medium">กลับไปหน้ารวมกลุ่ม</span>
+</a>
+
+</div>
+<!-- Group Header Card -->
+<section class="relative bg-surface-container-lowest rounded-3xl p-space-lg md:p-8 shadow-sm">
+<div class="flex items-start justify-between gap-space-md">
+<div class="flex-1 min-w-0">
+
+<h1 class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tight truncate">
+            Software Design Project&nbsp;</h1>
+<p class="font-body-md text-body-md text-on-surface-variant mt-space-xs leading-relaxed">
+            กลุ่มสำหรับนัดหมายทำโปรเจกต์และค้นหาช่วงเวลาที่สมาชิกสามารถทำงานร่วมกันได้
+          </p>
+</div>
+<!-- Three-dot menu button & Dropdown container -->
+<div class="relative shrink-0" id="group-action-menu-container">
+<button aria-label="ตัวเลือกการจัดการกลุ่ม" class="w-10 h-10 rounded-xl bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface flex items-center justify-center transition-all focus:outline-none" id="menu-toggle-btn" type="button">
+<span class="material-symbols-outlined text-[20px]">more_horiz</span>
+</button>
+<!-- Dropdown Preview Panel -->
+<div class="absolute right-0 top-12 w-56 bg-surface-container-lowest rounded-xl shadow-xl p-space-xs z-30 transition-all duration-200 hidden" id="group-dropdown-menu">
+<div class="px-space-sm py-1.5 font-label-tag text-label-tag text-on-surface-variant uppercase tracking-wider border-b border-surface-variant/40 mb-1">
+              สิทธิ์ผู้สร้างกลุ่ม
+            </div>
+<a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low transition-colors" data-path="edit-group" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary">edit</span>
+<span class="">แก้ไขข้อมูลกลุ่ม</span>
+</a>
+<a class="flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-sm text-body-sm text-on-surface hover:bg-surface-container-low transition-colors" data-path="manage-members" href="#">
+<span class="material-symbols-outlined text-[18px] text-secondary">group</span>
+<span class="">จัดการสมาชิก (4)</span>
+</a>
+<div class="h-px bg-surface-variant/70 my-1"></div>
+<button class="w-full flex items-center gap-space-sm px-space-sm py-2 rounded-lg font-body-sm text-body-sm text-error hover:bg-error-container/40 transition-colors text-left" type="button">
+<span class="material-symbols-outlined text-[18px]">delete</span>
+<span class="">ลบกลุ่ม</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Compact Info Pills row -->
+<div class="mt-space-lg flex flex-wrap items-center gap-space-sm pt-space-md bg-surface-container-lowest">
+<div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-surface-container text-on-surface font-body-sm text-body-sm font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">groups</span>
+<span class="">สมาชิก 4 คน</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-primary-fixed/40 text-on-primary-fixed-variant font-body-sm text-body-sm font-medium">
+<span class="material-symbols-outlined text-[16px] text-primary">calendar_month</span>
+<span class="">1 – 7 ต.ค. 2026</span>
+</div>
+<div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed-variant font-body-sm text-body-sm font-medium">
+<span class="material-symbols-outlined text-[16px] text-secondary">schedule</span>
+<span class="">ต้องการอย่างน้อย 2 ชั่วโมง</span>
+</div>
+</div>
+</section>
+<!-- Member Availability Status Section -->
+<section class="bg-surface-container-lowest rounded-3xl p-space-lg md:p-8 shadow-sm flex flex-col gap-space-md">
+<!-- Section Header -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold flex items-center gap-space-xs">
+<span class="">สมาชิกในกลุ่ม</span>
+
+</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
+            ดูว่าสมาชิกคนไหนกรอกเวลาว่างแล้ว เพื่อเตรียมประมวลผลช่วงเวลานัดหมาย
+          </p>
+</div>
+<div class="flex items-center gap-space-xs self-start sm:self-auto">
+<span class="font-label-code text-label-code font-bold px-3 py-1 rounded-full bg-primary-fixed/50 text-on-primary-fixed-variant" id="counter-badge">
+            3/4 คนกรอกแล้ว
+          </span>
+</div>
+</div>
+<!-- Progress Bar Container -->
+<div class="w-full flex flex-col gap-space-xs mt-space-xs">
+<div class="w-full h-3 rounded-full bg-surface-container-high overflow-hidden p-0.5">
+<div class="h-full rounded-full bg-primary-container transition-all duration-500 ease-out" id="progress-bar-fill" style="width: 75%;"></div>
+</div>
+<!-- Status Helper Pill & Message -->
+<div class="flex items-center justify-between flex-wrap gap-space-xs pt-1">
+<div class="inline-flex items-center gap-1.5 text-on-surface-variant font-body-sm text-body-sm" id="status-pill-message">
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="font-medium text-secondary">⏳ รอสมาชิกอีก 1 คนกรอกเวลาว่าง</span>
+<span class="hidden md:inline text-on-surface-variant">• เมื่อครบ 4 คน ระบบจะปลดล็อกการจับคู่เวลา</span>
+</div>
+<!-- Interactive Simulation Switcher -->
+<div class="flex items-center gap-1.5 p-1 rounded-xl bg-surface-container text-on-surface-variant">
+<button class="px-2.5 py-1 rounded-lg font-label-tag text-label-tag font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm" id="btn-state-partial" type="button">
+              รอ 1 คน (3/4)
+            </button>
+<button class="px-2.5 py-1 rounded-lg font-label-tag text-label-tag font-medium transition-all text-on-surface-variant hover:text-on-surface" id="btn-state-ready" type="button">
+              ครบแล้ว (4/4)
+            </button>
+</div>
+</div>
+</div>
+<!-- Member List -->
+<div class="mt-space-sm space-y-space-xs">
+<!-- Row 1: Current User -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-md rounded-2xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors gap-space-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="relative shrink-0">
+<img alt="ชิดชนก ชนะพา" class="w-11 h-11 rounded-full object-cover shadow-sm" src="https://lh3.googleusercontent.com/aida/AEtjO1XlSnEB9jG8W6hzP2SDsNo5fMsYan7ciLYMAMFtKI47o6bFNHpvRFvXIz3fUIDOAXBNUWyZBXDD-z2wYdi95qm7KniOrn1pM6FFJJGewawlf-GEnHOmTvwyapRy_IflwSoNDLxys_kvaXeMwTvsN4xCRucsaYjcUeEW3IBJDU450zXyM873CkE084R6Y1-sNAj3oEQardVcCoZiZpMvIViliAeFjocmYk2x8tpkxzblSwPlVpZxOwoeRsyT">
+<span class="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-tertiary-fixed-dim ring-2 ring-surface-container-lowest"></span>
+</div>
+<div class="min-w-0 flex flex-col">
+<div class="flex items-center flex-wrap gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">ชิดชนก ชนะพา</span>
+<span class="bg-primary-fixed text-on-primary-fixed-variant text-label-tag font-label-tag px-2 py-0.5 rounded-md font-semibold">คุณ</span>
+<span class="bg-surface-container text-on-surface-variant text-label-tag font-label-tag px-2 py-0.5 rounded-md">ผู้สร้างกลุ่ม</span>
+</div>
+<span class="font-label-code text-label-code text-on-surface-variant truncate">chidchanok.p@kkumail.com</span>
+</div>
+</div>
+<div class="self-start sm:self-center shrink-0">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed/40 text-tertiary font-body-sm text-body-sm font-medium">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="">คุณกรอกเวลาว่างแล้ว</span>
+</span>
+</div>
+</div>
+<!-- Row 2: Member 2 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-md rounded-2xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors gap-space-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-11 h-11 rounded-full bg-secondary-container/50 text-secondary flex items-center justify-center font-display text-headline-sm font-bold shrink-0">
+              NW
+            </div>
+<div class="min-w-0 flex flex-col">
+<div class="flex items-center flex-wrap gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">นรินทร์วุฒิ ว่องไว</span>
+<span class="bg-surface-container text-on-surface-variant text-label-tag font-label-tag px-2 py-0.5 rounded-md">สมาชิก</span>
+</div>
+<span class="font-label-code text-label-code text-on-surface-variant truncate">narin.w@kkumail.com</span>
+</div>
+</div>
+<div class="self-start sm:self-center shrink-0">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed/40 text-tertiary font-body-sm text-body-sm font-medium">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="">กรอกเวลาว่างแล้ว</span>
+</span>
+</div>
+</div>
+<!-- Row 3: Member 3 -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-md rounded-2xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors gap-space-sm">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-11 h-11 rounded-full bg-primary-fixed/60 text-primary flex items-center justify-center font-display text-headline-sm font-bold shrink-0">
+              PK
+            </div>
+<div class="min-w-0 flex flex-col">
+<div class="flex items-center flex-wrap gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">พิมพ์ชนก กุลจันทร์</span>
+<span class="bg-surface-container text-on-surface-variant text-label-tag font-label-tag px-2 py-0.5 rounded-md">สมาชิก</span>
+</div>
+<span class="font-label-code text-label-code text-on-surface-variant truncate">pimchanok.k@kkumail.com</span>
+</div>
+</div>
+<div class="self-start sm:self-center shrink-0">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed/40 text-tertiary font-body-sm text-body-sm font-medium">
+<span class="material-symbols-outlined text-[16px]">check_circle</span>
+<span class="">กรอกเวลาว่างแล้ว</span>
+</span>
+</div>
+</div>
+<!-- Row 4: Member 4 (Pending) -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between p-space-md rounded-2xl bg-surface-container-lowest hover:bg-surface-container-low transition-colors gap-space-sm" id="member-row-4">
+<div class="flex items-center gap-space-md min-w-0">
+<div class="w-11 h-11 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-display text-headline-sm font-bold shrink-0" id="member-4-avatar">
+              YS
+            </div>
+<div class="min-w-0 flex flex-col">
+<div class="flex items-center flex-wrap gap-1.5">
+<span class="font-headline-sm text-headline-sm text-on-surface font-semibold truncate">ญาทิชา สุวรรณรัตน์</span>
+<span class="bg-surface-container text-on-surface-variant text-label-tag font-label-tag px-2 py-0.5 rounded-md">สมาชิก</span>
+</div>
+<span class="font-label-code text-label-code text-on-surface-variant truncate">yathicha.s@kkumail.com</span>
+</div>
+</div>
+<div class="self-start sm:self-center shrink-0">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/40 text-on-secondary-container font-body-sm text-body-sm font-medium" id="member-4-status">
+<span class="material-symbols-outlined text-[16px]">schedule</span>
+<span class="">รอกรอกเวลาว่าง</span>
+</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Main Action Area -->
+<section class="p-space-lg md:p-6 bg-surface-container-low rounded-3xl flex flex-col sm:flex-row items-center justify-between gap-space-md shadow-sm">
+<!-- Left side: Edit availability -->
+<div class="flex flex-col items-center sm:items-start text-center sm:text-left w-full sm:w-auto">
+<a class="w-full sm:w-auto px-6 py-3 rounded-xl bg-surface-container-lowest hover:bg-surface-container-high text-on-surface font-body-md text-body-md font-semibold shadow-sm flex items-center justify-center gap-2 transition-all active:scale-95" data-path="my-availability" href="#">
+<span class="material-symbols-outlined text-[18px] text-primary">edit_calendar</span>
+<span class="">แก้ไขเวลาว่างของฉัน</span>
+</a>
+
+</div>
+<!-- Right side: Match Search Button -->
+<div class="flex flex-col items-center sm:items-end text-center sm:text-right w-full sm:w-auto">
+<button class="w-full sm:w-auto px-7 py-3 rounded-xl font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-2 transition-all bg-surface-dim text-on-surface-variant/50 cursor-not-allowed shadow-none" disabled="" id="btn-search-match" type="button">
+<span class="material-symbols-outlined text-[20px]">auto_awesome</span>
+<span class="">ค้นหาเวลาที่ตรงกัน</span>
+</button>
+
+</div>
+</section>
+<!-- Bottom Helper Card / Availability Matrix Insight -->
+
+</div>
+</div>
+<script>
+  (function initGroupDetailInteractive() {
+    const btnMenu = document.getElementById('menu-toggle-btn');
+    const dropdown = document.getElementById('group-dropdown-menu');
+    const btnPartial = document.getElementById('btn-state-partial');
+    const btnReady = document.getElementById('btn-state-ready');
+    const progressBar = document.getElementById('progress-bar-fill');
+    const counterBadge = document.getElementById('counter-badge');
+    const statusPillMsg = document.getElementById('status-pill-message');
+    const member4Avatar = document.getElementById('member-4-avatar');
+    const member4Status = document.getElementById('member-4-status');
+    const btnSearch = document.getElementById('btn-search-match');
+    const matchHint = document.getElementById('match-button-hint');
+
+    // Toggle menu
+    if (btnMenu && dropdown) {
+      btnMenu.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle('hidden');
+      });
+      document.addEventListener('click', (e) => {
+        if (!dropdown.contains(e.target) && e.target !== btnMenu) {
+          dropdown.classList.add('hidden');
+        }
+      });
+      // default hide menu on load
+      dropdown.classList.add('hidden');
+    }
+
+    // Toggle states for demonstration
+    function setSimulationState(ready) {
+      if (ready) {
+        // Active Ready 4/4 State
+        btnReady.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btnReady.classList.remove('text-on-surface-variant');
+        btnPartial.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btnPartial.classList.add('text-on-surface-variant');
+
+        progressBar.style.width = '100%';
+        progressBar.classList.remove('bg-primary-container');
+        progressBar.classList.add('bg-tertiary-container');
+
+        counterBadge.textContent = '4/4 คนกรอกครบแล้ว';
+        counterBadge.className = 'font-label-code text-label-code font-bold px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed';
+
+        statusPillMsg.innerHTML = '<span class="w-2 h-2 rounded-full bg-tertiary"></span><span class="font-medium text-tertiary">🎉 สมาชิกกรอกเวลาว่างครบทุกคนแล้ว</span><span class="hidden md:inline text-on-surface-variant">• สามารถประมวลผลช่วงเวลาที่เหมาะสมได้ทันที</span>';
+
+        member4Avatar.className = 'w-11 h-11 rounded-full bg-tertiary-fixed text-on-tertiary-fixed flex items-center justify-center font-display text-headline-sm font-bold shrink-0';
+        member4Status.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-tertiary-fixed/40 text-tertiary font-body-sm text-body-sm font-medium';
+        member4Status.innerHTML = '<span class="material-symbols-outlined text-[16px]">check_circle</span><span>กรอกเวลาว่างแล้ว</span>';
+
+        btnSearch.disabled = false;
+        btnSearch.className = 'w-full sm:w-auto px-7 py-3 rounded-xl font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-2 transition-all bg-primary hover:bg-primary-container text-on-primary shadow-md active:scale-95 cursor-pointer';
+        matchHint.textContent = 'พร้อมประมวลผลแล้ว! กดเพื่อดูตารางเวลาที่ดีที่สุดสำหรับ 4 คน';
+        matchHint.className = 'font-body-sm text-body-sm text-tertiary font-medium mt-2 max-w-xs';
+      } else {
+        // Partial 3/4 State
+        btnPartial.classList.add('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btnPartial.classList.remove('text-on-surface-variant');
+        btnReady.classList.remove('bg-surface-container-lowest', 'text-primary', 'shadow-sm');
+        btnReady.classList.add('text-on-surface-variant');
+
+        progressBar.style.width = '75%';
+        progressBar.classList.remove('bg-tertiary-container');
+        progressBar.classList.add('bg-primary-container');
+
+        counterBadge.textContent = '3/4 คนกรอกแล้ว';
+        counterBadge.className = 'font-label-code text-label-code font-bold px-3 py-1 rounded-full bg-primary-fixed/50 text-on-primary-fixed-variant';
+
+        statusPillMsg.innerHTML = '<span class="w-2 h-2 rounded-full bg-secondary-container"></span><span class="font-medium text-secondary">⏳ รอสมาชิกอีก 1 คนกรอกเวลาว่าง</span><span class="hidden md:inline text-on-surface-variant">• เมื่อครบ 4 คน ระบบจะปลดล็อกการจับคู่เวลา</span>';
+
+        member4Avatar.className = 'w-11 h-11 rounded-full bg-secondary-fixed text-on-secondary-fixed flex items-center justify-center font-display text-headline-sm font-bold shrink-0';
+        member4Status.className = 'inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container/40 text-on-secondary-container font-body-sm text-body-sm font-medium';
+        member4Status.innerHTML = '<span class="material-symbols-outlined text-[16px]">schedule</span><span>รอกรอกเวลาว่าง</span>';
+
+        btnSearch.disabled = true;
+        btnSearch.className = 'w-full sm:w-auto px-7 py-3 rounded-xl font-headline-sm text-headline-sm font-semibold flex items-center justify-center gap-2 transition-all bg-surface-dim text-on-surface-variant/50 cursor-not-allowed shadow-none';
+        matchHint.textContent = 'เมื่อสมาชิกทุกคนกรอกเวลาว่างครบ 4 คน ระบบจะเปิดให้กดค้นหาเวลาทันที';
+        matchHint.className = 'font-body-sm text-body-sm text-on-surface-variant mt-2 max-w-xs';
+      }
+    }
+
+    if (btnPartial && btnReady) {
+      btnPartial.addEventListener('click', () => setSimulationState(false));
+      btnReady.addEventListener('click', () => setSimulationState(true));
+    }
+  })();
+</script></div></main><footer class="w-full bg-surface-container-low shadow-[0_-1px_6px_rgba(0,0,0,0.02)] mt-space-xl"><div class="max-w-7xl mx-auto px-gutter lg:px-gutter-lg py-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md text-center md:text-left"><div class="flex flex-col gap-space-xs"><p class="font-body-sm text-body-sm text-on-surface-variant font-medium">TimeMatch • วิทยาลัยการคอมพิวเตอร์ (College of Computing) • มหาวิทยาลัยขอนแก่น</p><p class="font-label-tag text-label-tag text-on-surface-variant">แพลตฟอร์มจัดตารางนัดหมายกลุ่มโครงงานและกิจกรรมวิชาการ</p></div><div class="flex items-center gap-space-lg font-body-sm text-body-sm text-on-surface-variant"><a class="hover:text-primary transition-colors" data-path="help-support" href="#">ศูนย์ช่วยเหลือ</a><a class="hover:text-primary transition-colors" data-path="terms-conditions" href="#">เงื่อนไขการใช้งาน</a><a class="hover:text-primary transition-colors" data-path="privacy-policy" href="#">นโยบายความเป็นส่วนตัว</a></div></div></footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    // สีปกติ
+    const inactiveClasses = [
+        "text-[#607D8B]",
+        "hover:text-[#4F9D9D]"
+    ];
+
+    // สีตอนเลือก
+    const activeClasses = [
+        "bg-[#4F9D9D]",
+        "text-white",
+        "font-semibold"
+    ];
+
+    function setActiveNav(activeLink) {
+
+        navLinks.forEach(link => {
+            // ล้าง active
+            link.classList.remove(...activeClasses);
+
+            // ใส่สีปกติ
+            link.classList.add(...inactiveClasses);
+        });
+
+        // ล้างสีปกติจากปุ่มที่เลือก
+        activeLink.classList.remove(...inactiveClasses);
+
+        // ทำเป็นสีเขียว
+        activeLink.classList.add(...activeClasses);
+    }
+
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            setActiveNav(this);
+        });
+    });
+
+
+    // ===== ตรวจว่าตอนนี้อยู่หน้าอะไร =====
+    const currentPage = window.location.pathname.split("/").pop();
+
+    if (currentPage === "home.html") {
+        const home = document.querySelector('[data-nav="home"]');
+        if (home) setActiveNav(home);
+    }
+
+    if (currentPage === "my-groups.html") {
+        const groups = document.querySelector('[data-nav="my-groups"]');
+        if (groups) setActiveNav(groups);
+    }
+
+});
+</script>
+
+
+
+</body></html>

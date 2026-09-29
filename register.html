@@ -1,0 +1,255 @@
+<!DOCTYPE html><html lang="th">
+<head>
+<meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_blank" name="shell-type"><title>TimeMatch - Sign In / Authentication</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@600;700&family=Prompt:wght@300;400;500;600&display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#09696a", "on-tertiary-fixed-variant": "#00522a", "on-secondary-fixed": "#001d35", "tertiary-fixed": "#a9f3bc", "secondary-fixed-dim": "#9ecafe", "secondary-container": "#9ecafe", "error-container": "#ffdad6", "on-background": "#111d23", "surface-container": "#e3f0f8", "outline-variant": "#bec9c8", "tertiary-fixed-dim": "#8ed7a1", "on-secondary-container": "#255582", "inverse-surface": "#263238", "on-primary-fixed-variant": "#004f50", "surface-container-lowest": "#ffffff", "surface-variant": "#d7e4ec", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "tertiary-container": "#3c8254", "surface-bright": "#f4faff", "background": "#f4faff", "surface-container-high": "#ddeaf2", "on-secondary-fixed-variant": "#144976", "surface-container-highest": "#d7e4ec", "surface-tint": "#09696a", "inverse-primary": "#86d4d3", "primary-fixed-dim": "#86d4d3", "on-surface-variant": "#3f4948", "on-primary": "#ffffff", "on-primary-container": "#003030", "tertiary": "#20693e", "surface-dim": "#cfdce4", "surface-container-low": "#e9f6fd", "on-error": "#ffffff", "on-secondary": "#ffffff", "on-surface": "#111d23", "surface": "#f4faff", "secondary": "#33618f", "on-tertiary-container": "#f6fff4", "secondary-fixed": "#d1e4ff", "on-tertiary-fixed": "#00210e", "error": "#ba1a1a", "primary-fixed": "#a2f0f0", "outline": "#6f7979", "on-primary-fixed": "#002020", "inverse-on-surface": "#e6f3fb", "primary-container": "#4f9d9d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-lg": "2rem", "space-xs": "0.25rem", "gutter-md": "1.5rem", "margin-md": "2rem", "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem", "margin": "1rem", "gutter": "1rem", "margin-lg": "3rem", "space-xl": "2.5rem" }, "fontFamily": { "headline-md": ["Plus Jakarta Sans"], "body-md": ["Inter"], "body-sm": ["Inter"], "label-code": ["JetBrains Mono"], "label-tag": ["Inter"], "display-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"] }, "fontSize": { "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "0em", "fontWeight": "600" }], "body-md": ["0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "0em", "fontWeight": "400" }], "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-code": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "0em", "fontWeight": "500" }], "label-tag": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-mobile": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-sm": ["1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "0em", "fontWeight": "600" }], "display": ["3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["1rem", { "lineHeight": "1.625rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg-mobile": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script></head>
+<body class="bg-background font-body-md text-on-surface antialiased min-h-screen">
+
+    <main class="min-h-screen w-full flex items-center justify-center px-4 py-8">
+
+        <div class="w-full flex justify-center">
+
+            <div class="relative w-full max-w-4xl bg-surface-container-lowest rounded-xl shadow-xl overflow-hidden">
+<!-- Top Decorative Line / Accent Ribbon -->
+<div class="h-1.5 w-full bg-gradient-to-r from-primary via-primary-container to-secondary"></div>
+<div class="p-space-md sm:p-space-lg md:p-space-xl">
+<!-- Card Header -->
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-md pb-space-lg border-b border-surface-variant/40">
+<div class="flex items-center gap-space-md">
+<div class="w-14 h-14 rounded-lg bg-surface-container-low flex items-center justify-center p-1.5 shadow-sm">
+<img alt="TimeMatch Logo" class="w-full h-full object-contain rounded-md" src="images/logo.png">
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="text-headline-lg font-headline-lg text-on-surface tracking-tight">สร้างบัญชี</span>
+
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant">สมัครสมาชิกเพื่อเริ่มค้นหาเวลาว่างกับเพื่อนในกลุ่ม</p>
+</div>
+</div>
+<!-- Academic Context Badge -->
+<div class="hidden sm:flex flex-col items-end text-right">
+
+
+</div>
+</div>
+<!-- Registration Form Body -->
+<form class="mt-space-lg space-y-space-lg" id="registerForm" onsubmit="event.preventDefault(); showSuccessToast();">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- Column 1: Core Credentials (7 cols) -->
+<div class="lg:col-span-7 space-y-space-md">
+<div class="text-headline-sm font-headline-sm text-primary flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary">person</span>
+<span class="">ข้อมูลประจำตัวและบัญชี</span>
+</div>
+<!-- Full Name -->
+<div class="space-y-1">
+<label class="block text-body-md font-body-md font-semibold text-on-surface" for="fullName">ชื่อ-นามสกุล <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">badge</span>
+<input class="w-full pl-10 pr-space-md py-2.5 text-body-md font-body-md text-on-surface bg-surface-container-lowest rounded-lg border border-outline-variant focus:border-primary focus:outline-none transition-all shadow-sm" id="fullName" placeholder="เช่น ชิดชนก ชนะพา" required="" type="text">
+</div>
+</div>
+<!-- Student ID & Email Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div class="space-y-1">
+<label class="block text-body-md font-body-md font-semibold text-on-surface" for="studentId">รหัสนักศึกษา <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">pin</span>
+<input class="w-full pl-10 pr-space-md py-2.5 text-body-md font-body-md font-label-code text-on-surface bg-surface-container-lowest rounded-lg border border-outline-variant focus:border-primary focus:outline-none transition-all shadow-sm" id="studentId" maxlength="11" placeholder="673780033-9" required="" type="text">
+</div>
+<p class="text-body-sm font-body-sm text-outline">รหัสประจำตัวนักศึกษา 10-11 หลัก</p>
+</div>
+<div class="space-y-1">
+<label class="block text-body-md font-body-md font-semibold text-on-surface" for="email">อีเมล <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">mail</span>
+<input class="w-full pl-10 pr-space-md py-2.5 text-body-md font-body-md text-on-surface bg-surface-container-lowest rounded-lg border border-outline-variant focus:border-primary focus:outline-none transition-all shadow-sm" id="email" placeholder="student@kkumail.com" required="" type="email">
+</div>
+<p class="text-body-sm font-body-sm text-outline">ใช้อีเมลเพื่อยืนยันสิทธิ์นักศึกษา</p>
+</div>
+</div>
+<!-- Passwords Row -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<!-- Password -->
+<div class="space-y-1">
+<label class="block text-body-md font-body-md font-semibold text-on-surface" for="password">รหัสผ่าน <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">lock</span>
+<input class="w-full pl-10 pr-10 py-2.5 text-body-md font-body-md text-on-surface bg-surface-container-lowest rounded-lg border border-outline-variant focus:border-primary focus:outline-none transition-all shadow-sm" id="password" oninput="validatePasswords()" placeholder="อย่างน้อย 8 ตัวอักษร" required="" type="password">
+<button aria-label="แสดงหรือซ่อนรหัสผ่าน" class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface p-1 flex items-center justify-center" onclick="togglePasswordVisibility('password', 'eyeIcon1')" type="button">
+<span class="material-symbols-outlined text-lg" id="eyeIcon1">visibility</span>
+</button>
+</div>
+</div>
+<!-- Confirm Password -->
+<div class="space-y-1">
+<label class="block text-body-md font-body-md font-semibold text-on-surface" for="confirmPassword">ยืนยันรหัสผ่าน <span class="text-error">*</span></label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">lock_reset</span>
+<input class="w-full pl-10 pr-10 py-2.5 text-body-md font-body-md text-on-surface bg-surface-container-lowest rounded-lg border border-outline-variant focus:border-primary focus:outline-none transition-all shadow-sm" id="confirmPassword" oninput="validatePasswords()" placeholder="กรอกรหัสผ่านอีกครั้ง" required="" type="password">
+<button aria-label="แสดงหรือซ่อนรหัสผ่าน" class="absolute right-3 top-1/2 -translate-y-1/2 text-outline hover:text-on-surface p-1 flex items-center justify-center" onclick="togglePasswordVisibility('confirmPassword', 'eyeIcon2')" type="button">
+<span class="material-symbols-outlined text-lg" id="eyeIcon2">visibility</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Column 2: Academic Program & Security Checklist (5 cols) -->
+<div class="lg:col-span-5 space-y-space-md flex flex-col justify-between">
+
+<!-- Password Requirements & Academic Helper Card -->
+<div class="mt-space-md p-space-md rounded-xl bg-surface-container-low text-on-surface space-y-2.5">
+<div class="flex items-center gap-1.5 text-label-tag font-label-tag text-primary uppercase">
+<span class="material-symbols-outlined text-sm">verified_user</span>
+<span class="">เกณฑ์ความปลอดภัยรหัสผ่าน</span>
+</div>
+<ul class="text-body-sm font-body-sm space-y-1">
+<li class="flex items-center gap-2 text-outline transition-colors" id="rule-len">
+<span class="material-symbols-outlined text-sm" id="icon-len">radio_button_unchecked</span>
+<span class="">ความยาวอย่างน้อย 8 ตัวอักษร</span>
+</li>
+<li class="flex items-center gap-2 text-outline transition-colors" id="rule-char">
+<span class="material-symbols-outlined text-sm" id="icon-char">radio_button_unchecked</span>
+<span class="">ตัวอักษรภาษาอังกฤษและตัวเลข</span>
+</li>
+<li class="flex items-center gap-2 text-outline transition-colors" id="rule-match">
+<span class="material-symbols-outlined text-sm" id="icon-match">radio_button_unchecked</span>
+<span class="">รหัสผ่านทั้งสองช่องตรงกัน</span>
+</li>
+</ul>
+<div class="pt-2 border-t border-surface-variant/40 flex items-start gap-1.5 text-body-sm font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-xs text-primary mt-0.5">info</span>
+<span class="text-[11px] leading-tight">ข้อมูลนี้ใช้เพื่อการประสานงานและจับคู่เวลาว่างในวิชาเรียนเท่านั้น</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Submit & Navigation Action Bar -->
+<div class="pt-space-lg border-t border-surface-variant/40 flex flex-col sm:flex-row items-center justify-between gap-space-md">
+<div class="text-body-md font-body-md text-on-surface-variant order-2 sm:order-1">
+<span class="">มีบัญชีอยู่แล้ว?</span>
+<a class="text-primary font-semibold hover:underline ml-1" href="login.html">เข้าสู่ระบบ</a>
+</div>
+<div class="w-full sm:w-auto flex items-center justify-end gap-space-md order-1 sm:order-2">
+<button class="w-full sm:w-auto px-space-xl py-3 rounded-xl bg-primary-container text-on-primary font-headline-sm text-headline-sm hover:opacity-90 active:scale-95 transition-all shadow-md flex items-center justify-center gap-space-xs" type="submit">
+<span class="">สมัครสมาชิก</span>
+<span class="material-symbols-outlined text-lg">arrow_forward</span>
+</button>
+</div>
+</div>
+</form>
+</div>
+<!-- Active Collaborator Hint Footer -->
+<div class="bg-surface-container px-space-lg py-space-sm flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<div class="flex items-center gap-space-xs">
+<span class="w-2 h-2 rounded-full bg-tertiary-container animate-pulse"></span>
+<span class="">ระบบพร้อมให้บริการสำหรับนักศึกษา มข. ภาคการศึกษา 2/2567</span>
+</div>
+<div class="hidden md:flex items-center gap-space-sm text-label-code font-label-code text-xs text-outline">
+
+
+
+</div>
+</div>
+</div>
+<!-- Interactive Success Banner / Toast Preview -->
+<div class="fixed bottom-6 right-6 max-w-md bg-surface-container-lowest text-on-surface p-space-md rounded-xl shadow-2xl border-l-4 border-tertiary-container translate-y-24 opacity-0 pointer-events-none transition-all duration-300 z-50" id="successToast">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed-variant shrink-0">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+</div>
+<div class="flex-1">
+<p class="font-headline-sm text-headline-sm font-semibold text-on-surface">สร้างบัญชีสำเร็จ!</p>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">ระบบกำลังนำคุณเข้าสู่ระบบตารางเวลาเรียน...</p>
+</div>
+<button class="text-outline hover:text-on-surface" onclick="hideSuccessToast()">
+<span class="material-symbols-outlined text-sm">close</span>
+</button>
+</div>
+</div>
+</div>
+<script>
+  function togglePasswordVisibility(inputId, iconId) {
+    const input = document.getElementById(inputId);
+    const icon = document.getElementById(iconId);
+    if (!input || !icon) return;
+    if (input.type === 'password') {
+      input.type = 'text';
+      icon.textContent = 'visibility_off';
+    } else {
+      input.type = 'password';
+      icon.textContent = 'visibility';
+    }
+  }
+
+  function selectYear(button, yearVal) {
+    const container = document.getElementById('yearSelector');
+    if (!container) return;
+    const chips = container.querySelectorAll('.year-chip');
+    chips.forEach(chip => {
+      chip.className = 'year-chip px-3 py-1.5 rounded-lg text-body-sm font-body-sm font-medium transition-all bg-surface-container-high text-on-surface-variant hover:bg-surface-variant';
+    });
+    button.className = 'year-chip active px-3 py-1.5 rounded-lg text-body-sm font-body-sm font-semibold transition-all bg-primary text-on-primary shadow-sm';
+  }
+
+  function validatePasswords() {
+    const pwd = document.getElementById('password')?.value || '';
+    const confirmPwd = document.getElementById('confirmPassword')?.value || '';
+
+    // Rule 1: At least 8 chars
+    const ruleLen = document.getElementById('rule-len');
+    const iconLen = document.getElementById('icon-len');
+    if (pwd.length >= 8) {
+      ruleLen.className = 'flex items-center gap-2 text-tertiary font-medium';
+      iconLen.textContent = 'check_circle';
+    } else {
+      ruleLen.className = 'flex items-center gap-2 text-outline';
+      iconLen.textContent = 'radio_button_unchecked';
+    }
+
+    // Rule 2: Letters & Numbers
+    const hasAlpha = /[a-zA-Z]/.test(pwd);
+    const hasNum = /[0-9]/.test(pwd);
+    const ruleChar = document.getElementById('rule-char');
+    const iconChar = document.getElementById('icon-char');
+    if (hasAlpha && hasNum) {
+      ruleChar.className = 'flex items-center gap-2 text-tertiary font-medium';
+      iconChar.textContent = 'check_circle';
+    } else {
+      ruleChar.className = 'flex items-center gap-2 text-outline';
+      iconChar.textContent = 'radio_button_unchecked';
+    }
+
+    // Rule 3: Passwords match
+    const ruleMatch = document.getElementById('rule-match');
+    const iconMatch = document.getElementById('icon-match');
+    if (pwd && confirmPwd && pwd === confirmPwd) {
+      ruleMatch.className = 'flex items-center gap-2 text-tertiary font-medium';
+      iconMatch.textContent = 'check_circle';
+    } else {
+      ruleMatch.className = 'flex items-center gap-2 text-outline';
+      iconMatch.textContent = 'radio_button_unchecked';
+    }
+  }
+
+  function showSuccessToast() {
+    const toast = document.getElementById('successToast');
+    if (!toast) return;
+    toast.classList.remove('translate-y-24', 'opacity-0', 'pointer-events-none');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    setTimeout(() => {
+      hideSuccessToast();
+    }, 4500);
+  }
+
+  function hideSuccessToast() {
+    const toast = document.getElementById('successToast');
+    if (!toast) return;
+    toast.classList.add('translate-y-24', 'opacity-0', 'pointer-events-none');
+    toast.classList.remove('translate-y-0', 'opacity-100');
+  }
+</script></main>
+
+
+
+</body></html>

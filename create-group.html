@@ -1,0 +1,514 @@
+<!DOCTYPE html><html lang="th" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"surface-container-lowest":"#ffffff","outline-variant":"#bec9c8","surface-variant":"#d7e4ec","on-secondary-fixed":"#001d35","secondary-fixed-dim":"#9ecafe","secondary-container":"#9ecafe","surface-container":"#e3f0f8","on-background":"#111d23","tertiary-container":"#3c8254","primary-fixed-dim":"#86d4d3","secondary":"#33618f","inverse-surface":"#263238","on-surface":"#111d23","surface-dim":"#cfdce4","surface-container-low":"#e9f6fd","surface-tint":"#09696a","error":"#ba1a1a","on-secondary-container":"#255582","on-primary-fixed-variant":"#004f50","primary-fixed":"#a2f0f0","primary":"#09696a","tertiary-fixed-dim":"#8ed7a1","on-tertiary":"#ffffff","on-primary-container":"#003030","on-tertiary-fixed":"#00210e","tertiary-fixed":"#a9f3bc","surface-container-high":"#ddeaf2","on-tertiary-container":"#f6fff4","error-container":"#ffdad6","secondary-fixed":"#d1e4ff","background":"#f4faff","surface-bright":"#f4faff","on-primary-fixed":"#002020","on-surface-variant":"#3f4948","on-error":"#ffffff","tertiary":"#20693e","on-secondary":"#ffffff","inverse-primary":"#86d4d3","surface-container-highest":"#d7e4ec","outline":"#6f7979","inverse-on-surface":"#e6f3fb","on-secondary-fixed-variant":"#144976","surface":"#f4faff","on-primary":"#ffffff","primary-container":"#4f9d9d","on-tertiary-fixed-variant":"#00522a","on-error-container":"#93000a"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"gutter":"1rem","space-sm":"0.5rem","space-lg":"1.5rem","space-xl":"2.5rem","margin-md":"2rem","gutter-lg":"2rem","margin-lg":"3rem","gutter-md":"1.5rem","space-md":"1rem","space-xs":"0.25rem","margin":"1rem"},fontFamily:{"body-lg":["Inter"],"label-code":["JetBrains Mono"],"headline-lg-mobile":["Plus Jakarta Sans"],"display-mobile":["Plus Jakarta Sans"],"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"body-md":["Inter"],"headline-md":["Plus Jakarta Sans"],"display":["Plus Jakarta Sans"],"label-tag":["Inter"],"body-sm":["Inter"]},fontSize:{"body-lg":["1rem",{"lineHeight":"1.625rem","letterSpacing":"0em","fontWeight":"400"}],"label-code":["0.8125rem",{"lineHeight":"1.25rem","letterSpacing":"0em","fontWeight":"500"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.01em","fontWeight":"600"}],"display-mobile":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.01em","fontWeight":"700"}],"headline-sm":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"600"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"body-md":["0.875rem",{"lineHeight":"1.375rem","letterSpacing":"0em","fontWeight":"400"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"0em","fontWeight":"600"}],"display":["3rem",{"lineHeight":"3.5rem","letterSpacing":"-0.02em","fontWeight":"700"}],"label-tag":["0.6875rem",{"lineHeight":"1rem","letterSpacing":"0.04em","fontWeight":"600"}],"body-sm":["0.75rem",{"lineHeight":"1.125rem","letterSpacing":"0.01em","fontWeight":"400"}]}}}};</script></head><body class="bg-surface font-body-md text-on-surface antialiased">
+  
+  
+  
+<!-- ================= NAVBAR ================= -->
+<header class="fixed top-0 left-0 w-full z-50
+               bg-surface/95 backdrop-blur-xl
+               border-b border-outline-variant/30
+               shadow-[0_1px_8px_rgba(38,50,56,0.04)]">
+
+  <div class="h-16 w-full px-5
+              flex items-center justify-between">
+
+    <!-- LEFT : LOGO -->
+    <a href="index.html"
+       class="flex items-center gap-2 shrink-0">
+
+      <img
+        alt="TimeMatch Logo"
+        class="h-8 w-8 object-contain"
+        src="images/logo.png">
+      <span class="font-headline-sm text-headline-sm
+                   text-on-surface font-bold">
+        TimeMatch
+      </span>
+    </a>
+
+
+    <!-- CENTER : MENU -->
+   <!-- CENTER : MENU -->
+<nav class="hidden md:flex items-center gap-3
+            absolute left-1/2 -translate-x-1/2">
+
+    <a href="home.html"
+       class="nav-link px-5 py-2 rounded-full transition-colors"
+       data-nav="home">
+        หน้าหลัก
+    </a>
+
+    <a href="my-groups.html"
+       class="nav-link px-5 py-2 rounded-full transition-colors"
+       data-nav="my-groups">
+        กลุ่มของฉัน
+    </a>
+
+    <a href="#"
+       class="nav-link px-5 py-2 rounded-full transition-colors"
+       data-nav="how-it-works">
+        วิธีใช้งาน
+    </a>
+
+</nav>
+
+    <!-- RIGHT : NOTIFICATION + PROFILE -->
+    <div class="flex items-center gap-4 shrink-0">
+
+      <!-- NOTIFICATION -->
+      <button
+        type="button"
+        aria-label="Notifications"
+        class="relative w-10 h-10
+               flex items-center justify-center
+               rounded-full
+               text-on-surface-variant
+               hover:text-on-surface
+               hover:bg-surface-container
+               transition-colors">
+
+        <span class="material-symbols-outlined text-[22px]">
+          notifications
+        </span>
+
+        <!-- Notification Dot -->
+        <span class="absolute top-1.5 right-1.5
+                     w-2 h-2 rounded-full
+                     bg-error
+                     ring-2 ring-surface">
+        </span>
+
+      </button>
+
+
+      <!-- PROFILE -->
+      <a href="profile.html"
+         class="flex items-center gap-2
+                px-2 py-1.5 rounded-xl
+                hover:bg-surface-container
+                transition-colors">
+
+        <!-- Profile Image -->
+        <img
+          alt="Profile"
+          class="w-9 h-9 rounded-full object-cover
+                 ring-2 ring-surface-container-high"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1XlSnEB9jG8W6hzP2SDsNo5fMsYan7ciLYMAMFtKI47o6bFNHpvRFvXIz3fUIDOAXBNUWyZBXDD-z2wYdi95qm7KniOrn1pM6FFJJGewawlf-GEnHOmTvwyapRy_IflwSoNDLxys_kvaXeMwTvsN4xCRucsaYjcUeEW3IBJDU450zXyM873CkE084R6Y1-sNAj3oEQardVcCoZiZpMvIViliAeFjocmYk2x8tpkxzblSwPlVpZxOwoeRsyT">
+
+        <!-- Profile Information -->
+        <div class="hidden sm:flex flex-col text-left">
+
+          <span class="font-body-md text-body-md
+                       text-on-surface font-semibold
+                       leading-tight">
+            Chidchanok P.
+          </span>
+
+          <span class="font-label-tag text-label-tag
+                       text-on-surface-variant
+                       leading-tight">
+            CS Student
+          </span>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+<!-- =============== END NAVBAR =============== -->
+
+<body class="bg-brand-bg font-sans min-h-screen flex flex-col antialiased text-brand-text">
+<!-- Unified Top Navigation Bar -->
+<header class="fixed top-0 inset-x-0 z-40 bg-white/95 backdrop-blur-md border-b border-brand-border shadow-card">
+<div class="h-16 w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 flex items-center justify-between gap-4">
+<div class="flex items-center gap-6 lg:gap-8">
+<a class="flex items-center gap-2 group focus:outline-none" data-path="home" href="#">
+<div class="w-9 h-9 rounded-xl bg-brand-teal flex items-center justify-center text-white shadow-sm font-display font-bold text-lg">
+          TM
+        </div>
+<div class="flex items-center gap-1.5">
+<span class="font-display font-bold text-xl text-brand-text tracking-tight group-hover:text-brand-teal transition-colors">TimeMatch</span>
+</div>
+</a>
+<nav class="hidden lg:flex items-center gap-1"><a class="px-3 py-1.5 rounded-lg text-sm font-medium text-brand-muted hover:text-brand-text hover:bg-brand-bg transition-colors" data-path="home" href="#">หน้าหลัก</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-medium text-brand-teal-dark bg-brand-teal-light font-semibold transition-colors" data-path="my-groups" href="#">กลุ่มของฉัน</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-medium text-brand-muted hover:text-brand-text hover:bg-brand-bg transition-colors" data-path="guide" href="#">วิธีใช้งาน</a></nav>
+</div>
+<div class="flex items-center gap-3">
+<button aria-label="Notifications" class="relative p-2 text-brand-muted hover:text-brand-text hover:bg-brand-bg rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-2xl">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-brand-error ring-2 ring-white"></span>
+</button>
+<div class="h-6 w-px bg-brand-border"></div>
+<div class="flex items-center gap-2 pl-1 py-1 rounded-lg hover:bg-brand-bg cursor-pointer transition-colors">
+<img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-brand-teal/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqgSZrPrmthM_yNn9ZeDivP8p9aqewa0eq2TtvSG0UzqK8G4Zh4oxoeQlpJ0Q0NEZZLXV9omAx-eIbL_P35eHL2M1kXShSogByYMGJOAKgSQniO1RhXno_F5IWqFKSIdVOGa-PQNbWNDyzL7DOG05EUmkvBkCjVqadx0Gx8Gi1bc17A5Tr_INcf3vJ_TmSq0sBTY_yTINWxoyxG0_ons0AcH_UH0KsGv6K6w7WS6K-HCloSULavEp1DQ">
+<div class="hidden md:flex flex-col text-left">
+<span class="text-xs font-semibold text-brand-text leading-tight">Chidchanok P.</span>
+<span class="text-[11px] text-brand-muted leading-tight">Student CS</span>
+</div>
+<span class="material-symbols-outlined text-brand-muted text-base">expand_more</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content: Single Column Focused Layout -->
+<main class="w-full flex-1 pt-24 pb-16"><div class="w-full max-w-4xl mx-auto px-4 sm:px-6">
+<!-- Back button & Header -->
+<div class="mb-6">
+
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+<div>
+<h1 class="font-display text-2xl md:text-3xl font-bold text-slate-800 tracking-tight flex items-center gap-2"><span class="w-10 h-10 rounded-2xl bg-teal-50 border border-teal-200/80 text-[#3f8585] flex items-center justify-center shrink-0 shadow-sm"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path><path d="M12 8v4m-2-2h4"></path></svg></span><span class="">สร้างกลุ่มใหม่</span></h1>
+<p class="text-sm text-slate-500 mt-1">
+          สร้างกลุ่มและกำหนดช่วงเวลาสำหรับค้นหาเวลาว่างที่ตรงกัน
+        </p>
+</div>
+</div>
+</div>
+<!-- Single Cohesive Card Layout -->
+<form class="bg-white rounded-3xl border border-slate-100 shadow-sm p-6 sm:p-10 flex flex-col" id="createGroupForm" onsubmit="event.preventDefault(); submitCreateGroup();">
+<!-- SECTION 1: ข้อมูลกลุ่ม -->
+<section class="flex flex-col gap-5 pb-8">
+<div class="flex items-center gap-2.5"><span class="w-7 h-7 rounded-full bg-[#E9F5F5] text-[#3f8585] font-display text-sm font-bold flex items-center justify-center shadow-xs">1</span><div class="flex items-center gap-1.5"><svg class="w-4 h-4 text-[#4f9d9d]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg><h2 class="font-display text-lg font-bold text-slate-800">ข้อมูลกลุ่ม</h2></div></div>
+<div class="flex flex-col gap-1.5">
+<label class="text-sm font-semibold text-slate-700 flex items-center gap-1" for="groupName">
+          ชื่อกลุ่ม <span class="text-rose-500 font-bold">*</span>
+</label>
+<div class="relative flex items-center"><svg class="w-4 h-4 absolute left-3.5 text-[#4f9d9d] pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg><input class="w-full h-11 pl-10 pr-4 rounded-xl bg-slate-50/50 border border-slate-200 text-slate-800 text-sm shadow-none outline-none transition-all placeholder:text-slate-400 focus:bg-white focus:border-[#4f9d9d] focus:ring-2 focus:ring-[#4f9d9d]/20 font-medium" id="groupName" placeholder="เช่น Software Design Project" required="" type="text" value=""></div>
+</div>
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<label class="text-sm font-semibold text-slate-700" for="groupDescription"><span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="21" y1="10" x2="3" y2="10"></line><line x1="21" y1="6" x2="3" y2="6"></line><line x1="21" y1="14" x2="3" y2="14"></line><line x1="18" y1="18" x2="3" y2="18"></line></svg>รายละเอียดกลุ่ม <span class="text-xs text-slate-400 font-normal">(ไม่บังคับ)</span></span></label>
+</div>
+<textarea class="w-full p-3.5 rounded-xl bg-slate-50/50 border border-slate-200 text-slate-800 text-sm shadow-none outline-none resize-none transition-all placeholder:text-slate-400 focus:bg-white focus:border-[#4f9d9d] focus:ring-2 focus:ring-[#4f9d9d]/20 leading-relaxed" id="groupDescription" placeholder="เช่น กลุ่มสำหรับทำโปรเจกต์วิชา Software Design นัดสรุปความคืบหน้ารายสัปดาห์" rows="3"></textarea>
+</div>
+</section>
+<!-- SECTION 2: ช่วงเวลาที่ต้องการนัดหมาย -->
+<section class="flex flex-col gap-6 py-8 border-t border-slate-100">
+<div>
+<div class="flex items-center gap-2.5"><span class="w-7 h-7 rounded-full bg-[#E9F5F5] text-[#3f8585] font-display text-sm font-bold flex items-center justify-center shadow-xs">2</span><div class="flex items-center gap-1.5"><svg class="w-4 h-4 text-[#4f9d9d]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg><h2 class="font-display text-lg font-bold text-slate-800">ช่วงเวลาที่ต้องการนัดหมาย</h2></div></div>
+<p class="text-xs text-slate-500 mt-1 pl-9">
+          กำหนดช่วงวันที่ที่ต้องการให้ระบบค้นหาเวลาว่างที่ตรงกัน
+        </p>
+</div>
+<!-- Date Range (2 Equal Columns) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-semibold text-slate-600 flex items-center gap-1" for="startDate">
+            วันที่เริ่มต้น <span class="text-rose-500 font-bold">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-[#4f9d9d] text-lg pointer-events-none">calendar_today</span>
+<input class="w-full h-11 pl-10 pr-4 rounded-xl bg-slate-50/50 border border-slate-200 text-slate-800 text-sm outline-none focus:bg-white focus:border-[#4f9d9d] focus:ring-2 focus:ring-[#4f9d9d]/20 transition-all font-medium" id="startDate" type="text" value="18 ต.ค. 2026">
+</div>
+</div>
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-semibold text-slate-600 flex items-center gap-1" for="endDate">
+            วันที่สิ้นสุด <span class="text-rose-500 font-bold">*</span>
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-[#4f9d9d] text-lg pointer-events-none">event_available</span>
+<input class="w-full h-11 pl-10 pr-4 rounded-xl bg-slate-50/50 border border-slate-200 text-slate-800 text-sm outline-none focus:bg-white focus:border-[#4f9d9d] focus:ring-2 focus:ring-[#4f9d9d]/20 transition-all font-medium" id="endDate" type="text" value="22 ต.ค. 2026">
+</div>
+</div>
+</div>
+<!-- Duration Selection -->
+<div class="flex flex-col gap-2.5 pt-1">
+<label class="text-xs font-semibold text-slate-600"><span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-[#4f9d9d]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>ต้องการเวลาต่อเนื่องอย่างน้อย</span></label>
+<div class="flex flex-wrap items-center gap-2" id="durationChipsGroup"><button class="duration-btn px-4 py-2 rounded-xl bg-slate-100/80 hover:bg-slate-200/70 text-slate-700 text-xs sm:text-sm font-medium border border-transparent transition-all flex items-center gap-1.5" onclick="selectDuration(this)" type="button"><svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 15 15"></polyline></svg>30 นาที</button><button class="duration-btn px-4 py-2 rounded-xl bg-slate-100/80 hover:bg-slate-200/70 text-slate-700 text-xs sm:text-sm font-medium border border-transparent transition-all flex items-center gap-1.5" onclick="selectDuration(this)" type="button"><svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 15 15"></polyline></svg>1 ชั่วโมง</button><button class="duration-btn px-4 py-2 rounded-xl bg-slate-100/80 hover:bg-slate-200/70 text-slate-700 text-xs sm:text-sm font-medium border border-transparent transition-all flex items-center gap-1.5" onclick="selectDuration(this)" type="button"><svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 15 15"></polyline></svg>1 ชั่วโมง 30 นาที</button><button class="duration-btn active-chip px-4 py-2 rounded-xl bg-[#4f9d9d] text-white text-xs sm:text-sm font-medium shadow-sm border border-[#4f9d9d] flex items-center gap-1.5 transition-all" onclick="selectDuration(this)" type="button"><svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="">2 ชั่วโมง</span></button><button class="duration-btn px-4 py-2 rounded-xl bg-slate-100/80 hover:bg-slate-200/70 text-slate-700 text-xs sm:text-sm font-medium border border-transparent transition-all flex items-center gap-1.5" onclick="selectDuration(this)" type="button"><svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>กำหนดเอง</button></div>
+</div>
+</section>
+<!-- SECTION 3: สมาชิกในกลุ่ม -->
+<section class="flex flex-col gap-6 py-8 border-t border-slate-100">
+<div>
+<div class="flex items-center gap-2.5"><span class="w-7 h-7 rounded-full bg-[#E9F5F5] text-[#3f8585] font-display text-sm font-bold flex items-center justify-center shadow-xs">3</span><div class="flex items-center gap-1.5"><svg class="w-4 h-4 text-[#4f9d9d]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg><h2 class="font-display text-lg font-bold text-slate-800">สมาชิกในกลุ่ม</h2></div></div>
+<p class="text-xs text-slate-500 mt-1 pl-9">
+          เพิ่มเพื่อนตอนนี้ หรือแชร์รหัสกลุ่มให้เพื่อนเข้าร่วมภายหลัง
+        </p>
+</div>
+<!-- Add Member Input Row -->
+<div class="flex flex-col gap-1.5">
+<label class="text-xs font-semibold text-slate-600" for="newMemberEmail">อีเมลนักศึกษา</label>
+<div class="flex flex-col sm:flex-row gap-2.5 items-stretch">
+<div class="relative flex-1 flex items-center">
+<span class="material-symbols-outlined absolute left-3.5 text-slate-400 text-lg pointer-events-none">mail</span>
+<input class="w-full h-11 pl-10 pr-4 rounded-xl bg-slate-50/50 border border-slate-200 text-slate-800 text-sm outline-none focus:bg-white focus:border-[#4f9d9d] focus:ring-2 focus:ring-[#4f9d9d]/20 transition-all placeholder:text-slate-400" id="newMemberEmail" placeholder="friend@kkumail.com" type="email">
+</div>
+<button class="h-11 px-5 rounded-xl bg-[#4f9d9d] hover:bg-[#3f8585] text-white text-sm font-medium inline-flex items-center justify-center gap-1.5 shadow-sm transition-all active:scale-95 shrink-0" onclick="addMember()" type="button">
+<span class="material-symbols-outlined text-base">add</span>
+<span class="">เพิ่ม</span>
+</button>
+</div>
+</div>
+<!-- Members List -->
+<div class="flex flex-col gap-2.5">
+<div class="flex items-center justify-between pb-1">
+<span class="text-xs font-semibold text-slate-600" id="memberCountLabel">สมาชิกในกลุ่ม (3 คน)</span>
+</div>
+<div class="flex flex-col gap-2" id="membersContainer">
+<!-- Member 1: Creator -->
+<div class="rounded-xl p-3 bg-slate-50/70 border border-slate-100 flex items-center justify-between gap-3">
+<div class="flex items-center gap-3 min-w-0">
+<img alt="Chidchanok" class="w-9 h-9 rounded-full object-cover shrink-0 ring-2 ring-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqgSZrPrmthM_yNn9ZeDivP8p9aqewa0eq2TtvSG0UzqK8G4Zh4oxoeQlpJ0Q0NEZZLXV9omAx-eIbL_P35eHL2M1kXShSogByYMGJOAKgSQniO1RhXno_F5IWqFKSIdVOGa-PQNbWNDyzL7DOG05EUmkvBkCjVqadx0Gx8Gi1bc17A5Tr_INcf3vJ_TmSq0sBTY_yTINWxoyxG0_ons0AcH_UH0KsGv6K6w7WS6K-HCloSULavEp1DQ">
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="text-sm font-semibold text-slate-800 truncate">ชิดชนก ชนะพา</span>
+<span class="bg-teal-50 text-[#3f8585] border border-teal-200 text-[11px] font-medium px-2 py-0.5 rounded-full inline-flex items-center gap-0.5">
+                    ผู้สร้างกลุ่ม
+                  </span>
+</div>
+<span class="text-xs text-slate-500 font-mono truncate">chidchanok.p@kkumail.com</span>
+</div>
+</div>
+<span class="text-slate-300 text-xs px-2 select-none" title="ผู้สร้างกลุ่ม">–</span>
+</div>
+<!-- Member 2: Yathicha -->
+<div class="member-row rounded-xl p-3 bg-slate-50/70 border border-slate-100 flex items-center justify-between gap-3 transition-colors hover:bg-slate-100/50">
+<div class="flex items-center gap-3 min-w-0">
+<div class="w-9 h-9 rounded-full bg-[#7BA7D9] text-white flex items-center justify-center font-display font-semibold text-xs shrink-0">
+                YS
+              </div>
+<div class="flex flex-col min-w-0">
+<span class="text-sm font-semibold text-slate-800 truncate">ญาทิชา สุวรรณรัตน์</span>
+<span class="text-xs text-slate-500 font-mono truncate">yathicha.s@kkumail.com</span>
+</div>
+</div>
+<button aria-label="ลบสมาชิก" class="w-8 h-8 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 flex items-center justify-center transition-colors" onclick="removeMemberRow(this)" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+<!-- Member 3: Narin -->
+<div class="member-row rounded-xl p-3 bg-slate-50/70 border border-slate-100 flex items-center justify-between gap-3 transition-colors hover:bg-slate-100/50">
+<div class="flex items-center gap-3 min-w-0">
+<img alt="Narin" class="w-9 h-9 rounded-full object-cover shrink-0 ring-2 ring-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhswqGLs2WEUw-Gab7qx6Qf0n-ERD34_S97DqgSdQZSV7XWU1MEfKSjOEP8smtRuDE-blOh9sYMALCWYHrCugSaRKebUTf7Ue0jgQgHlqutclVubEqCir7mL3A_tCJKjVsme9lld8abT7pWZK-hfckdFt0cyrCNn4FDuZF8BKJwipDvfFl7Uh04lbQ5W90VFnO054rvPSURTHvX-1LCrvgl_-l31hopKd83I59A15R-d6JUBVoFSdf3Q">
+<div class="flex flex-col min-w-0">
+<span class="text-sm font-semibold text-slate-800 truncate">นรินทร์วุฒิ ว่องไว</span>
+<span class="text-xs text-slate-500 font-mono truncate">narin.w@kkumail.com</span>
+</div>
+</div>
+<button aria-label="ลบสมาชิก" class="w-8 h-8 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 flex items-center justify-center transition-colors" onclick="removeMemberRow(this)" type="button">
+<span class="material-symbols-outlined text-lg">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Friendly Subtle Info Box -->
+
+</section>
+<!-- Bottom Action Bar -->
+<div class="flex items-center justify-end gap-3 pt-6 border-t border-slate-100"><a class="px-6 py-3 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 text-sm font-medium transition-colors inline-flex items-center justify-center gap-1.5" data-path="my-groups" href="#"><svg class="w-4 h-4 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg><span class="">ยกเลิก</span></a><button class="px-8 py-3 rounded-xl bg-[#4f9d9d] hover:bg-[#3f8585] text-white text-sm font-medium shadow-md shadow-teal-500/10 transition-all active:scale-95 flex items-center justify-center gap-2 group" type="submit"><svg class="w-4 h-4 text-white transition-transform group-hover:scale-110" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="">สร้างกลุ่ม</span></button></div>
+</form>
+</div></main>
+<!-- Interactive Centered Confirmation Modal & Success State View -->
+<!-- Floating Success Toast Notification -->
+<div class="fixed top-6 left-1/2 -translate-x-1/2 z-50 transform -translate-y-16 opacity-0 pointer-events-none transition-all duration-300 ease-out flex items-center gap-3 px-5 py-3.5 rounded-2xl bg-slate-900/90 text-white shadow-xl backdrop-blur-md text-sm font-medium" id="toastNotification">
+<span class="w-6 h-6 rounded-full bg-[#4f9d9d] text-white flex items-center justify-center text-xs">
+<span class="material-symbols-outlined text-sm">check</span>
+</span>
+<span class="">สร้างกลุ่มเรียบร้อยแล้ว 🎉 กำลังไปยังหน้ารายละเอียดกลุ่ม...</span>
+</div>
+<script>
+  // Duration Chip toggle
+  function selectDuration(btn) {
+    document.querySelectorAll('#durationChipsGroup .duration-btn').forEach(b => {
+      b.className = 'duration-btn px-4 py-2 rounded-xl bg-slate-100/80 hover:bg-slate-200/70 text-slate-700 text-xs sm:text-sm font-medium border border-transparent transition-all';
+      const check = b.querySelector('.material-symbols-outlined');
+      if (check) check.remove();
+    });
+    btn.className = 'duration-btn active-chip px-4 py-2 rounded-xl bg-[#4f9d9d] text-white text-xs sm:text-sm font-medium shadow-sm border border-[#4f9d9d] flex items-center gap-1.5 transition-all';
+    const icon = document.createElement('span');
+    icon.className = 'material-symbols-outlined text-base';
+    icon.textContent = 'check';
+    btn.prepend(icon);
+  }
+
+  // Remove Member Row
+  function removeMemberRow(button) {
+    const row = button.closest('.member-row');
+    if (row) {
+      row.remove();
+      updateMemberCount();
+    }
+  }
+
+  // Add Member
+  function addMember() {
+    const input = document.getElementById('newMemberEmail');
+    const email = input.value.trim();
+    if (!email) {
+      input.focus();
+      return;
+    }
+    const namePrefix = email.split('@')[0];
+    const initials = namePrefix.substring(0, 2).toUpperCase();
+    const container = document.getElementById('membersContainer');
+
+    const newRow = document.createElement('div');
+    newRow.className = 'member-row rounded-xl p-3 bg-slate-50/70 border border-slate-100 flex items-center justify-between gap-3 transition-colors hover:bg-slate-100/50';
+    newRow.innerHTML = `
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="w-9 h-9 rounded-full bg-[#4f9d9d] text-white flex items-center justify-center font-display font-semibold text-xs shrink-0">
+          ${initials}
+        </div>
+        <div class="flex flex-col min-w-0">
+          <span class="text-sm font-semibold text-slate-800 truncate">${namePrefix}</span>
+          <span class="text-xs text-slate-500 font-mono truncate">${email}</span>
+        </div>
+      </div>
+      <button type="button" onclick="removeMemberRow(this)" class="w-8 h-8 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 flex items-center justify-center transition-colors" aria-label="ลบสมาชิก">
+        <span class="material-symbols-outlined text-lg">close</span>
+      </button>
+    `;
+    container.appendChild(newRow);
+    input.value = '';
+    updateMemberCount();
+  }
+
+  function updateMemberCount() {
+    const count = document.querySelectorAll('#membersContainer > div').length;
+    const label = document.getElementById('memberCountLabel');
+    if (label) {
+      label.textContent = `สมาชิกในกลุ่ม (${count} คน)`;
+    }
+  }
+
+  // Submit & Show Toast
+  function submitCreateGroup() {
+    const toast = document.getElementById('toastNotification');
+    if (toast) {
+      toast.classList.remove('-translate-y-16', 'opacity-0', 'pointer-events-none');
+      toast.classList.add('translate-y-0', 'opacity-100');
+      setTimeout(() => {
+        toast.classList.add('-translate-y-16', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }, 3500);
+    }
+  }
+</script>
+<!-- Unified Footer -->
+<footer class="w-full bg-brand-card border-t border-brand-border mt-auto">
+<div class="w-full max-w-7xl mx-auto px-4 md:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4 text-brand-muted text-xs">
+<div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-3 text-center sm:text-left">
+<span class="font-display font-bold text-brand-text">TimeMatch </span>
+<span class="hidden sm:inline text-brand-border">|</span>
+<span class="">College of Computing, Department of Computer Science</span>
+</div>
+<div class="flex flex-wrap items-center justify-center gap-4">
+<a class="hover:text-brand-teal transition-colors" data-path="help" href="#">ศูนย์ช่วยเหลือ</a>
+<a class="hover:text-brand-teal transition-colors" data-path="privacy" href="#">นโยบายความเป็นส่วนตัว</a>
+<a class="hover:text-brand-teal transition-colors" data-path="terms" href="#">ข้อกำหนดการใช้งาน</a>
+<span class="text-brand-muted/70">© 2026 College of Computing. All rights reserved.</span>
+</div>
+</div>
+</footer>
+<!-- Interactive Scripts -->
+<script>
+  // Duration Chip Selection
+  document.querySelectorAll('.duration-chip').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.duration-chip').forEach(btn => {
+        btn.className = 'duration-chip px-4 py-2 rounded-xl bg-brand-bg hover:bg-slate-100 text-brand-text text-xs md:text-sm font-medium border border-brand-border transition-all';
+        const checkIcon = btn.querySelector('.material-symbols-outlined');
+        if (checkIcon) checkIcon.remove();
+      });
+      button.className = 'duration-chip px-4 py-2 rounded-xl bg-brand-teal text-white text-xs md:text-sm font-semibold flex items-center gap-1.5 shadow-sm active-duration border border-brand-teal';
+      
+      const check = document.createElement('span');
+      check.className = 'material-symbols-outlined text-base';
+      check.textContent = 'check';
+      button.prepend(check);
+    });
+  });
+
+  // Modal Control Functions
+  const modal = document.getElementById('confirmationModal');
+  const confirmState = document.getElementById('modalConfirmState');
+  const successState = document.getElementById('modalSuccessState');
+
+  function openModal() {
+    confirmState.classList.remove('hidden');
+    successState.classList.add('hidden');
+    modal.classList.remove('hidden');
+  }
+
+  function closeModal() {
+    modal.classList.add('hidden');
+  }
+
+  function showSuccessState() {
+    confirmState.classList.add('hidden');
+    successState.classList.remove('hidden');
+  }
+
+  // Close modal when clicking backdrop outside inner card
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      closeModal();
+    }
+  });
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    // สีปกติ
+    const inactiveClasses = [
+        "text-[#607D8B]",
+        "hover:text-[#4F9D9D]"
+    ];
+
+    // สีตอนเลือก
+    const activeClasses = [
+        "bg-[#4F9D9D]",
+        "text-white",
+        "font-semibold"
+    ];
+
+    function setActiveNav(activeLink) {
+
+        navLinks.forEach(link => {
+            // ล้าง active
+            link.classList.remove(...activeClasses);
+
+            // ใส่สีปกติ
+            link.classList.add(...inactiveClasses);
+        });
+
+        // ล้างสีปกติจากปุ่มที่เลือก
+        activeLink.classList.remove(...inactiveClasses);
+
+        // ทำเป็นสีเขียว
+        activeLink.classList.add(...activeClasses);
+    }
+
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            setActiveNav(this);
+        });
+    });
+
+
+    // ===== ตรวจว่าตอนนี้อยู่หน้าอะไร =====
+    const currentPage = window.location.pathname.split("/").pop();
+
+    if (currentPage === "home.html") {
+        const home = document.querySelector('[data-nav="home"]');
+        if (home) setActiveNav(home);
+    }
+
+    if (currentPage === "my-groups.html") {
+        const groups = document.querySelector('[data-nav="my-groups"]');
+        if (groups) setActiveNav(groups);
+    }
+
+});
+</script>
+
+</body></html>

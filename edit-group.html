@@ -1,0 +1,502 @@
+<!DOCTYPE html><html class="light" lang="th" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>TimeMatch</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@400;500&amp;family=Plus+Jakarta+Sans:wght@500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } ::-webkit-scrollbar { display: none; }</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "inverse-primary": "#86d4d3", "tertiary-fixed": "#a9f3bc", "surface-container-low": "#e9f6fd", "on-tertiary-fixed-variant": "#00522a", "inverse-surface": "#263238", "on-secondary-fixed": "#001d35", "on-secondary-container": "#255582", "surface-container-lowest": "#ffffff", "tertiary": "#20693e", "on-primary-container": "#003030", "outline-variant": "#bec9c8", "primary-fixed-dim": "#86d4d3", "primary-fixed": "#a2f0f0", "primary": "#09696a", "on-tertiary-container": "#f6fff4", "on-surface-variant": "#3f4948", "surface": "#f4faff", "on-background": "#111d23", "tertiary-container": "#3c8254", "on-secondary": "#ffffff", "surface-container-highest": "#d7e4ec", "secondary-container": "#9ecafe", "secondary-fixed-dim": "#9ecafe", "on-secondary-fixed-variant": "#144976", "surface-variant": "#d7e4ec", "background": "#f4faff", "on-tertiary-fixed": "#00210e", "primary-container": "#4f9d9d", "on-surface": "#111d23", "error-container": "#ffdad6", "tertiary-fixed-dim": "#8ed7a1", "surface-container": "#e3f0f8", "on-primary-fixed-variant": "#004f50", "inverse-on-surface": "#e6f3fb", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "on-primary-fixed": "#002020", "surface-tint": "#09696a", "surface-container-high": "#ddeaf2", "surface-bright": "#f4faff", "error": "#ba1a1a", "surface-dim": "#cfdce4", "on-primary": "#ffffff", "outline": "#6f7979", "on-error": "#ffffff", "secondary-fixed": "#d1e4ff", "secondary": "#33618f" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-xl": "2.5rem", "gutter-md": "1.5rem", "gutter-lg": "2rem", "margin": "1rem", "space-sm": "0.5rem", "margin-md": "2rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "gutter": "1rem", "margin-lg": "3rem", "space-md": "1rem" }, "fontFamily": { "headline-sm": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "body-md": ["Inter"], "display-mobile": ["Plus Jakarta Sans"], "body-sm": ["Inter"], "headline-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "label-tag": ["Inter"], "label-code": ["JetBrains Mono"], "headline-md": ["Plus Jakarta Sans"], "body-lg": ["Inter"] }, "fontSize": { "headline-sm": ["1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "0em", "fontWeight": "600" }], "display": ["3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-md": ["0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "0em", "fontWeight": "400" }], "display-mobile": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "letterSpacing": "0.01em", "fontWeight": "400" }], "headline-lg": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg-mobile": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "label-tag": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.04em", "fontWeight": "600" }], "label-code": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "0em", "fontWeight": "500" }], "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "0em", "fontWeight": "600" }], "body-lg": ["1rem", { "lineHeight": "1.625rem", "letterSpacing": "0em", "fontWeight": "400" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased">
+    
+<!-- ================= NAVBAR ================= -->
+<header class="fixed top-0 left-0 w-full z-50
+               bg-surface/95 backdrop-blur-xl
+               border-b border-outline-variant/30
+               shadow-[0_1px_8px_rgba(38,50,56,0.04)]">
+
+  <div class="h-16 w-full px-5
+              flex items-center justify-between">
+
+    <!-- LEFT : LOGO -->
+    <a href="index.html"
+       class="flex items-center gap-2 shrink-0">
+
+      <img
+        alt="TimeMatch Logo"
+        class="h-8 w-8 object-contain"
+        src="https://lh3.googleusercontent.com/aida/AEtjO1WdLqtWtZk7hffCrpEFHvyz_ar8IJD_L4LqNlCgRrf_GyxErMf4immcMbahuljbEODGFcHxcJtGc5rW6S8FakgEq31q-ACI_-5oiNQZbZi1WCiNXtOLUu0v0FuB_YkBEFCOJL3KWvjjwQYH2NCJKdScUCEj-DydOrmWnIO3S1nQJL6LMJpJO-58YupR_wXSuA2Ghwh9l28AG5zDMFqHDFjKSqdkwX596MP8rbXM-nsWFHluAPZdV2g2bVM">
+
+      <span class="font-headline-sm text-headline-sm
+                   text-on-surface font-bold">
+        TimeMatch
+      </span>
+    </a>
+
+
+    <!-- CENTER : MENU -->
+   <!-- CENTER : MENU -->
+<nav class="hidden md:flex items-center gap-3
+            absolute left-1/2 -translate-x-1/2">
+
+    <a href="home.html"
+       class="nav-link px-5 py-2 rounded-full transition-colors"
+       data-nav="home">
+        หน้าหลัก
+    </a>
+
+    <a href="my-groups.html"
+       class="nav-link px-5 py-2 rounded-full transition-colors"
+       data-nav="my-groups">
+        กลุ่มของฉัน
+    </a>
+
+    <a href="#"
+       class="nav-link px-5 py-2 rounded-full transition-colors"
+       data-nav="how-it-works">
+        วิธีใช้งาน
+    </a>
+
+</nav>
+
+    <!-- RIGHT : NOTIFICATION + PROFILE -->
+    <div class="flex items-center gap-4 shrink-0">
+
+      <!-- NOTIFICATION -->
+      <button
+        type="button"
+        aria-label="Notifications"
+        class="relative w-10 h-10
+               flex items-center justify-center
+               rounded-full
+               text-on-surface-variant
+               hover:text-on-surface
+               hover:bg-surface-container
+               transition-colors">
+
+        <span class="material-symbols-outlined text-[22px]">
+          notifications
+        </span>
+
+        <!-- Notification Dot -->
+        <span class="absolute top-1.5 right-1.5
+                     w-2 h-2 rounded-full
+                     bg-error
+                     ring-2 ring-surface">
+        </span>
+
+      </button>
+
+
+      <!-- PROFILE -->
+      <a href="profile.html"
+         class="flex items-center gap-2
+                px-2 py-1.5 rounded-xl
+                hover:bg-surface-container
+                transition-colors">
+
+        <!-- Profile Image -->
+        <img
+          alt="Profile"
+          class="w-9 h-9 rounded-full object-cover
+                 ring-2 ring-surface-container-high"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1XlSnEB9jG8W6hzP2SDsNo5fMsYan7ciLYMAMFtKI47o6bFNHpvRFvXIz3fUIDOAXBNUWyZBXDD-z2wYdi95qm7KniOrn1pM6FFJJGewawlf-GEnHOmTvwyapRy_IflwSoNDLxys_kvaXeMwTvsN4xCRucsaYjcUeEW3IBJDU450zXyM873CkE084R6Y1-sNAj3oEQardVcCoZiZpMvIViliAeFjocmYk2x8tpkxzblSwPlVpZxOwoeRsyT">
+
+        <!-- Profile Information -->
+        <div class="hidden sm:flex flex-col text-left">
+
+          <span class="font-body-md text-body-md
+                       text-on-surface font-semibold
+                       leading-tight">
+            Chidchanok P.
+          </span>
+
+          <span class="font-label-tag text-label-tag
+                       text-on-surface-variant
+                       leading-tight">
+            CS Student
+          </span>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+<!-- =============== END NAVBAR =============== -->
+
+
+
+<main class="w-full pt-16 min-h-screen bg-background"><div class="w-full px-gutter-lg py-space-lg"><div class="flex flex-col w-full max-w-4xl mx-auto px-margin md:px-margin-md py-space-md">
+<!-- Top Navigation & Breadcrumb -->
+<div class="flex items-center justify-between mb-space-lg">
+<a class="group inline-flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-all duration-200" href="my-groups.html" id="backNavBtn">
+<span class="material-symbols-outlined text-headline-sm transition-transform duration-200 group-hover:-translate-x-1">arrow_back</span>
+<span class="font-body-md text-body-md font-medium">กลับไปหน้ารวมกลุ่ม</span>
+</a>
+
+</div>
+<!-- Page Header -->
+<div class="mb-space-xl">
+<div class="flex flex-wrap items-baseline gap-space-sm mb-space-xs">
+<h1 class="font-headline-lg text-headline-lg text-on-surface">แก้ไขข้อมูลกลุ่ม&nbsp;</h1>
+
+</div>
+
+</div>
+<!-- Main Card Container -->
+<form class="w-full bg-surface-container-lowest rounded-xl p-space-md md:p-space-xl shadow-sm flex flex-col gap-space-xl" id="editGroupForm">
+<!-- SECTION 1: ข้อมูลทั่วไปของกลุ่ม -->
+<div class="flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-headline-sm">badge</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">ข้อมูลทั่วไปของกลุ่ม</h2>
+</div>
+<span class="font-label-tag text-label-tag text-on-surface-variant">* ข้อมูลจำเป็น</span>
+</div>
+<!-- Group Name -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-body-sm text-body-sm font-semibold text-on-surface" for="groupName">
+          ชื่อกลุ่ม <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none focus:bg-surface-bright focus:shadow-md transition-all" placeholder="เช่น Software Design Project" id="groupName" name="groupName" required="" style="box-shadow: inset 0 0 0 1px #bec9c8;" type="text" value="">
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[14px]">info</span>
+          ชื่อที่สมาชิกในวิทยาลัยการคอมพิวเตอร์ใช้ค้นหาและระบุกลุ่ม
+        </p>
+</div>
+<!-- Subject & Code Row -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-space-md">
+
+<div class="flex flex-col gap-space-xs">
+
+</div>
+</div>
+<!-- Description -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-body-sm text-body-sm font-semibold text-on-surface" for="groupDescription">รายละเอียดกลุ่ม</label>
+<textarea class="w-full px-space-md py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none focus:bg-surface-bright resize-none transition-all" id="groupDescription" placeholder="เช่น กลุ่มสำหรับนัดหมายทำโปรเจกต์และค้นหาช่วงเวลาที่สมาชิกสามารถทำงานร่วมกันได้" name="groupDescription" rows="3" style="box-shadow: inset 0 0 0 1px #bec9c8;"></textarea>
+
+</div>
+</div>
+<!-- Soft Tonal Divider -->
+<div class="w-full h-px bg-surface-container-high"></div>
+<!-- SECTION 2: ช่วงวันที่ที่ต้องการหาเวลาว่าง -->
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-headline-sm">date_range</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">ช่วงวันที่ที่ต้องการหาเวลาว่าง&nbsp;</h2>
+</div>
+
+</div>
+<!-- Date Pickers Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md items-center">
+<!-- Start Date -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-body-sm text-body-sm font-semibold text-on-surface flex items-center justify-between" for="startDate">
+<span class="">วันที่เริ่มต้น</span>
+
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary pointer-events-none">calendar_month</span>
+<input class="w-full pl-10 pr-space-md py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none focus:bg-surface-bright transition-all" id="startDate" name="startDate" style="box-shadow: inset 0 0 0 1px #bec9c8;" type="date" value="2026-10-01">
+</div>
+<span class="font-label-code text-label-code text-on-surface-variant">แสดงผล: 1 ต.ค. 2026</span>
+</div>
+<!-- End Date -->
+<div class="flex flex-col gap-space-xs">
+<label class="font-body-sm text-body-sm font-semibold text-on-surface flex items-center justify-between" for="endDate">
+<span class="">วันที่สิ้นสุด</span>
+
+</label>
+<div class="relative flex items-center">
+<span class="material-symbols-outlined absolute left-3 text-secondary pointer-events-none">event_available</span>
+<input class="w-full pl-10 pr-space-md py-2.5 rounded-lg bg-surface-container-lowest text-on-surface font-body-md text-body-md shadow-sm outline-none focus:bg-surface-bright transition-all" id="endDate" name="endDate" style="box-shadow: inset 0 0 0 1px #bec9c8;" type="date" value="2026-10-07">
+</div>
+<span class="font-label-code text-label-code text-on-surface-variant">แสดงผล: 7 ต.ค. 2026 (รวม 7 วัน)</span>
+</div>
+</div>
+<!-- Warning Box: Date Change Notice -->
+<div class="p-space-md rounded-xl bg-surface-container-low shadow-sm flex items-start gap-space-md">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[18px]">group</span>
+</div>
+<div class="flex flex-col gap-1 min-w-0">
+<div class="flex flex-wrap items-center gap-space-xs">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">มีสมาชิกกรอกเวลาว่างแล้ว 3/4 คน</span>
+
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
+            การเปลี่ยนช่วงวันที่อาจทำให้สมาชิกต้องตรวจสอบหรือกรอกเวลาว่างใหม่ ระบบจะส่งการแจ้งเตือนไปยังเพื่อนในกลุ่มให้อัตโนมัติทันทีที่บันทึก
+          </p>
+</div>
+</div>
+</div>
+<!-- Soft Tonal Divider -->
+<div class="w-full h-px bg-surface-container-high"></div>
+<!-- SECTION 3: ระยะเวลาที่ต้องการ -->
+<div class="flex flex-col gap-space-md">
+<div class="flex flex-col gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-headline-sm">schedule</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">ระยะเวลาที่ต้องการ&nbsp;</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">ระบบจะค้นหาเฉพาะช่วงเวลาที่ว่างตรงกันต่อเนื่องตามระยะเวลาที่ระบุนี้</p>
+</div>
+<!-- Duration Selection Pills -->
+<div class="flex flex-wrap gap-space-xs" id="durationContainer">
+<!-- 30 Mins -->
+<button class="duration-btn px-space-md py-2 rounded-full font-body-sm text-body-sm transition-all duration-150 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-sm flex items-center gap-1.5" data-duration="30" style="box-shadow: inset 0 0 0 1px #bec9c8;" type="button">
+<span class="material-symbols-outlined text-[16px] hidden">check</span>
+<span class="">30 นาที</span>
+</button>
+<!-- 1 Hour -->
+<button class="duration-btn px-space-md py-2 rounded-full font-body-sm text-body-sm transition-all duration-150 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-sm flex items-center gap-1.5" data-duration="60" style="box-shadow: inset 0 0 0 1px #bec9c8;" type="button">
+<span class="material-symbols-outlined text-[16px] hidden">check</span>
+<span class="">1 ชั่วโมง</span>
+</button>
+<!-- 1 Hour 30 Mins -->
+<button class="duration-btn px-space-md py-2 rounded-full font-body-sm text-body-sm transition-all duration-150 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-sm flex items-center gap-1.5" data-duration="90" style="box-shadow: inset 0 0 0 1px #bec9c8;" type="button">
+<span class="material-symbols-outlined text-[16px] hidden">check</span>
+<span class="">1 ชั่วโมง 30 นาที</span>
+</button>
+<!-- 2 Hours (ACTIVE) -->
+<button class="duration-btn px-space-md py-2 rounded-full font-body-sm text-body-sm transition-all duration-150 bg-primary-container text-on-primary-container font-semibold shadow-md flex items-center gap-1.5" data-duration="120" type="button">
+<span class="material-symbols-outlined text-[16px]">check</span>
+<span class="">2 ชั่วโมง</span>
+</button>
+<!-- Custom -->
+<button class="duration-btn px-space-md py-2 rounded-full font-body-sm text-body-sm transition-all duration-150 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-sm flex items-center gap-1.5" data-duration="custom" style="box-shadow: inset 0 0 0 1px #bec9c8;" type="button">
+<span class="material-symbols-outlined text-[16px] hidden">check</span>
+<span class="">กำหนดเอง...</span>
+</button>
+</div>
+<!-- Explanatory Caption -->
+
+</div>
+<!-- Soft Tonal Divider -->
+<div class="w-full h-px bg-surface-container-high"></div>
+<!-- ACTION BUTTONS ROW -->
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-xs">
+<div class="flex items-center gap-space-xs text-on-surface-variant font-body-sm text-body-sm w-full sm:w-auto">
+<span class="material-symbols-outlined text-[16px] text-tertiary">sync</span>
+<span class="">การเปลี่ยนแปลงจะมีผลกับสมาชิกทุกคนในกลุ่มทันที</span>
+</div>
+<div class="flex items-center justify-end gap-space-sm w-full sm:w-auto">
+<!-- Cancel Button -->
+<button class="px-space-lg py-2.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-body-sm text-body-sm font-medium transition-all" id="cancelBtn" type="button">
+          ยกเลิก
+        </button>
+<!-- Save Button -->
+<button class="px-space-xl py-2.5 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-space-xs" id="saveBtn" type="submit">
+<span class="material-symbols-outlined text-[18px]">save</span>
+<span class="">บันทึกการเปลี่ยนแปลง</span>
+</button>
+</div>
+</div>
+</form>
+<!-- Interactive Toast Notification (Hidden by default, triggered on save) -->
+<div class="fixed bottom-6 right-6 z-50 transform translate-y-16 opacity-0 pointer-events-none transition-all duration-300 max-w-sm" id="toastNotification">
+<div class="bg-surface-container-lowest text-on-surface p-space-md rounded-xl shadow-xl flex items-center justify-between gap-space-md" style="box-shadow: 0 12px 32px -4px rgba(38, 50, 56, 0.12), inset 0 0 0 1px #bec9c8;">
+<div class="flex items-center gap-space-sm">
+<div class="w-7 h-7 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]">check</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-sm text-body-sm font-semibold text-on-surface">บันทึกข้อมูลกลุ่มเรียบร้อยแล้ว</span>
+<span class="font-label-tag text-label-tag text-on-surface-variant">อัปเดตสถานะและแจ้งเตือนเพื่อนในกลุ่มแล้ว</span>
+</div>
+</div>
+<button class="text-on-surface-variant hover:text-on-surface p-1 rounded" id="closeToast" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+</div>
+<!-- Interactive Unsaved Changes Modal -->
+<div class="fixed inset-0 z-50 flex items-center justify-center bg-inverse-surface/40 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-200 p-margin" id="unsavedModal">
+<div class="w-full max-w-md bg-surface-container-lowest rounded-xl p-space-lg shadow-2xl transform scale-95 transition-transform duration-200 flex flex-col gap-space-md" style="box-shadow: 0 12px 32px -4px rgba(38, 50, 56, 0.12);">
+<div class="w-10 h-10 rounded-full bg-surface-container-high text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined">help</span>
+</div>
+<div class="flex flex-col gap-1">
+<h3 class="font-headline-sm text-headline-sm text-on-surface">ยังไม่ได้บันทึกการเปลี่ยนแปลง</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+          คุณมีการแก้ไขข้อมูลที่ยังไม่ได้จัดเก็บ ข้อมูลที่แก้ไขจะหายไปหากคุณออกจากหน้านี้
+        </p>
+</div>
+<div class="flex items-center justify-end gap-space-sm pt-space-xs mt-space-xs">
+<button class="px-space-md py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-body-sm text-body-sm transition-all" id="confirmLeaveBtn" type="button">
+          ออกโดยไม่บันทึก
+        </button>
+<button class="px-space-lg py-2 rounded-lg bg-primary hover:bg-primary-container text-on-primary font-body-sm text-body-sm font-semibold shadow-sm transition-all" id="stayAndEditBtn" type="button">
+          กลับไปแก้ไข
+        </button>
+</div>
+</div>
+</div>
+<script>
+    (function() {
+      // DOM Elements
+      const form = document.getElementById('editGroupForm');
+      const durationButtons = document.querySelectorAll('.duration-btn');
+      const durationText = document.getElementById('durationText');
+      const backNavBtn = document.getElementById('backNavBtn');
+      const cancelBtn = document.getElementById('cancelBtn');
+      const toast = document.getElementById('toastNotification');
+      const closeToast = document.getElementById('closeToast');
+      const modal = document.getElementById('unsavedModal');
+      const confirmLeaveBtn = document.getElementById('confirmLeaveBtn');
+      const stayAndEditBtn = document.getElementById('stayAndEditBtn');
+
+      let isDirty = false;
+
+      // Track Form Changes
+      form.addEventListener('input', () => { isDirty = true; });
+
+      // Duration Selection Logic
+      durationButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          isDirty = true;
+          durationButtons.forEach(b => {
+            b.className = "duration-btn px-space-md py-2 rounded-full font-body-sm text-body-sm transition-all duration-150 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-sm flex items-center gap-1.5";
+            b.style.boxShadow = "inset 0 0 0 1px #bec9c8";
+            const check = b.querySelector('.material-symbols-outlined');
+            if (check) check.classList.add('hidden');
+          });
+
+          btn.className = "duration-btn px-space-md py-2 rounded-full font-body-sm text-body-sm transition-all duration-150 bg-primary-container text-on-primary-container font-semibold shadow-md flex items-center gap-1.5";
+          btn.style.boxShadow = "none";
+          const check = btn.querySelector('.material-symbols-outlined');
+          if (check) check.classList.remove('hidden');
+
+          const durationVal = btn.getAttribute('data-duration');
+          if (durationVal === '30') durationText.textContent = '30 นาที';
+          else if (durationVal === '60') durationText.textContent = '1 ชั่วโมง';
+          else if (durationVal === '90') durationText.textContent = '1 ชั่วโมง 30 นาที';
+          else if (durationVal === '120') durationText.textContent = '2 ชั่วโมง';
+          else durationText.textContent = 'ระยะเวลากำหนดเอง';
+        });
+      });
+
+      // Show Toast Notification
+      function showToast() {
+        toast.classList.remove('translate-y-16', 'opacity-0', 'pointer-events-none');
+        toast.classList.add('translate-y-0', 'opacity-100');
+        setTimeout(() => {
+          hideToast();
+        }, 4000);
+      }
+
+      function hideToast() {
+        toast.classList.add('translate-y-16', 'opacity-0', 'pointer-events-none');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+      }
+
+      closeToast.addEventListener('click', hideToast);
+
+      // Handle Save
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        isDirty = false;
+        showToast();
+      });
+
+      // Modal Controls
+      function openModal() {
+        modal.classList.remove('opacity-0', 'pointer-events-none');
+        modal.classList.add('opacity-100');
+        modal.querySelector('.transform').classList.remove('scale-95');
+        modal.querySelector('.transform').classList.add('scale-100');
+      }
+
+      function closeModal() {
+        modal.classList.add('opacity-0', 'pointer-events-none');
+        modal.classList.remove('opacity-100');
+        modal.querySelector('.transform').classList.add('scale-95');
+        modal.querySelector('.transform').classList.remove('scale-100');
+      }
+
+      function handleBackOrCancel(e) {
+        if (isDirty) {
+          e.preventDefault();
+          openModal();
+        } else {
+          // Normal back action simulation
+          showToast();
+        }
+      }
+
+      backNavBtn.addEventListener('click', handleBackOrCancel);
+      cancelBtn.addEventListener('click', handleBackOrCancel);
+      stayAndEditBtn.addEventListener('click', closeModal);
+      confirmLeaveBtn.addEventListener('click', () => {
+        isDirty = false;
+        closeModal();
+        window.history.back();
+      });
+    })();
+  </script>
+</div></div></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_6px_rgba(0,0,0,0.02)] mt-auto"><div class="w-full px-gutter-lg py-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-body-sm text-body-sm text-on-surface-variant"><div class="flex items-center gap-space-xs text-center md:text-left"><span class="font-headline-sm text-primary font-semibold">TimeMatch</span><span class="">•</span><span class="">วิทยาลัยการคอมพิวเตอร์ (College of Computing)</span><span class="">•</span><span class="">มหาวิทยาลัยขอนแก่น</span></div><div class="flex items-center gap-space-lg"><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="help-center" href="#">ศูนย์ช่วยเหลือ</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="terms-of-service" href="#">ข้อกำหนดการใช้งาน</a><a class="text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">นโยบายความเป็นส่วนตัว</a></div></div></footer>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    // สีปกติ
+    const inactiveClasses = [
+        "text-[#607D8B]",
+        "hover:text-[#4F9D9D]"
+    ];
+
+    // สีตอนเลือก
+    const activeClasses = [
+        "bg-[#4F9D9D]",
+        "text-white",
+        "font-semibold"
+    ];
+
+    function setActiveNav(activeLink) {
+
+        navLinks.forEach(link => {
+            // ล้าง active
+            link.classList.remove(...activeClasses);
+
+            // ใส่สีปกติ
+            link.classList.add(...inactiveClasses);
+        });
+
+        // ล้างสีปกติจากปุ่มที่เลือก
+        activeLink.classList.remove(...inactiveClasses);
+
+        // ทำเป็นสีเขียว
+        activeLink.classList.add(...activeClasses);
+    }
+
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            setActiveNav(this);
+        });
+    });
+
+
+    // ===== ตรวจว่าตอนนี้อยู่หน้าอะไร =====
+    const currentPage = window.location.pathname.split("/").pop();
+
+    if (currentPage === "home.html") {
+        const home = document.querySelector('[data-nav="home"]');
+        if (home) setActiveNav(home);
+    }
+
+    if (currentPage === "my-groups.html") {
+        const groups = document.querySelector('[data-nav="my-groups"]');
+        if (groups) setActiveNav(groups);
+    }
+
+});
+</script>
+
+
+</body></html>

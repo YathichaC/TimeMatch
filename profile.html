@@ -1,0 +1,197 @@
+<!DOCTYPE html><html lang="th">
+
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="web_standard" name="shell-type">
+
+  <title>TimeMatch - CS Student Availability Finder</title><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;family=Prompt:wght@300;400;500;600&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base { html, body { margin: 0; padding: 0; } body { overscroll-behavior: none; } main > :first-child { margin-top: 0 !important; } main > :last-child { margin-bottom: 0 !important; } } </style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "primary": "#09696a", "on-tertiary-fixed-variant": "#00522a", "on-secondary-fixed": "#001d35", "tertiary-fixed": "#a9f3bc", "secondary-fixed-dim": "#9ecafe", "secondary-container": "#9ecafe", "error-container": "#ffdad6", "on-background": "#111d23", "surface-container": "#e3f0f8", "outline-variant": "#bec9c8", "tertiary-fixed-dim": "#8ed7a1", "on-secondary-container": "#255582", "inverse-surface": "#263238", "on-primary-fixed-variant": "#004f50", "surface-container-lowest": "#ffffff", "surface-variant": "#d7e4ec", "on-error-container": "#93000a", "on-tertiary": "#ffffff", "tertiary-container": "#3c8254", "surface-bright": "#f4faff", "background": "#f4faff", "surface-container-high": "#ddeaf2", "on-secondary-fixed-variant": "#144976", "surface-container-highest": "#d7e4ec", "surface-tint": "#09696a", "inverse-primary": "#86d4d3", "primary-fixed-dim": "#86d4d3", "on-surface-variant": "#3f4948", "on-primary": "#ffffff", "on-primary-container": "#003030", "tertiary": "#20693e", "surface-dim": "#cfdce4", "surface-container-low": "#e9f6fd", "on-error": "#ffffff", "on-secondary": "#ffffff", "on-surface": "#111d23", "surface": "#f4faff", "secondary": "#33618f", "on-tertiary-container": "#f6fff4", "secondary-fixed": "#d1e4ff", "on-tertiary-fixed": "#00210e", "error": "#ba1a1a", "primary-fixed": "#a2f0f0", "outline": "#6f7979", "on-primary-fixed": "#002020", "inverse-on-surface": "#e6f3fb", "primary-container": "#4f9d9d" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "gutter-lg": "2rem", "space-xs": "0.25rem", "gutter-md": "1.5rem", "margin-md": "2rem", "space-lg": "1.5rem", "space-md": "1rem", "space-sm": "0.5rem", "margin": "1rem", "gutter": "1rem", "margin-lg": "3rem", "space-xl": "2.5rem" }, "fontFamily": { "headline-md": ["Plus Jakarta Sans"], "body-md": ["Inter"], "body-sm": ["Inter"], "label-code": ["JetBrains Mono"], "label-tag": ["Inter"], "display-mobile": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "display": ["Plus Jakarta Sans"], "body-lg": ["Inter"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"] }, "fontSize": { "headline-md": ["1.25rem", { "lineHeight": "1.75rem", "letterSpacing": "0em", "fontWeight": "600" }], "body-md": ["0.875rem", { "lineHeight": "1.375rem", "letterSpacing": "0em", "fontWeight": "400" }], "body-sm": ["0.75rem", { "lineHeight": "1.125rem", "letterSpacing": "0.01em", "fontWeight": "400" }], "label-code": ["0.8125rem", { "lineHeight": "1.25rem", "letterSpacing": "0em", "fontWeight": "500" }], "label-tag": ["0.6875rem", { "lineHeight": "1rem", "letterSpacing": "0.04em", "fontWeight": "600" }], "display-mobile": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.01em", "fontWeight": "700" }], "headline-sm": ["1.125rem", { "lineHeight": "1.5rem", "letterSpacing": "0em", "fontWeight": "600" }], "display": ["3rem", { "lineHeight": "3.5rem", "letterSpacing": "-0.02em", "fontWeight": "700" }], "body-lg": ["1rem", { "lineHeight": "1.625rem", "letterSpacing": "0em", "fontWeight": "400" }], "headline-lg-mobile": ["1.5rem", { "lineHeight": "2rem", "letterSpacing": "-0.01em", "fontWeight": "600" }], "headline-lg": ["2rem", { "lineHeight": "2.5rem", "letterSpacing": "-0.01em", "fontWeight": "600" }] } } } };</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen">
+    <!-- ================= NAVBAR ================= -->
+<header class="fixed top-0 left-0 w-full z-50
+               bg-surface/95 backdrop-blur-xl
+               border-b border-outline-variant/30
+               shadow-[0_1px_8px_rgba(38,50,56,0.04)]">
+
+  <div class="h-16 w-full px-5
+              flex items-center justify-between">
+
+    <!-- LEFT : LOGO -->
+    <a href="index.html"
+       class="flex items-center gap-2 shrink-0">
+
+      <img
+        alt="TimeMatch Logo"
+        class="h-8 w-8 object-contain"
+        src="images/logo.png">
+      <span class="font-headline-sm text-headline-sm
+                   text-on-surface font-bold">
+        TimeMatch
+      </span>
+    </a>
+
+
+    <!-- CENTER : MENU -->
+   <!-- CENTER : MENU -->
+<nav class="hidden md:flex items-center gap-3
+            absolute left-1/2 -translate-x-1/2">
+
+    <a href="home.html"
+       class="nav-link px-5 py-2 rounded-full transition-colors"
+       data-nav="home">
+        หน้าหลัก
+    </a>
+
+    <a href="my-groups.html"
+       class="nav-link px-5 py-2 rounded-full transition-colors"
+       data-nav="my-groups">
+        กลุ่มของฉัน
+    </a>
+
+    <a href="#"
+       class="nav-link px-5 py-2 rounded-full transition-colors"
+       data-nav="how-it-works">
+        วิธีใช้งาน
+    </a>
+
+</nav>
+
+    <!-- RIGHT : NOTIFICATION + PROFILE -->
+    <div class="flex items-center gap-4 shrink-0">
+
+      <!-- NOTIFICATION -->
+      <button
+        type="button"
+        aria-label="Notifications"
+        class="relative w-10 h-10
+               flex items-center justify-center
+               rounded-full
+               text-on-surface-variant
+               hover:text-on-surface
+               hover:bg-surface-container
+               transition-colors">
+
+        <span class="material-symbols-outlined text-[22px]">
+          notifications
+        </span>
+
+        <!-- Notification Dot -->
+        <span class="absolute top-1.5 right-1.5
+                     w-2 h-2 rounded-full
+                     bg-error
+                     ring-2 ring-surface">
+        </span>
+
+      </button>
+
+
+      <!-- PROFILE -->
+      <a href="profile.html"
+         class="flex items-center gap-2
+                px-2 py-1.5 rounded-xl
+                hover:bg-surface-container
+                transition-colors">
+
+        <!-- Profile Image -->
+        <img
+          alt="Profile"
+          class="w-9 h-9 rounded-full object-cover
+                 ring-2 ring-surface-container-high"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1XlSnEB9jG8W6hzP2SDsNo5fMsYan7ciLYMAMFtKI47o6bFNHpvRFvXIz3fUIDOAXBNUWyZBXDD-z2wYdi95qm7KniOrn1pM6FFJJGewawlf-GEnHOmTvwyapRy_IflwSoNDLxys_kvaXeMwTvsN4xCRucsaYjcUeEW3IBJDU450zXyM873CkE084R6Y1-sNAj3oEQardVcCoZiZpMvIViliAeFjocmYk2x8tpkxzblSwPlVpZxOwoeRsyT">
+
+        <!-- Profile Information -->
+        <div class="hidden sm:flex flex-col text-left">
+
+          <span class="font-body-md text-body-md
+                       text-on-surface font-semibold
+                       leading-tight">
+            Chidchanok P.
+          </span>
+
+          <span class="font-label-tag text-label-tag
+                       text-on-surface-variant
+                       leading-tight">
+            CS Student
+          </span>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+<!-- =============== END NAVBAR =============== -->
+
+    
+    <main class="w-full pt-20 pb-16 min-h-screen bg-background"><div class="w-full max-w-3xl mx-auto px-4 md:px-6 flex flex-col gap-space-lg"><div class="flex flex-col gap-1"><div class="flex items-center gap-2"><h1 class="font-headline-lg text-2xl md:text-3xl font-bold text-on-surface tracking-tight">โปรไฟล์ของฉัน&nbsp;</h1></div><p class="font-body-md text-body-md text-on-surface-variant">จัดการข้อมูลส่วนตัวและบัญชีของคุณ</p></div><div class="w-full bg-surface-container-lowest rounded-3xl p-6 md:p-8 shadow-sm border border-surface-variant/40 flex flex-col sm:flex-row items-center sm:items-center justify-between gap-6"><div class="flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left"><div class="relative flex-shrink-0"><div class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-4 ring-primary-fixed/50 shadow-md bg-surface-container-low flex items-center justify-center"><img alt="ชิดชนก ชนะพา" class="w-full h-full object-cover" id="userAvatarImg" src="https://lh3.googleusercontent.com/aida/AEtjO1XlSnEB9jG8W6hzP2SDsNo5fMsYan7ciLYMAMFtKI47o6bFNHpvRFvXIz3fUIDOAXBNUWyZBXDD-z2wYdi95qm7KniOrn1pM6FFJJGewawlf-GEnHOmTvwyapRy_IflwSoNDLxys_kvaXeMwTvsN4xCRucsaYjcUeEW3IBJDU450zXyM873CkE084R6Y1-sNAj3oEQardVcCoZiZpMvIViliAeFjocmYk2x8tpkxzblSwPlVpZxOwoeRsyT"></div><button aria-label="เปลี่ยนรูปโปรไฟล์" class="absolute bottom-0 right-0 p-2 rounded-full bg-primary text-on-primary shadow-md hover:bg-primary/90 transition-transform active:scale-95" onclick="openModal('avatarModal')" type="button"><span class="material-symbols-outlined text-base leading-none block">photo_camera</span></button></div><div class="flex flex-col gap-1.5"><div class="flex flex-col sm:flex-row items-center gap-2"><h2 class="font-headline-md text-xl md:text-2xl font-bold text-on-surface" id="displayHeroName">ชิดชนก ชนะพา</h2><span class="px-2.5 py-0.5 rounded-full bg-primary-fixed/40 text-primary font-label-code text-xs font-semibold" id="displayHeroId">673780033-9</span></div><div class="flex items-center justify-center sm:justify-start gap-1.5 text-on-surface-variant font-body-sm text-sm flex-wrap"><span class="material-symbols-outlined text-base text-primary">mail</span><span id="displayHeroEmail" class="">chidchanok.p@kkumail.com</span></div></div></div><button class="px-4 py-2 rounded-full border border-primary/30 text-primary hover:bg-primary-fixed/30 font-headline-sm text-body-sm font-semibold transition-all flex items-center gap-1.5 shadow-sm active:scale-95 flex-shrink-0" onclick="toggleEditMode()" type="button"><span class="material-symbols-outlined text-base">edit</span><span id="heroEditBtnText" class="">แก้ไขโปรไฟล์</span></button></div><div class="flex items-center gap-2 p-1.5 bg-surface-container-low rounded-2xl w-fit self-center"
+     role="tablist"><button class="px-5 py-2 rounded-xl font-headline-sm text-body-sm font-medium transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-2" id="tab-btn-info" onclick="switchMainTab('info')" role="tab" type="button"><span class="material-symbols-outlined text-lg">person</span>ข้อมูลส่วนตัว</button><button class="px-5 py-2 rounded-xl font-headline-sm text-body-sm font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm flex items-center gap-2" id="tab-btn-security" onclick="switchMainTab('security')" role="tab" type="button"><span class="material-symbols-outlined text-lg">security</span>บัญชีและความปลอดภัย</button></div><div class="flex-col gap-space-lg hidden" id="pane-info"><div class="bg-surface-container-lowest rounded-3xl p-6 md:p-8 shadow-sm border border-surface-variant/40"><div class="flex items-center justify-between pb-5 mb-6 border-b border-surface-variant/40"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-2xl bg-primary-fixed/40 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-2xl">school</span></div><div><h3 class="font-headline-md text-lg font-bold text-on-surface">ข้อมูลนักศึกษา&nbsp;</h3><p class="font-body-sm text-body-sm text-on-surface-variant">ข้อมูลที่ใช้กับบัญชี TimeMatch ของคุณ</p></div></div></div><div class="grid grid-cols-1 md:grid-cols-2 gap-4" id="infoViewMode"><div class="p-4 rounded-2xl bg-surface-container-low/60 flex items-start gap-3.5"><div class="p-2 rounded-xl bg-surface-container-lowest text-primary shadow-xs"><span class="material-symbols-outlined text-xl">badge</span></div><div><span class="font-body-sm text-xs text-on-surface-variant block mb-0.5">ชื่อ-นามสกุล</span><span class="font-headline-sm text-body-md font-semibold text-on-surface" id="valFullName">ชิดชนก ชนะพา</span></div></div><div class="p-4 rounded-2xl bg-surface-container-low/60 flex items-start gap-3.5"><div class="p-2 rounded-xl bg-surface-container-lowest text-primary shadow-xs"><span class="material-symbols-outlined text-xl">school</span></div><div><span class="font-body-sm text-xs text-on-surface-variant block mb-0.5">รหัสนักศึกษา</span><span class="font-headline-sm text-body-md font-semibold text-on-surface font-label-code" id="valStudentId">673780033-9</span></div></div><div class="p-4 rounded-2xl bg-surface-container-low/60 flex items-start gap-3.5 md:col-span-2"><div class="p-2 rounded-xl bg-surface-container-lowest text-primary shadow-xs"><span class="material-symbols-outlined text-xl">mail</span></div><div><span class="font-body-sm text-xs text-on-surface-variant block mb-0.5">อีเมล</span><span class="font-headline-sm text-body-md font-semibold text-on-surface" id="valEmail">chidchanok.p@kkumail.com</span></div></div></div><form class="flex-col gap-5 hidden" id="infoEditMode" onsubmit="saveProfileChanges(event)"><div class="grid grid-cols-1 md:grid-cols-2 gap-4"><div class="flex flex-col gap-1.5"><label class="font-headline-sm text-body-sm font-semibold text-on-surface flex items-center gap-1" for="inputFullName">ชื่อ-นามสกุล <span class="text-error">*</span></label><input class="w-full h-11 px-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/30 focus:outline-none transition-colors border border-surface-variant/40" id="inputFullName" required="" type="text" value="ชิดชนก ชนะพา"></div><div class="flex flex-col gap-1.5"><div class="flex items-center justify-between"><label class="font-headline-sm text-body-sm font-semibold text-on-surface flex items-center gap-1">รหัสนักศึกษา <span class="material-symbols-outlined text-xs text-on-surface-variant">lock</span></label><span class="font-body-sm text-[11px] text-on-surface-variant">รหัสนักศึกษาไม่สามารถแก้ไขได้</span></div><input class="w-full h-11 px-4 rounded-xl bg-surface-container text-on-surface-variant font-label-code text-body-sm cursor-not-allowed opacity-80 border border-surface-variant/40" disabled="" id="inputStudentId" type="text" value="673780033-9"></div><div class="flex flex-col gap-1.5 md:col-span-2"><label class="font-headline-sm text-body-sm font-semibold text-on-surface flex items-center gap-1" for="inputEmail">อีเมล <span class="text-error">*</span></label><input class="w-full h-11 px-4 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/30 focus:outline-none transition-colors border border-surface-variant/40" id="inputEmail" required="" type="email" value="chidchanok.p@kkumail.com"></div></div><div class="flex items-center justify-end gap-3 pt-4 border-t border-surface-variant/40 mt-2"><button class="px-5 py-2.5 rounded-xl font-headline-sm text-body-sm font-medium text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" onclick="toggleEditMode(false)" type="button">ยกเลิก</button><button class="px-6 py-2.5 rounded-xl font-headline-sm text-body-sm font-semibold bg-primary hover:bg-primary/90 text-on-primary shadow-sm transition-all active:scale-95 flex items-center gap-1.5" type="submit"><span class="material-symbols-outlined text-base">check</span>บันทึกการเปลี่ยนแปลง</button></div></form></div></div><div class="flex-col gap-space-lg flex" id="pane-security"><div class="bg-surface-container-lowest rounded-3xl p-6 md:p-8 shadow-sm border border-surface-variant/40 flex flex-col gap-6"><div class="flex items-start justify-between pb-5 border-b border-surface-variant/40"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-2xl bg-secondary-fixed/40 flex items-center justify-center text-secondary"><span class="material-symbols-outlined text-2xl">mark_email_read</span></div><div><h3 class="font-headline-md text-lg font-bold text-on-surface">อีเมลสำหรับเข้าสู่ระบบ</h3><p class="font-body-sm text-body-sm text-on-surface-variant">ใช้ KKU Mail </p></div></div><span class="px-3 py-1 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-headline-sm text-xs font-semibold flex items-center gap-1"><span class="material-symbols-outlined text-sm">verified</span>ยืนยันแล้ว</span></div><div class="flex items-center justify-between p-4 rounded-2xl bg-surface-container-low"><div class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-xl">account_circle</span><span class="font-headline-sm text-body-md font-semibold text-on-surface">chidchanok.p@kkumail.com</span></div></div><div class="pt-4 flex flex-col gap-4"><div class="flex items-center gap-3"><div class="w-10 h-10 rounded-2xl bg-primary-fixed/40 flex items-center justify-center text-primary"><span class="material-symbols-outlined text-2xl">lock_reset</span></div><div><h4 class="font-headline-md text-base font-bold text-on-surface">เปลี่ยนรหัสผ่าน 🔑</h4><p class="font-body-sm text-body-sm text-on-surface-variant">ตั้งรหัสผ่านใหม่เพื่อความปลอดภัยของบัญชี TimeMatch</p></div></div><form class="flex flex-col gap-4 max-w-lg mt-1" onsubmit="savePasswordChanges(event)"><div class="flex flex-col gap-1.5"><label class="font-headline-sm text-body-sm font-semibold text-on-surface" for="pwdCurrent">รหัสผ่านปัจจุบัน (Current password)</label><div class="relative"><input class="w-full h-11 pl-4 pr-11 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/30 focus:outline-none transition-colors" id="pwdCurrent" required="" type="password" value="demo123456"><button class="absolute right-3 top-3 text-on-surface-variant hover:text-on-surface" onclick="toggleFieldVisibility('pwdCurrent', this)" type="button"><span class="material-symbols-outlined text-lg leading-none">visibility</span></button></div></div><div class="flex flex-col gap-1.5"><label class="font-headline-sm text-body-sm font-semibold text-on-surface" for="pwdNew">รหัสผ่านใหม่ (New password)</label><div class="relative"><input class="w-full h-11 pl-4 pr-11 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/30 focus:outline-none transition-colors" id="pwdNew" placeholder="ความยาวอย่างน้อย 8 ตัวอักษร" required="" type="password"><button class="absolute right-3 top-3 text-on-surface-variant hover:text-on-surface" onclick="toggleFieldVisibility('pwdNew', this)" type="button"><span class="material-symbols-outlined text-lg leading-none">visibility</span></button></div></div><div class="flex flex-col gap-1.5"><label class="font-headline-sm text-body-sm font-semibold text-on-surface" for="pwdConfirm">ยืนยันรหัสผ่านใหม่ (Confirm new password)</label><div class="relative"><input class="w-full h-11 pl-4 pr-11 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md focus:bg-surface-container-lowest focus:ring-2 focus:ring-primary/30 focus:outline-none transition-colors" id="pwdConfirm" placeholder="กรอกรหัสผ่านใหม่อีกครั้ง" required="" type="password"><button class="absolute right-3 top-3 text-on-surface-variant hover:text-on-surface" onclick="toggleFieldVisibility('pwdConfirm', this)" type="button"><span class="material-symbols-outlined text-lg leading-none">visibility</span></button></div></div><div class="pt-2"><button class="px-6 py-2.5 rounded-xl font-headline-sm text-body-sm font-semibold bg-primary hover:bg-primary/90 text-on-primary shadow-sm transition-all active:scale-95 flex items-center gap-1.5" type="submit"><span class="material-symbols-outlined text-base">key</span>เปลี่ยนรหัสผ่าน</button></div></form></div></div><div class="bg-surface-container-lowest rounded-3xl p-6 md:p-8 shadow-sm border border-error-container/60 flex flex-col sm:flex-row sm:items-center justify-between gap-4"><div class="flex items-start gap-3"><div class="w-10 h-10 rounded-2xl bg-error-container/40 flex items-center justify-center text-error flex-shrink-0"><span class="material-symbols-outlined text-2xl">logout</span></div><div><h4 class="font-headline-md text-base font-bold text-on-surface">ออกจากระบบ</h4><p class="font-body-sm text-body-sm text-on-surface-variant">ออกจากบัญชี TimeMatch บนอุปกรณ์นี้</p></div></div><button class="px-5 py-2.5 rounded-xl font-headline-sm text-body-sm font-semibold border border-error/30 text-error hover:bg-error-container/30 transition-all flex items-center justify-center gap-1.5 flex-shrink-0 active:scale-95" onclick="openModal('logoutModal')" type="button"><span class="material-symbols-outlined text-base">logout</span>ออกจากระบบ</button></div></div></div><div class="fixed bottom-6 right-6 z-50 transform translate-y-16 opacity-0 transition-all duration-300 pointer-events-none" id="toastNotification"><div class="bg-on-surface text-surface-container-lowest px-5 py-3 rounded-2xl shadow-xl flex items-center gap-2.5 font-headline-sm text-body-sm font-medium"><span class="material-symbols-outlined text-tertiary-fixed text-xl">check_circle</span><span id="toastMessage" class="">บันทึกข้อมูลเรียบร้อยแล้ว ✓</span></div></div><div class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-xs hidden items-center justify-center p-4" id="avatarModal"><div class="bg-surface-container-lowest w-full max-w-sm rounded-3xl p-6 shadow-xl flex flex-col gap-4 animate-fadeIn"><div class="flex items-center justify-between"><h4 class="font-headline-md text-lg font-bold text-on-surface">เปลี่ยนรูปโปรไฟล์ 📸</h4><button class="p-1 rounded-full hover:bg-surface-container text-on-surface-variant" onclick="closeModal('avatarModal')" type="button"><span class="material-symbols-outlined text-xl">close</span></button></div><div class="flex flex-col items-center py-4 gap-3"><div class="w-24 h-24 rounded-full overflow-hidden ring-4 ring-primary-fixed/40"><img alt="Preview" class="w-full h-full object-cover" id="avatarPreviewModal" src="https://lh3.googleusercontent.com/aida/AEtjO1XlSnEB9jG8W6hzP2SDsNo5fMsYan7ciLYMAMFtKI47o6bFNHpvRFvXIz3fUIDOAXBNUWyZBXDD-z2wYdi95qm7KniOrn1pM6FFJJGewawlf-GEnHOmTvwyapRy_IflwSoNDLxys_kvaXeMwTvsN4xCRucsaYjcUeEW3IBJDU450zXyM873CkE084R6Y1-sNAj3oEQardVcCoZiZpMvIViliAeFjocmYk2x8tpkxzblSwPlVpZxOwoeRsyT"></div><span class="font-body-sm text-xs text-on-surface-variant">รองรับไฟล์ JPG, PNG หรือ GIF สูงสุด 5MB</span></div><div class="flex flex-col gap-2"><button class="w-full py-2.5 rounded-xl bg-primary hover:bg-primary/90 text-on-primary font-headline-sm text-body-sm font-semibold transition-all shadow-sm" onclick="simulateAvatarUpload()" type="button">เลือกรูปภาพใหม่</button><button class="w-full py-2 rounded-xl text-error hover:bg-error-container/20 font-headline-sm text-body-sm font-medium transition-colors" onclick="removeAvatar()" type="button">ลบรูปปัจจุบัน</button><button class="w-full py-2 rounded-xl text-on-surface-variant hover:bg-surface-container font-headline-sm text-body-sm transition-colors" onclick="closeModal('avatarModal')" type="button">ยกเลิก</button></div></div></div><div class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-xs hidden items-center justify-center p-4" id="logoutModal"><div class="bg-surface-container-lowest w-full max-w-sm rounded-3xl p-6 shadow-xl flex flex-col gap-4 animate-fadeIn"><div class="w-12 h-12 rounded-2xl bg-error-container/40 text-error flex items-center justify-center mx-auto"><span class="material-symbols-outlined text-3xl">logout</span></div><div class="text-center flex flex-col gap-1"><h4 class="font-headline-md text-lg font-bold text-on-surface">ออกจากระบบ?</h4><p class="font-body-sm text-body-sm text-on-surface-variant">คุณต้องการออกจากบัญชีนี้หรือไม่? ตารางเวลาและการนัดหมายของคุณจะยังคงปลอดภัย</p></div><div class="grid grid-cols-2 gap-3 mt-2"><button class="py-2.5 rounded-xl border border-surface-variant text-on-surface font-headline-sm text-body-sm font-medium hover:bg-surface-container-low transition-colors" onclick="closeModal('logoutModal')" type="button">ยกเลิก</button><button class="py-2.5 rounded-xl bg-error text-on-error font-headline-sm text-body-sm font-semibold hover:bg-error/90 transition-all shadow-sm" onclick="confirmLogout()" type="button">ออกจากระบบ</button></div></div></div><script>function switchMainTab(tab) { var btnInfo = document.getElementById('tab-btn-info'); var btnSec = document.getElementById('tab-btn-security'); var paneInfo = document.getElementById('pane-info'); var paneSec = document.getElementById('pane-security'); if (tab === 'info') { paneInfo.classList.remove('hidden'); paneInfo.classList.add('flex'); paneSec.classList.add('hidden'); paneSec.classList.remove('flex'); btnInfo.className = 'px-5 py-2 rounded-xl font-headline-sm text-body-sm font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm flex items-center gap-2'; btnSec.className = 'px-5 py-2 rounded-xl font-headline-sm text-body-sm font-medium transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-2'; } else { paneSec.classList.remove('hidden'); paneSec.classList.add('flex'); paneInfo.classList.add('hidden'); paneInfo.classList.remove('flex'); btnSec.className = 'px-5 py-2 rounded-xl font-headline-sm text-body-sm font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm flex items-center gap-2'; btnInfo.className = 'px-5 py-2 rounded-xl font-headline-sm text-body-sm font-medium transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-2'; } } function toggleEditMode(forceState) { var view = document.getElementById('infoViewMode'); var edit = document.getElementById('infoEditMode'); var heroBtnText = document.getElementById('heroEditBtnText'); var shouldEdit = (forceState !== undefined) ? forceState : view.classList.contains('grid'); if (shouldEdit) { switchMainTab('info'); view.classList.remove('grid'); view.classList.add('hidden'); edit.classList.remove('hidden'); edit.classList.add('flex'); heroBtnText.innerText = 'กำลังแก้ไข...'; } else { edit.classList.remove('flex'); edit.classList.add('hidden'); view.classList.remove('hidden'); view.classList.add('grid'); heroBtnText.innerText = 'แก้ไขโปรไฟล์'; } } function saveProfileChanges(e) { e.preventDefault(); var newName = document.getElementById('inputFullName').value.trim(); var newEmail = document.getElementById('inputEmail').value.trim(); var newYear = document.getElementById('inputYear').value; if (newName) { document.getElementById('valFullName').innerText = newName; document.getElementById('displayHeroName').innerText = newName; } if (newEmail) { document.getElementById('valEmail').innerText = newEmail; document.getElementById('displayHeroEmail').innerText = newEmail; } if (newYear) { document.getElementById('valYear').innerText = newYear; } toggleEditMode(false); showToast('บันทึกโปรไฟล์เรียบร้อยแล้ว ✓'); } function savePasswordChanges(e) { e.preventDefault(); document.getElementById('pwdCurrent').value = ''; document.getElementById('pwdNew').value = ''; document.getElementById('pwdConfirm').value = ''; showToast('เปลี่ยนรหัสผ่านเรียบร้อยแล้ว 🔑'); } function toggleFieldVisibility(fieldId, btn) { var input = document.getElementById(fieldId); var icon = btn.querySelector('.material-symbols-outlined'); if (input.type === 'password') { input.type = 'text'; icon.innerText = 'visibility_off'; } else { input.type = 'password'; icon.innerText = 'visibility'; } } function openModal(id) { var modal = document.getElementById(id); modal.classList.remove('hidden'); modal.classList.add('flex'); } function closeModal(id) { var modal = document.getElementById(id); modal.classList.remove('flex'); modal.classList.add('hidden'); } function simulateAvatarUpload() { closeModal('avatarModal'); showToast('อัปเดตภาพโปรไฟล์สำเร็จแล้ว 📸'); } function removeAvatar() { closeModal('avatarModal'); showToast('นำภาพโปรไฟล์ออกเรียบร้อยแล้ว'); } function confirmLogout() { closeModal('logoutModal'); showToast('กำลังออกจากระบบ...'); } function showToast(msg) { var toast = document.getElementById('toastNotification'); var toastMsg = document.getElementById('toastMessage'); toastMsg.innerText = msg; toast.classList.remove('translate-y-16', 'opacity-0', 'pointer-events-none'); setTimeout(function() { toast.classList.add('translate-y-16', 'opacity-0', 'pointer-events-none'); }, 3000); }</script></main><footer class="w-full bg-surface-container-lowest border-t border-surface-variant/40 py-6"><div class="max-w-4xl mx-auto px-margin md:px-margin-md flex flex-col sm:flex-row items-center justify-between gap-4 text-on-surface-variant font-body-sm text-xs"><div class="flex items-center gap-2 text-center sm:text-left flex-wrap justify-center sm:justify-start"><span class="font-headline-sm font-bold text-primary">TimeMatch</span><span class="">•</span><span class="">วิทยาลัยการคอมพิวเตอร์ (College of Computing)</span><span class="">•</span><span class="">มหาวิทยาลัยขอนแก่น</span></div><div class="flex items-center gap-4"><a class="hover:text-primary transition-colors" href="#">ศูนย์ช่วยเหลือ</a><a class="hover:text-primary transition-colors" href="#">ข้อกำหนดการใช้งาน</a></div></div></footer>
+
+
+
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    // สีปกติ
+    const inactiveClasses = [
+        "text-[#607D8B]",
+        "hover:text-[#4F9D9D]"
+    ];
+
+    // สีตอนเลือก
+    const activeClasses = [
+        "bg-[#4F9D9D]",
+        "text-white",
+        "font-semibold"
+    ];
+
+    function setActiveNav(activeLink) {
+
+        navLinks.forEach(link => {
+            // ล้าง active
+            link.classList.remove(...activeClasses);
+
+            // ใส่สีปกติ
+            link.classList.add(...inactiveClasses);
+        });
+
+        // ล้างสีปกติจากปุ่มที่เลือก
+        activeLink.classList.remove(...inactiveClasses);
+
+        // ทำเป็นสีเขียว
+        activeLink.classList.add(...activeClasses);
+    }
+
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            setActiveNav(this);
+        });
+    });
+
+
+    // ===== ตรวจว่าตอนนี้อยู่หน้าอะไร =====
+    const currentPage = window.location.pathname.split("/").pop();
+
+    if (currentPage === "home.html") {
+        const home = document.querySelector('[data-nav="home"]');
+        if (home) setActiveNav(home);
+    }
+
+    if (currentPage === "my-groups.html") {
+        const groups = document.querySelector('[data-nav="my-groups"]');
+        if (groups) setActiveNav(groups);
+    }
+
+});
+</script>
+
+</body></html>

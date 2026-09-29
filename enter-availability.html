@@ -1,0 +1,926 @@
+<!DOCTYPE html><html lang="th" style=""><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><title>TimeMatch</title><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = {"darkMode":"class","theme":{"extend":{"colors":{"secondary":"#33618f","surface-container-low":"#e9f6fd","on-error":"#ffffff","on-tertiary-fixed-variant":"#00522a","primary":"#09696a","on-tertiary-container":"#f6fff4","inverse-on-surface":"#e6f3fb","on-tertiary-fixed":"#00210e","tertiary":"#20693e","primary-fixed":"#a2f0f0","tertiary-container":"#3c8254","surface-variant":"#d7e4ec","on-secondary-fixed-variant":"#144976","on-primary":"#ffffff","outline":"#6f7979","secondary-fixed-dim":"#9ecafe","error-container":"#ffdad6","surface-tint":"#09696a","surface-container":"#e3f0f8","on-secondary":"#ffffff","on-primary-fixed-variant":"#004f50","tertiary-fixed-dim":"#8ed7a1","background":"#f4faff","surface-container-lowest":"#ffffff","on-error-container":"#93000a","outline-variant":"#bec9c8","primary-container":"#4f9d9d","primary-fixed-dim":"#86d4d3","on-secondary-container":"#255582","surface":"#f4faff","on-tertiary":"#ffffff","on-secondary-fixed":"#001d35","secondary-container":"#9ecafe","on-primary-fixed":"#002020","inverse-primary":"#86d4d3","surface-dim":"#cfdce4","on-primary-container":"#003030","inverse-surface":"#263238","surface-bright":"#f4faff","on-surface-variant":"#3f4948","on-surface":"#111d23","surface-container-highest":"#d7e4ec","tertiary-fixed":"#a9f3bc","surface-container-high":"#ddeaf2","secondary-fixed":"#d1e4ff","error":"#ba1a1a","on-background":"#111d23"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-md":"1rem","gutter-lg":"2rem","space-sm":"0.5rem","margin-md":"2rem","margin-lg":"3rem","space-xs":"0.25rem","space-xl":"2.5rem","space-lg":"1.5rem","gutter-md":"1.5rem","margin":"1rem","gutter":"1rem"},"fontFamily":{"headline-sm":["Plus Jakarta Sans"],"headline-lg":["Plus Jakarta Sans"],"headline-md":["Plus Jakarta Sans"],"body-sm":["Inter"],"body-lg":["Inter"],"display":["Plus Jakarta Sans"],"display-mobile":["Plus Jakarta Sans"],"label-tag":["Inter"],"body-md":["Inter"],"headline-lg-mobile":["Plus Jakarta Sans"],"label-code":["JetBrains Mono"]},"fontSize":{"headline-sm":["1.125rem",{"lineHeight":"1.5rem","letterSpacing":"0em","fontWeight":"600"}],"headline-lg":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-md":["1.25rem",{"lineHeight":"1.75rem","letterSpacing":"0em","fontWeight":"600"}],"body-sm":["0.75rem",{"lineHeight":"1.125rem","letterSpacing":"0.01em","fontWeight":"400"}],"body-lg":["1rem",{"lineHeight":"1.625rem","letterSpacing":"0em","fontWeight":"400"}],"display":["3rem",{"lineHeight":"3.5rem","letterSpacing":"-0.02em","fontWeight":"700"}],"display-mobile":["2rem",{"lineHeight":"2.5rem","letterSpacing":"-0.01em","fontWeight":"700"}],"label-tag":["0.6875rem",{"lineHeight":"1rem","letterSpacing":"0.04em","fontWeight":"600"}],"body-md":["0.875rem",{"lineHeight":"1.375rem","letterSpacing":"0em","fontWeight":"400"}],"headline-lg-mobile":["1.5rem",{"lineHeight":"2rem","letterSpacing":"-0.01em","fontWeight":"600"}],"label-code":["0.8125rem",{"lineHeight":"1.25rem","letterSpacing":"0em","fontWeight":"500"}]}}}};</script></head><body class="bg-background font-body-md text-on-surface antialiased min-h-screen flex flex-col">
+    
+    
+   <!-- ================= NAVBAR ================= -->
+<header class="fixed top-0 left-0 w-full z-50
+               bg-surface/95 backdrop-blur-xl
+               border-b border-outline-variant/30
+               shadow-[0_1px_8px_rgba(38,50,56,0.04)]">
+
+  <div class="h-16 w-full px-5
+              flex items-center justify-between">
+
+    <!-- LEFT : LOGO -->
+    <a href="index.html"
+       class="flex items-center gap-2 shrink-0">
+
+      <img
+        alt="TimeMatch Logo"
+        class="h-8 w-8 object-contain"
+        src="https://lh3.googleusercontent.com/aida/AEtjO1WdLqtWtZk7hffCrpEFHvyz_ar8IJD_L4LqNlCgRrf_GyxErMf4immcMbahuljbEODGFcHxcJtGc5rW6S8FakgEq31q-ACI_-5oiNQZbZi1WCiNXtOLUu0v0FuB_YkBEFCOJL3KWvjjwQYH2NCJKdScUCEj-DydOrmWnIO3S1nQJL6LMJpJO-58YupR_wXSuA2Ghwh9l28AG5zDMFqHDFjKSqdkwX596MP8rbXM-nsWFHluAPZdV2g2bVM">
+
+      <span class="font-headline-sm text-headline-sm
+                   text-on-surface font-bold">
+        TimeMatch
+      </span>
+    </a>
+
+
+    <!-- CENTER : MENU -->
+   <!-- CENTER : MENU -->
+<nav class="hidden md:flex items-center gap-3
+            absolute left-1/2 -translate-x-1/2">
+
+    <a href="home.html"
+       class="nav-link px-5 py-2 rounded-full transition-colors"
+       data-nav="home">
+        หน้าหลัก
+    </a>
+
+    <a href="my-groups.html"
+       class="nav-link px-5 py-2 rounded-full transition-colors"
+       data-nav="my-groups">
+        กลุ่มของฉัน
+    </a>
+
+    <a href="#"
+       class="nav-link px-5 py-2 rounded-full transition-colors"
+       data-nav="how-it-works">
+        วิธีใช้งาน
+    </a>
+
+</nav>
+
+    <!-- RIGHT : NOTIFICATION + PROFILE -->
+    <div class="flex items-center gap-4 shrink-0">
+
+      <!-- NOTIFICATION -->
+      <button
+        type="button"
+        aria-label="Notifications"
+        class="relative w-10 h-10
+               flex items-center justify-center
+               rounded-full
+               text-on-surface-variant
+               hover:text-on-surface
+               hover:bg-surface-container
+               transition-colors">
+
+        <span class="material-symbols-outlined text-[22px]">
+          notifications
+        </span>
+
+        <!-- Notification Dot -->
+        <span class="absolute top-1.5 right-1.5
+                     w-2 h-2 rounded-full
+                     bg-error
+                     ring-2 ring-surface">
+        </span>
+
+      </button>
+
+
+      <!-- PROFILE -->
+      <a href="profile.html"
+         class="flex items-center gap-2
+                px-2 py-1.5 rounded-xl
+                hover:bg-surface-container
+                transition-colors">
+
+        <!-- Profile Image -->
+        <img
+          alt="Profile"
+          class="w-9 h-9 rounded-full object-cover
+                 ring-2 ring-surface-container-high"
+          src="https://lh3.googleusercontent.com/aida/AEtjO1XlSnEB9jG8W6hzP2SDsNo5fMsYan7ciLYMAMFtKI47o6bFNHpvRFvXIz3fUIDOAXBNUWyZBXDD-z2wYdi95qm7KniOrn1pM6FFJJGewawlf-GEnHOmTvwyapRy_IflwSoNDLxys_kvaXeMwTvsN4xCRucsaYjcUeEW3IBJDU450zXyM873CkE084R6Y1-sNAj3oEQardVcCoZiZpMvIViliAeFjocmYk2x8tpkxzblSwPlVpZxOwoeRsyT">
+
+        <!-- Profile Information -->
+        <div class="hidden sm:flex flex-col text-left">
+
+          <span class="font-body-md text-body-md
+                       text-on-surface font-semibold
+                       leading-tight">
+            Chidchanok P.
+          </span>
+
+          <span class="font-label-tag text-label-tag
+                       text-on-surface-variant
+                       leading-tight">
+            CS Student
+          </span>
+
+        </div>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</header>
+<!-- =============== END NAVBAR =============== -->
+
+
+
+<main class="w-full pt-16 flex-1 bg-background"><div class="flex flex-col w-full pb-32">
+<!-- Top Background Ambient Glow Effect -->
+<div class="relative w-full overflow-hidden">
+<div class="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[350px] bg-gradient-to-b from-secondary-container/25 via-primary-fixed/20 to-transparent blur-3xl pointer-events-none -z-10"></div>
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+<!-- 1. BACK ACTION -->
+<div class="flex items-center justify-between mb-6">
+<a class="group inline-flex items-center gap-space-xs text-on-surface-variant hover:text-primary transition-all duration-200" href="my-groups.html" id="backNavBtn">
+<span class="material-symbols-outlined text-headline-sm transition-transform duration-200 group-hover:-translate-x-1">arrow_back</span>
+<span class="font-body-md text-body-md font-medium">กลับไปหน้ารวมกลุ่ม</span>
+</a>
+<!-- Mode Toggle Switch (Interactive Demo) -->
+<div class="inline-flex items-center bg-surface-container-high p-1 rounded-full shadow-inner">
+<button class="px-3.5 py-1.5 rounded-full font-label-tag text-label-tag font-semibold transition-all text-on-surface-variant hover:text-on-surface" id="mode-new" type="button">
+            ✨ โหมด: กรอกครั้งแรก
+          </button>
+<button class="px-3.5 py-1.5 rounded-full font-label-tag text-label-tag font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm" id="mode-edit" type="button">
+            ✏️ โหมด: แก้ไขเวลาเดิม
+          </button>
+</div>
+</div>
+<!-- 2. PAGE HEADER & GROUP PARAMETERS -->
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6">
+<div class="max-w-2xl">
+
+<h1 class="font-headline-lg text-headline-lg md:text-[2.5rem] md:leading-[3rem] font-bold text-on-surface tracking-tight">
+            กรอกเวลาว่างของฉัน&nbsp;</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-2 leading-relaxed">
+            เลือกช่วงเวลาที่คุณสะดวกสำหรับทำงานกลุ่ม แล้วระบบจะนำเวลาของคุณไปเปรียบเทียบกับสมาชิกคนอื่นให้อัตโนมัติ
+          </p>
+</div>
+<!-- Meta Parameters Cards -->
+<div class="flex flex-wrap items-center gap-2.5">
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-primary text-[20px]">calendar_today</span>
+<div>
+<p class="font-label-tag text-[0.625rem] text-outline uppercase tracking-wider">ช่วงกำหนดนัด</p>
+<p class="font-body-sm text-body-sm font-semibold text-on-surface">1 – 7 ต.ค. 2026</p>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-surface-container-lowest shadow-sm">
+<span class="material-symbols-outlined text-secondary text-[20px]">timer</span>
+<div>
+<p class="font-label-tag text-[0.625rem] text-outline uppercase tracking-wider">ต้องการเวลา</p>
+<p class="font-body-sm text-body-sm font-semibold text-on-surface">ขั้นต่ำ 2 ชม.</p>
+</div>
+</div>
+<div class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed-variant shadow-sm">
+<span class="material-symbols-outlined text-tertiary text-[20px]">group</span>
+<div>
+<p class="font-label-tag text-[0.625rem] text-tertiary-container uppercase tracking-wider">สถานะสมาชิกกลุ่ม</p>
+<p class="font-body-sm text-body-sm font-semibold text-on-tertiary-fixed">ส่งแล้ว 4/5</p>
+</div>
+</div>
+</div>
+</div>
+<!-- 3. INSTRUCTION & LEGEND BANNER -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-4 items-center bg-surface-container-lowest p-5 rounded-2xl shadow-sm mb-6">
+<div class="md:col-span-7 flex items-start gap-3.5">
+<div class="w-10 h-10 rounded-xl bg-primary-fixed flex items-center justify-center text-primary shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[24px]">touch_app</span>
+</div>
+<div>
+<h4 class="font-headline-sm text-headline-sm text-on-surface font-semibold flex items-center gap-2">
+              เลือกเฉพาะเวลาที่คุณว่าง <span class="text-primary text-base">✨</span>
+</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-snug">
+              คลิกหรือลากเมาส์บนตารางเพื่อเลือกหลายช่วงเวลาได้สะดวก ช่องที่ปล่อยว่างจะถูกนับเป็น <span class="font-medium text-error">ไม่ว่าง</span> โดยอัตโนมัติ
+            </p>
+</div>
+</div>
+<div class="md:col-span-5 flex flex-wrap items-center md:justify-end gap-4 pt-3 md:pt-0 border-t md:border-t-0 border-surface-container">
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-md bg-primary-container flex items-center justify-center text-on-primary shadow-xs">
+<span class="material-symbols-outlined text-[14px] font-bold">check</span>
+</div>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">ว่าง (สะดวกทำงาน)</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-5 h-5 rounded-md bg-surface-container-lowest shadow-inner"></div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">ยังไม่ได้เลือก (ไม่ว่าง)</span>
+</div>
+</div>
+</div>
+<!-- 4. QUICK ACTIONS TOOLBAR -->
+<div class="flex flex-wrap items-center justify-between gap-3 mb-4">
+<div class="flex flex-wrap items-center gap-2">
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-secondary-fixed text-on-surface-variant hover:text-on-secondary-fixed-variant font-label-tag text-label-tag transition-all duration-150" id="btn-select-all-monday" type="button">
+<span class="material-symbols-outlined text-[16px]">select_all</span>
+<span class="">เลือกทั้งวัน (จ. 1 ต.ค.)</span>
+</button>
+<button class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-secondary-fixed text-on-surface-variant hover:text-on-secondary-fixed-variant font-label-tag text-label-tag transition-all duration-150" id="btn-select-afternoons" type="button">
+<span class="material-symbols-outlined text-[16px]">wb_twilight</span>
+<span class="">เลือกทุกช่วงบ่าย (13:00 - 17:00)</span>
+</button>
+<button class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-outline hover:text-error hover:bg-error-container/20 font-label-tag text-label-tag transition-all duration-150" id="btn-clear-table" type="button">
+<span class="material-symbols-outlined text-[16px]">refresh</span>
+<span class="">ล้างทั้งหมด</span>
+</button>
+</div>
+
+</div>
+<!-- 5. AVAILABILITY TABLE CARD (DESKTOP GRID VIEW) -->
+<div class="hidden md:block bg-surface-container-lowest rounded-3xl shadow-[0_4px_24px_rgba(0,0,0,0.03)] p-6 overflow-hidden">
+<div class="w-full overflow-x-auto select-none" id="table-scroll-container">
+<div class="min-w-[760px]">
+<!-- Day Column Headers -->
+<div class="grid grid-cols-8 gap-2 pb-3 mb-2 border-b border-surface-container">
+<div class="flex items-center justify-center font-label-tag text-label-tag text-outline tracking-wider uppercase">
+                เวลา
+              </div>
+<!-- Monday -->
+<div class="text-center p-2 rounded-xl bg-surface-container-low transition-colors hover:bg-surface-container">
+<span class="font-label-tag text-[0.7rem] uppercase tracking-wider text-secondary font-semibold">จันทร์</span>
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">1 ต.ค.</p>
+<button class="mt-1 text-[0.68rem] text-primary hover:underline font-medium block mx-auto" onclick="selectEntireDay('mon')" type="button">เลือกทั้งวัน</button>
+</div>
+<!-- Tuesday -->
+<div class="text-center p-2 rounded-xl bg-surface-container-low transition-colors hover:bg-surface-container">
+<span class="font-label-tag text-[0.7rem] uppercase tracking-wider text-secondary font-semibold">อังคาร</span>
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">2 ต.ค.</p>
+<button class="mt-1 text-[0.68rem] text-primary hover:underline font-medium block mx-auto" onclick="selectEntireDay('tue')" type="button">เลือกทั้งวัน</button>
+</div>
+<!-- Wednesday -->
+<div class="text-center p-2 rounded-xl bg-surface-container-low transition-colors hover:bg-surface-container">
+<span class="font-label-tag text-[0.7rem] uppercase tracking-wider text-secondary font-semibold">พุธ</span>
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">3 ต.ค.</p>
+<button class="mt-1 text-[0.68rem] text-primary hover:underline font-medium block mx-auto" onclick="selectEntireDay('wed')" type="button">เลือกทั้งวัน</button>
+</div>
+<!-- Thursday -->
+<div class="text-center p-2 rounded-xl bg-surface-container-low transition-colors hover:bg-surface-container">
+<span class="font-label-tag text-[0.7rem] uppercase tracking-wider text-secondary font-semibold">พฤหัสฯ</span>
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">4 ต.ค.</p>
+<button class="mt-1 text-[0.68rem] text-primary hover:underline font-medium block mx-auto" onclick="selectEntireDay('thu')" type="button">เลือกทั้งวัน</button>
+</div>
+<!-- Friday -->
+<div class="text-center p-2 rounded-xl bg-surface-container-low transition-colors hover:bg-surface-container">
+<span class="font-label-tag text-[0.7rem] uppercase tracking-wider text-secondary font-semibold">ศุกร์</span>
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">5 ต.ค.</p>
+<button class="mt-1 text-[0.68rem] text-primary hover:underline font-medium block mx-auto" onclick="selectEntireDay('fri')" type="button">เลือกทั้งวัน</button>
+</div>
+<!-- Saturday -->
+<div class="text-center p-2 rounded-xl bg-surface-container-low transition-colors hover:bg-surface-container">
+<span class="font-label-tag text-[0.7rem] uppercase tracking-wider text-secondary font-semibold">เสาร์</span>
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">6 ต.ค.</p>
+<button class="mt-1 text-[0.68rem] text-primary hover:underline font-medium block mx-auto" onclick="selectEntireDay('sat')" type="button">เลือกทั้งวัน</button>
+</div>
+<!-- Sunday -->
+<div class="text-center p-2 rounded-xl bg-surface-container-low transition-colors hover:bg-surface-container">
+<span class="font-label-tag text-[0.7rem] uppercase tracking-wider text-secondary font-semibold">อาทิตย์</span>
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">7 ต.ค.</p>
+<button class="mt-1 text-[0.68rem] text-primary hover:underline font-medium block mx-auto" onclick="selectEntireDay('sun')" type="button">เลือกทั้งวัน</button>
+</div>
+</div>
+<!-- Interactive Grid Rows -->
+<div class="flex flex-col gap-1.5 text-xs font-label-code" id="desktop-grid-rows"><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">09:00</div><button type="button" data-key="mon_09:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="tue_09:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="wed_09:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_09:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="fri_09:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_09:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_09:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">09:30</div><button type="button" data-key="mon_09:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="tue_09:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="wed_09:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_09:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="fri_09:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_09:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_09:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">10:00</div><button type="button" data-key="mon_10:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="tue_10:00" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="wed_10:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_10:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="fri_10:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_10:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_10:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">10:30</div><button type="button" data-key="mon_10:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="tue_10:30" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="wed_10:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_10:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="fri_10:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_10:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_10:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">11:00</div><button type="button" data-key="mon_11:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="tue_11:00" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="wed_11:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_11:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="fri_11:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_11:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_11:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">11:30</div><button type="button" data-key="mon_11:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="tue_11:30" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="wed_11:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_11:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="fri_11:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_11:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_11:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">12:00</div><button type="button" data-key="mon_12:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="tue_12:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="wed_12:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_12:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="fri_12:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_12:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_12:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">12:30</div><button type="button" data-key="mon_12:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="tue_12:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="wed_12:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_12:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="fri_12:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_12:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_12:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">13:00</div><button type="button" data-key="mon_13:00" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="tue_13:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="wed_13:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_13:00" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="fri_13:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_13:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_13:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">13:30</div><button type="button" data-key="mon_13:30" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="tue_13:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="wed_13:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_13:30" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="fri_13:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_13:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_13:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">14:00</div><button type="button" data-key="mon_14:00" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="tue_14:00" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="wed_14:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_14:00" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="fri_14:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_14:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_14:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">14:30</div><button type="button" data-key="mon_14:30" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="tue_14:30" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="wed_14:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_14:30" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="fri_14:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_14:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_14:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">15:00</div><button type="button" data-key="mon_15:00" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="tue_15:00" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="wed_15:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_15:00" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="fri_15:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_15:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_15:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">15:30</div><button type="button" data-key="mon_15:30" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="tue_15:30" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="wed_15:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_15:30" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="fri_15:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_15:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_15:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">16:00</div><button type="button" data-key="mon_16:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="tue_16:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="wed_16:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_16:00" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="fri_16:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_16:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_16:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">16:30</div><button type="button" data-key="mon_16:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="tue_16:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="wed_16:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_16:30" class="group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]"><span class="material-symbols-outlined text-[14px] font-bold">check</span></button><button type="button" data-key="fri_16:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_16:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_16:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">17:00</div><button type="button" data-key="mon_17:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="tue_17:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="wed_17:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_17:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="fri_17:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_17:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_17:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">17:30</div><button type="button" data-key="mon_17:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="tue_17:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="wed_17:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_17:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="fri_17:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_17:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_17:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">18:00</div><button type="button" data-key="mon_18:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="tue_18:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="wed_18:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_18:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="fri_18:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_18:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_18:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">18:30</div><button type="button" data-key="mon_18:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="tue_18:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="wed_18:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_18:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="fri_18:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_18:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_18:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">19:00</div><button type="button" data-key="mon_19:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="tue_19:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="wed_19:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_19:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="fri_19:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_19:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_19:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">19:30</div><button type="button" data-key="mon_19:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="tue_19:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="wed_19:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_19:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="fri_19:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_19:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_19:30" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div><div class="grid grid-cols-8 gap-2 items-center"><div class="text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none">20:00</div><button type="button" data-key="mon_20:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="tue_20:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="wed_20:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="thu_20:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="fri_20:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sat_20:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button><button type="button" data-key="sun_20:00" class="group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner"><span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span></button></div></div>
+</div>
+</div>
+</div>
+<!-- 9. MOBILE VIEW PREVIEW INTERACTION (Shown on small screens) -->
+<div class="block md:hidden bg-surface-container-lowest rounded-2xl shadow-sm p-4 mb-6">
+<div class="flex items-center justify-between mb-3 pb-2 border-b border-surface-container">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-lg">calendar_view_day</span>
+<span class="font-headline-sm text-headline-sm font-semibold text-on-surface">เลือกวัน</span>
+</div>
+<span class="font-body-sm text-body-sm text-outline">แตะเพื่อสลับวัน</span>
+</div>
+<!-- Horizontal Date Pill Scroller -->
+<div class="flex gap-2 overflow-x-auto pb-2 -mx-2 px-2 no-scrollbar" id="mobile-day-pills">
+<button class="mobile-day-pill shrink-0 flex flex-col items-center justify-center w-16 py-2 rounded-xl bg-primary-container text-on-primary font-semibold shadow-sm" data-mday="mon" type="button">
+<span class="text-[0.65rem] opacity-90">จันทร์</span>
+<span class="text-base font-bold">1 ต.ค.</span>
+<span class="w-1.5 h-1.5 rounded-full bg-white mt-1"></span>
+</button>
+<button class="mobile-day-pill shrink-0 flex flex-col items-center justify-center w-16 py-2 rounded-xl bg-surface-container-high text-on-surface font-medium" data-mday="tue" type="button">
+<span class="text-[0.65rem] text-on-surface-variant">อังคาร</span>
+<span class="text-base font-bold">2 ต.ค.</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1"></span>
+</button>
+<button class="mobile-day-pill shrink-0 flex flex-col items-center justify-center w-16 py-2 rounded-xl bg-surface-container-high text-on-surface font-medium" data-mday="wed" type="button">
+<span class="text-[0.65rem] text-on-surface-variant">พุธ</span>
+<span class="text-base font-bold">3 ต.ค.</span>
+<span class="w-1.5 h-1.5 rounded-full bg-transparent mt-1"></span>
+</button>
+<button class="mobile-day-pill shrink-0 flex flex-col items-center justify-center w-16 py-2 rounded-xl bg-surface-container-high text-on-surface font-medium" data-mday="thu" type="button">
+<span class="text-[0.65rem] text-on-surface-variant">พฤหัสฯ</span>
+<span class="text-base font-bold">4 ต.ค.</span>
+<span class="w-1.5 h-1.5 rounded-full bg-primary mt-1"></span>
+</button>
+<button class="mobile-day-pill shrink-0 flex flex-col items-center justify-center w-16 py-2 rounded-xl bg-surface-container-high text-on-surface font-medium" data-mday="fri" type="button">
+<span class="text-[0.65rem] text-on-surface-variant">ศุกร์</span>
+<span class="text-base font-bold">5 ต.ค.</span>
+<span class="w-1.5 h-1.5 rounded-full bg-transparent mt-1"></span>
+</button>
+<button class="mobile-day-pill shrink-0 flex flex-col items-center justify-center w-16 py-2 rounded-xl bg-surface-container-high text-on-surface font-medium" data-mday="sat" type="button">
+<span class="text-[0.65rem] text-on-surface-variant">เสาร์</span>
+<span class="text-base font-bold">6 ต.ค.</span>
+<span class="w-1.5 h-1.5 rounded-full bg-transparent mt-1"></span>
+</button>
+<button class="mobile-day-pill shrink-0 flex flex-col items-center justify-center w-16 py-2 rounded-xl bg-surface-container-high text-on-surface font-medium" data-mday="sun" type="button">
+<span class="text-[0.65rem] text-on-surface-variant">อาทิตย์</span>
+<span class="text-base font-bold">7 ต.ค.</span>
+<span class="w-1.5 h-1.5 rounded-full bg-transparent mt-1"></span>
+</button>
+</div>
+<!-- Mobile Slots Stack -->
+<div class="mt-4">
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-tag text-label-tag uppercase tracking-wider text-outline">ช่วงเวลา 30 นาที</span>
+<span class="font-body-sm text-body-sm text-primary font-semibold" id="mobile-day-summary">จันทร์: ว่าง 3.0 ชั่วโมง</span>
+</div>
+<div class="grid grid-cols-2 gap-2 max-h-[360px] overflow-y-auto pr-1" id="mobile-slots-container"><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-surface-container-high text-on-surface hover:bg-surface-container">
+        <span class="font-label-code text-xs">09:00</span>
+        <span class="material-symbols-outlined text-[16px]">add_circle_outline</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-surface-container-high text-on-surface hover:bg-surface-container">
+        <span class="font-label-code text-xs">09:30</span>
+        <span class="material-symbols-outlined text-[16px]">add_circle_outline</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-surface-container-high text-on-surface hover:bg-surface-container">
+        <span class="font-label-code text-xs">10:00</span>
+        <span class="material-symbols-outlined text-[16px]">add_circle_outline</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-surface-container-high text-on-surface hover:bg-surface-container">
+        <span class="font-label-code text-xs">10:30</span>
+        <span class="material-symbols-outlined text-[16px]">add_circle_outline</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-surface-container-high text-on-surface hover:bg-surface-container">
+        <span class="font-label-code text-xs">11:00</span>
+        <span class="material-symbols-outlined text-[16px]">add_circle_outline</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-surface-container-high text-on-surface hover:bg-surface-container">
+        <span class="font-label-code text-xs">11:30</span>
+        <span class="material-symbols-outlined text-[16px]">add_circle_outline</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-surface-container-high text-on-surface hover:bg-surface-container">
+        <span class="font-label-code text-xs">12:00</span>
+        <span class="material-symbols-outlined text-[16px]">add_circle_outline</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-surface-container-high text-on-surface hover:bg-surface-container">
+        <span class="font-label-code text-xs">12:30</span>
+        <span class="material-symbols-outlined text-[16px]">add_circle_outline</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-primary-container text-on-primary font-semibold shadow-xs">
+        <span class="font-label-code text-xs">13:00</span>
+        <span class="material-symbols-outlined text-[16px]">check_circle</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-primary-container text-on-primary font-semibold shadow-xs">
+        <span class="font-label-code text-xs">13:30</span>
+        <span class="material-symbols-outlined text-[16px]">check_circle</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-primary-container text-on-primary font-semibold shadow-xs">
+        <span class="font-label-code text-xs">14:00</span>
+        <span class="material-symbols-outlined text-[16px]">check_circle</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-primary-container text-on-primary font-semibold shadow-xs">
+        <span class="font-label-code text-xs">14:30</span>
+        <span class="material-symbols-outlined text-[16px]">check_circle</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-primary-container text-on-primary font-semibold shadow-xs">
+        <span class="font-label-code text-xs">15:00</span>
+        <span class="material-symbols-outlined text-[16px]">check_circle</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-primary-container text-on-primary font-semibold shadow-xs">
+        <span class="font-label-code text-xs">15:30</span>
+        <span class="material-symbols-outlined text-[16px]">check_circle</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-surface-container-high text-on-surface hover:bg-surface-container">
+        <span class="font-label-code text-xs">16:00</span>
+        <span class="material-symbols-outlined text-[16px]">add_circle_outline</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-surface-container-high text-on-surface hover:bg-surface-container">
+        <span class="font-label-code text-xs">16:30</span>
+        <span class="material-symbols-outlined text-[16px]">add_circle_outline</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-surface-container-high text-on-surface hover:bg-surface-container">
+        <span class="font-label-code text-xs">17:00</span>
+        <span class="material-symbols-outlined text-[16px]">add_circle_outline</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-surface-container-high text-on-surface hover:bg-surface-container">
+        <span class="font-label-code text-xs">17:30</span>
+        <span class="material-symbols-outlined text-[16px]">add_circle_outline</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-surface-container-high text-on-surface hover:bg-surface-container">
+        <span class="font-label-code text-xs">18:00</span>
+        <span class="material-symbols-outlined text-[16px]">add_circle_outline</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-surface-container-high text-on-surface hover:bg-surface-container">
+        <span class="font-label-code text-xs">18:30</span>
+        <span class="material-symbols-outlined text-[16px]">add_circle_outline</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-surface-container-high text-on-surface hover:bg-surface-container">
+        <span class="font-label-code text-xs">19:00</span>
+        <span class="material-symbols-outlined text-[16px]">add_circle_outline</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-surface-container-high text-on-surface hover:bg-surface-container">
+        <span class="font-label-code text-xs">19:30</span>
+        <span class="material-symbols-outlined text-[16px]">add_circle_outline</span>
+      </button><button type="button" class="flex items-center justify-between p-2.5 rounded-xl transition-all bg-surface-container-high text-on-surface hover:bg-surface-container">
+        <span class="font-label-code text-xs">20:00</span>
+        <span class="material-symbols-outlined text-[16px]">add_circle_outline</span>
+      </button></div>
+</div>
+</div>
+<!-- 6. SELECTED AVAILABILITY SUMMARY -->
+
+</div>
+</div>
+<!-- 7. STICKY BOTTOM BAR (SAVE ACTION) -->
+<div class="fixed bottom-0 left-0 right-0 z-40 bg-surface-container-lowest/95 backdrop-blur-md shadow-[0_-4px_20px_rgba(0,0,0,0.06)]">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-col sm:flex-row items-center justify-between gap-3">
+<!-- Left side summary badge -->
+<div class="flex items-center gap-3 w-full sm:w-auto justify-between sm:justify-start">
+<div class="flex items-center gap-2.5">
+<span class="flex h-3 w-3 relative">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-tertiary-container opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3 w-3 bg-tertiary"></span>
+</span>
+<div>
+<p class="font-body-md text-body-md font-bold text-on-surface" id="bottom-summary-text">เลือกแล้ว 3 วัน (รวม 11.0 ชั่วโมง)</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant hidden sm:block">
+              สถานะ: พร้อมบันทึกข้อมูลเข้าระบบกลาง
+            </p>
+</div>
+</div>
+</div>
+<!-- Right side actions -->
+<div class="flex items-center gap-2.5 w-full sm:w-auto">
+<button class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-1.5 px-4 py-2.5 rounded-xl text-outline hover:text-error hover:bg-error-container/20 font-body-md text-body-md font-semibold transition-all" id="btn-bottom-clear" type="button">
+<span class="material-symbols-outlined text-[18px]">delete_sweep</span>
+<span class="">ล้างทั้งหมด</span>
+</button>
+<button class="flex-1 sm:flex-initial inline-flex items-center justify-center gap-2 px-6 py-2.5 rounded-xl bg-primary-container hover:bg-[#3f8585] active:scale-[0.98] text-on-primary font-headline-sm text-headline-sm font-bold shadow-md hover:shadow-lg transition-all" id="btn-save-availability" type="button">
+<span class="">บันทึกเวลาว่าง</span>
+<span class="material-symbols-outlined text-[20px]">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- 8. TOAST NOTIFICATION -->
+<div class="fixed top-20 right-6 z-50 transform translate-x-full opacity-0 transition-all duration-300 pointer-events-none" id="toast-success">
+<div class="bg-surface-container-lowest text-on-surface rounded-2xl p-4 shadow-[0_12px_32px_rgba(0,0,0,0.12)] flex items-center gap-3 border-l-4 border-tertiary">
+<div class="w-9 h-9 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed">
+<span class="material-symbols-outlined text-[22px]">check_circle</span>
+</div>
+<div>
+<p class="font-headline-sm text-headline-sm font-bold text-on-surface">บันทึกเวลาว่างเรียบร้อยแล้ว ✨</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">สถานะของคุณอัปเดตเป็น “กรอกเวลาว่างแล้ว (5/5 คน)”</p>
+</div>
+</div>
+</div>
+<!-- 8. UNSAVED CHANGES MODAL -->
+<div class="fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-sm hidden items-center justify-center p-4" id="modal-unsaved">
+<div class="bg-surface-container-lowest rounded-3xl max-w-md w-full p-6 shadow-[0_20px_40px_rgba(0,0,0,0.2)] transform transition-all">
+<div class="w-12 h-12 rounded-2xl bg-secondary-fixed flex items-center justify-center text-secondary mb-4">
+<span class="material-symbols-outlined text-[28px]">pending_actions</span>
+</div>
+<h3 class="font-headline-md text-headline-md font-bold text-on-surface">
+        ยังไม่ได้บันทึกเวลาว่าง 👀
+      </h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2 leading-relaxed">
+        การเปลี่ยนแปลงช่วงเวลาของคุณยังไม่ได้ถูกบันทึกเข้าระบบกลุ่ม หากออกจากหน้านี้ ช่วงเวลาที่เพิ่งแก้ไขจะไม่ถูกนำไปคำนวณ
+      </p>
+<div class="mt-6 flex flex-col sm:flex-row items-center gap-2.5">
+<button class="w-full sm:flex-1 py-2.5 px-4 rounded-xl bg-primary-container text-on-primary font-headline-sm text-headline-sm font-bold hover:bg-[#3f8585] transition-colors" id="modal-btn-stay" type="button">
+          กลับไปบันทึก
+        </button>
+<button class="w-full sm:flex-1 py-2.5 px-4 rounded-xl text-outline hover:text-error hover:bg-error-container/20 font-body-md text-body-md font-semibold transition-colors" id="modal-btn-leave" type="button">
+          ออกโดยไม่บันทึก
+        </button>
+</div>
+</div>
+</div>
+</div>
+<script>
+  // Availability Data State Model
+  const DAYS = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+  const DAY_LABELS = {
+    mon: 'จันทร์ 1 ต.ค.',
+    tue: 'อังคาร 2 ต.ค.',
+    wed: 'พุธ 3 ต.ค.',
+    thu: 'พฤหัสบดี 4 ต.ค.',
+    fri: 'ศุกร์ 5 ต.ค.',
+    sat: 'เสาร์ 6 ต.ค.',
+    sun: 'อาทิตย์ 7 ต.ค.'
+  };
+
+  // Generate 30-min intervals from 09:00 to 20:00
+  const TIMES = [];
+  for (let hour = 9; hour <= 20; hour++) {
+    const hh = hour.toString().padStart(2, '0');
+    TIMES.push(`${hh}:00`);
+    if (hour < 20) {
+      TIMES.push(`${hh}:30`);
+    }
+  }
+
+  // Pre-filled selection as specified:
+  // Mon: 13:00 – 16:00
+  // Tue: 10:00 – 12:00 and 14:00 – 16:00
+  // Thu: 13:00 – 17:00
+  const selectedSlots = new Set();
+
+  function prefillDefaultSlots() {
+    selectedSlots.clear();
+    // Mon: 13:00 to 15:30 (slots representing 13:00 - 16:00)
+    ['13:00', '13:30', '14:00', '14:30', '15:00', '15:30'].forEach(t => selectedSlots.add(`mon_${t}`));
+    
+    // Tue: 10:00 - 12:00
+    ['10:00', '10:30', '11:00', '11:30'].forEach(t => selectedSlots.add(`tue_${t}`));
+    // Tue: 14:00 - 16:00
+    ['14:00', '14:30', '15:00', '15:30'].forEach(t => selectedSlots.add(`tue_${t}`));
+
+    // Thu: 13:00 - 17:00
+    ['13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30'].forEach(t => selectedSlots.add(`thu_${t}`));
+  }
+  prefillDefaultSlots();
+
+  let isMouseDown = false;
+  let dragMode = true; // true = selecting, false = deselecting
+  let activeMobileDay = 'mon';
+  let hasUnsavedChanges = false;
+
+  // Build Desktop Table
+  function renderDesktopGrid() {
+    const container = document.getElementById('desktop-grid-rows');
+    if (!container) return;
+    container.innerHTML = '';
+
+    TIMES.forEach((time, index) => {
+      const row = document.createElement('div');
+      row.className = 'grid grid-cols-8 gap-2 items-center';
+
+      // Time Gutter Cell
+      const timeCell = document.createElement('div');
+      timeCell.className = 'text-center font-label-code text-on-surface-variant text-[0.75rem] py-1 select-none';
+      timeCell.textContent = time;
+      row.appendChild(timeCell);
+
+      // 7 Days
+      DAYS.forEach(day => {
+        const key = `${day}_${time}`;
+        const isSelected = selectedSlots.has(key);
+        const cell = document.createElement('button');
+        cell.type = 'button';
+        cell.dataset.key = key;
+        cell.className = getCellClass(isSelected);
+        cell.innerHTML = isSelected 
+          ? `<span class="material-symbols-outlined text-[14px] font-bold">check</span>`
+          : `<span class="opacity-0 group-hover:opacity-100 text-[10px] text-outline">•</span>`;
+
+        // Mouse Drag & Click Handlers
+        cell.addEventListener('mousedown', (e) => {
+          e.preventDefault();
+          isMouseDown = true;
+          dragMode = !selectedSlots.has(key);
+          toggleCellKey(key, dragMode);
+        });
+
+        cell.addEventListener('mouseenter', () => {
+          if (isMouseDown) {
+            toggleCellKey(key, dragMode);
+          }
+        });
+
+        row.appendChild(cell);
+      });
+
+      container.appendChild(row);
+    });
+  }
+
+  function getCellClass(isSelected) {
+    if (isSelected) {
+      return 'group h-7 w-full rounded-lg bg-primary-container text-on-primary flex items-center justify-center transition-all duration-100 shadow-xs cursor-pointer hover:bg-[#3f8585]';
+    }
+    return 'group h-7 w-full rounded-lg bg-surface-container-lowest hover:bg-surface-container-low transition-all duration-100 flex items-center justify-center cursor-pointer shadow-inner';
+  }
+
+  // Toggle Slot Logic
+  function toggleCellKey(key, forceSelect) {
+    if (forceSelect) {
+      selectedSlots.add(key);
+    } else {
+      selectedSlots.delete(key);
+    }
+    hasUnsavedChanges = true;
+    updateAllViews();
+  }
+
+  window.addEventListener('mouseup', () => {
+    isMouseDown = false;
+  });
+
+  // Select entire Day Helper
+  window.selectEntireDay = function(day) {
+    const allSelected = TIMES.every(t => selectedSlots.has(`${day}_${t}`));
+    TIMES.forEach(t => {
+      const k = `${day}_${t}`;
+      if (allSelected) {
+        selectedSlots.delete(k);
+      } else {
+        selectedSlots.add(k);
+      }
+    });
+    hasUnsavedChanges = true;
+    updateAllViews();
+  };
+
+  // Render Mobile Slots for Current Tab
+  function renderMobileSlots() {
+    const container = document.getElementById('mobile-slots-container');
+    if (!container) return;
+    container.innerHTML = '';
+
+    TIMES.forEach(time => {
+      const key = `${activeMobileDay}_${time}`;
+      const isSelected = selectedSlots.has(key);
+
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = `flex items-center justify-between p-2.5 rounded-xl transition-all ${
+        isSelected ? 'bg-primary-container text-on-primary font-semibold shadow-xs' : 'bg-surface-container-high text-on-surface hover:bg-surface-container'
+      }`;
+      btn.innerHTML = `
+        <span class="font-label-code text-xs">${time}</span>
+        <span class="material-symbols-outlined text-[16px]">${isSelected ? 'check_circle' : 'add_circle_outline'}</span>
+      `;
+      btn.addEventListener('click', () => {
+        toggleCellKey(key, !isSelected);
+      });
+      container.appendChild(btn);
+    });
+
+    // Update active pill styling & summary
+    document.querySelectorAll('.mobile-day-pill').forEach(pill => {
+      const day = pill.dataset.mday;
+      if (day === activeMobileDay) {
+        pill.className = 'mobile-day-pill shrink-0 flex flex-col items-center justify-center w-16 py-2 rounded-xl bg-primary-container text-on-primary font-semibold shadow-sm';
+      } else {
+        pill.className = 'mobile-day-pill shrink-0 flex flex-col items-center justify-center w-16 py-2 rounded-xl bg-surface-container-high text-on-surface font-medium';
+      }
+    });
+
+    const daySlotCount = Array.from(selectedSlots).filter(k => k.startsWith(activeMobileDay + '_')).length;
+    const hours = (daySlotCount * 0.5).toFixed(1);
+    const summaryLabel = document.getElementById('mobile-day-summary');
+    if (summaryLabel) {
+      summaryLabel.textContent = `${DAY_LABELS[activeMobileDay].split(' ')[0]}: ว่าง ${hours} ชั่วโมง`;
+    }
+  }
+
+  // Calculate & Render Human-Readable Summary Cards
+  function updateSummaryCards() {
+    const listContainer = document.getElementById('summary-cards-list');
+    if (!listContainer) return;
+    listContainer.innerHTML = '';
+
+    const daysWithSlots = [];
+
+    DAYS.forEach(day => {
+      const dayTimes = TIMES.filter(t => selectedSlots.has(`${day}_${t}`));
+      if (dayTimes.length === 0) return;
+
+      // Group consecutive intervals
+      const ranges = [];
+      let start = null;
+      let prevIndex = -1;
+
+      dayTimes.forEach(t => {
+        const idx = TIMES.indexOf(t);
+        if (start === null) {
+          start = t;
+          prevIndex = idx;
+        } else if (idx === prevIndex + 1) {
+          prevIndex = idx;
+        } else {
+          // Range ended, calculate end time
+          const endNextIdx = prevIndex + 1;
+          const endStr = endNextIdx < TIMES.length ? TIMES[endNextIdx] : '20:30';
+          ranges.push({ start, end: endStr, slots: (prevIndex - TIMES.indexOf(start) + 1) });
+          start = t;
+          prevIndex = idx;
+        }
+      });
+
+      if (start !== null) {
+        const endNextIdx = prevIndex + 1;
+        const endStr = endNextIdx < TIMES.length ? TIMES[endNextIdx] : '20:30';
+        ranges.push({ start, end: endStr, slots: (prevIndex - TIMES.indexOf(start) + 1) });
+      }
+
+      const totalSlots = dayTimes.length;
+      const totalHours = (totalSlots * 0.5);
+
+      daysWithSlots.push({
+        day,
+        label: DAY_LABELS[day],
+        ranges,
+        totalHours
+      });
+    });
+
+    if (daysWithSlots.length === 0) {
+      listContainer.innerHTML = `
+        <div class="col-span-full py-8 text-center text-outline">
+          <span class="material-symbols-outlined text-[36px] opacity-40 mb-1">event_busy</span>
+          <p class="font-body-md text-body-md">ยังไม่มีช่วงเวลาที่เลือก กรุณาคลิกเลือกเวลาที่คุณสะดวกในตารางด้านบน</p>
+        </div>
+      `;
+      return;
+    }
+
+    daysWithSlots.forEach(item => {
+      const card = document.createElement('div');
+      card.className = 'p-4 rounded-xl bg-surface-container-low transition-all hover:bg-surface-container border-l-4 border-primary';
+
+      let rangesHtml = item.ranges.map(r => `
+        <div class="font-headline-sm text-headline-sm font-semibold text-on-surface">
+          ${r.start} – ${r.end} น. <span class="text-xs text-outline font-normal">(${r.slots * 0.5} ชม.)</span>
+        </div>
+      `).join('');
+
+      card.innerHTML = `
+        <div class="flex items-center justify-between">
+          <span class="font-label-tag text-[0.7rem] uppercase tracking-wider text-secondary font-bold">🗓️ ${item.label}</span>
+          <span class="font-label-tag text-label-tag px-2 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed-variant font-bold">รวม ${item.totalHours} ชม.</span>
+        </div>
+        <div class="mt-2 space-y-1">
+          ${rangesHtml}
+        </div>
+        <p class="font-body-sm text-body-sm text-outline mt-1.5">ช่วงเวลาได้รับการยืนยันแล้ว</p>
+      `;
+      listContainer.appendChild(card);
+    });
+
+    // Update Overall Stats
+    const totalSelectedSlots = selectedSlots.size;
+    const totalHours = (totalSelectedSlots * 0.5).toFixed(1);
+    const totalDays = daysWithSlots.length;
+
+    const counterPill = document.getElementById('counter-summary-pill');
+    if (counterPill) {
+      counterPill.textContent = `เลือกแล้ว: ${totalHours} ชั่วโมง (${totalDays} วัน)`;
+    }
+
+    const bottomSummary = document.getElementById('bottom-summary-text');
+    if (bottomSummary) {
+      bottomSummary.textContent = `เลือกแล้ว ${totalDays} วัน (รวม ${totalHours} ชั่วโมง)`;
+    }
+  }
+
+  function updateAllViews() {
+    renderDesktopGrid();
+    renderMobileSlots();
+    updateSummaryCards();
+  }
+
+  // Quick Action Buttons
+  document.getElementById('btn-select-all-monday')?.addEventListener('click', () => {
+    selectEntireDay('mon');
+  });
+
+  document.getElementById('btn-select-afternoons')?.addEventListener('click', () => {
+    const afternoonTimes = ['13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30'];
+    DAYS.forEach(day => {
+      afternoonTimes.forEach(t => selectedSlots.add(`${day}_${t}`));
+    });
+    hasUnsavedChanges = true;
+    updateAllViews();
+  });
+
+  const clearHandler = () => {
+    selectedSlots.clear();
+    hasUnsavedChanges = true;
+    updateAllViews();
+  };
+  document.getElementById('btn-clear-table')?.addEventListener('click', clearHandler);
+  document.getElementById('btn-bottom-clear')?.addEventListener('click', clearHandler);
+
+  // Mobile Tabs
+  document.querySelectorAll('.mobile-day-pill').forEach(btn => {
+    btn.addEventListener('click', () => {
+      activeMobileDay = btn.dataset.mday;
+      renderMobileSlots();
+    });
+  });
+
+  // Mode Switch Demo
+  const modeNewBtn = document.getElementById('mode-new');
+  const modeEditBtn = document.getElementById('mode-edit');
+
+  modeNewBtn?.addEventListener('click', () => {
+    modeNewBtn.className = 'px-3.5 py-1.5 rounded-full font-label-tag text-label-tag font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm';
+    modeEditBtn.className = 'px-3.5 py-1.5 rounded-full font-label-tag text-label-tag font-semibold transition-all text-on-surface-variant hover:text-on-surface';
+    selectedSlots.clear();
+    hasUnsavedChanges = false;
+    updateAllViews();
+  });
+
+  modeEditBtn?.addEventListener('click', () => {
+    modeEditBtn.className = 'px-3.5 py-1.5 rounded-full font-label-tag text-label-tag font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm';
+    modeNewBtn.className = 'px-3.5 py-1.5 rounded-full font-label-tag text-label-tag font-semibold transition-all text-on-surface-variant hover:text-on-surface';
+    prefillDefaultSlots();
+    hasUnsavedChanges = false;
+    updateAllViews();
+  });
+
+  // Save Flow & Toast
+  const btnSave = document.getElementById('btn-save-availability');
+  const toastSuccess = document.getElementById('toast-success');
+
+  btnSave?.addEventListener('click', () => {
+    hasUnsavedChanges = false;
+    if (toastSuccess) {
+      toastSuccess.classList.remove('translate-x-full', 'opacity-0');
+      toastSuccess.classList.add('translate-x-0', 'opacity-100');
+      setTimeout(() => {
+        toastSuccess.classList.remove('translate-x-0', 'opacity-100');
+        toastSuccess.classList.add('translate-x-full', 'opacity-0');
+      }, 3500);
+    }
+  });
+
+  // Back Button & Modal Interactivity
+  const btnBack = document.getElementById('btn-back');
+  const modalUnsaved = document.getElementById('modal-unsaved');
+  const modalBtnStay = document.getElementById('modal-btn-stay');
+  const modalBtnLeave = document.getElementById('modal-btn-leave');
+
+  btnBack?.addEventListener('click', () => {
+    if (hasUnsavedChanges) {
+      modalUnsaved?.classList.remove('hidden');
+      modalUnsaved?.classList.add('flex');
+    } else {
+      // Simulate navigate back
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  });
+
+  modalBtnStay?.addEventListener('click', () => {
+    modalUnsaved?.classList.remove('flex');
+    modalUnsaved?.classList.add('hidden');
+  });
+
+  modalBtnLeave?.addEventListener('click', () => {
+    modalUnsaved?.classList.remove('flex');
+    modalUnsaved?.classList.add('hidden');
+    hasUnsavedChanges = false;
+    prefillDefaultSlots();
+    updateAllViews();
+  });
+
+  // Initial Run
+  updateAllViews();
+</script></main><footer class="w-full bg-surface-container-lowest shadow-[0_-1px_6px_rgba(0,0,0,0.02)] mt-auto"><div class="max-w-7xl mx-auto px-6 lg:px-12 py-8 flex flex-col md:flex-row items-center justify-between gap-space-md"><div class="flex flex-col sm:flex-row items-center gap-space-xs text-center sm:text-left"><span class="font-body-sm text-body-sm text-on-surface-variant">© 2024 TimeMatch</span><span class="hidden sm:inline font-body-sm text-body-sm text-outline-variant">•</span><span class="font-body-sm text-body-sm text-on-surface-variant">College of Computing, Khon Kaen University</span></div><div class="flex items-center gap-space-lg"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="help-center" href="#">ศูนย์ช่วยเหลือ</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="terms-of-service" href="#">ข้อกำหนดการใช้งาน</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">นโยบายความเป็นส่วนตัว</a></div></div></footer>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const navLinks = document.querySelectorAll(".nav-link");
+
+    // สีปกติ
+    const inactiveClasses = [
+        "text-[#607D8B]",
+        "hover:text-[#4F9D9D]"
+    ];
+
+    // สีตอนเลือก
+    const activeClasses = [
+        "bg-[#4F9D9D]",
+        "text-white",
+        "font-semibold"
+    ];
+
+    function setActiveNav(activeLink) {
+
+        navLinks.forEach(link => {
+            // ล้าง active
+            link.classList.remove(...activeClasses);
+
+            // ใส่สีปกติ
+            link.classList.add(...inactiveClasses);
+        });
+
+        // ล้างสีปกติจากปุ่มที่เลือก
+        activeLink.classList.remove(...inactiveClasses);
+
+        // ทำเป็นสีเขียว
+        activeLink.classList.add(...activeClasses);
+    }
+
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function () {
+            setActiveNav(this);
+        });
+    });
+
+
+    // ===== ตรวจว่าตอนนี้อยู่หน้าอะไร =====
+    const currentPage = window.location.pathname.split("/").pop();
+
+    if (currentPage === "home.html") {
+        const home = document.querySelector('[data-nav="home"]');
+        if (home) setActiveNav(home);
+    }
+
+    if (currentPage === "my-groups.html") {
+        const groups = document.querySelector('[data-nav="my-groups"]');
+        if (groups) setActiveNav(groups);
+    }
+
+});
+</script>
+
+
+
+</body></html>
