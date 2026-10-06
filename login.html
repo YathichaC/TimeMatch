@@ -48,10 +48,7 @@
 <span class="hidden font-body-sm text-body-sm text-error mt-0.5 pl-1" id="passwordError"></span>
 </div>
 <div class="flex items-center justify-between pt-1">
-<label class="flex items-center gap-2 cursor-pointer select-none">
-<input class="w-4 h-4 rounded text-primary focus:ring-0 accent-primary cursor-pointer" id="rememberMe" type="checkbox">
-<span class="font-body-sm text-body-sm text-on-surface-variant font-medium">จดจำฉัน</span>
-</label>
+
 <button class="font-body-sm text-body-sm font-medium text-primary hover:text-primary-container transition-colors focus:outline-none" type="button">
             ลืมรหัสผ่าน?
           </button>
@@ -79,6 +76,11 @@
 </div>
 </div>
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+
+
 <script>
   (function initLoginPage() {
     const passwordInput = document.getElementById('studentPassword');
@@ -123,36 +125,60 @@
     }, 600);
   }
 
-  function validateForm() {
-    clearErrors();
-    const email = document.getElementById('studentEmail').value.trim();
-    const password = document.getElementById('studentPassword').value;
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  
+async function validateForm() {
+  clearErrors();
 
-    if (!email) {
-      showEmailError('กรุณากรอกอีเมลนักศึกษา');
-      return;
-    }
-    if (!emailRegex.test(email)) {
-      showEmailError('รูปแบบอีเมลไม่ถูกต้อง (เช่น example@kkumail.com)');
-      return;
-    }
-    if (!password) {
-      showPasswordError('กรุณากรอกรหัสผ่าน');
-      return;
-    }
+  const email = document.getElementById('studentEmail').value.trim();
+  const password = document.getElementById('studentPassword').value;
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (email === 'chidchanok.b@kkumail.com' && password === 'TimeMatch2025!') {
-      const alertBox = document.getElementById('alertBox');
-      const alertMessage = document.getElementById('alertMessage');
-      alertBox.className = 'rounded-xl bg-tertiary-fixed p-space-sm transition-all duration-200';
-      alertMessage.textContent = 'เข้าสู่ระบบสำเร็จ กำลังพาไปยังกระดานตารางเวลา...';
-      alertMessage.className = 'font-body-sm text-body-sm font-semibold text-on-tertiary-fixed-variant';
-      alertBox.classList.remove('hidden');
-    } else {
-      showAlertError('อีเมลหรือรหัสผ่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลอีกครั้ง');
-    }
+  if (!email) {
+    showEmailError('กรุณากรอกอีเมลนักศึกษา');
+    return;
   }
+
+  if (!emailRegex.test(email)) {
+    showEmailError('รูปแบบอีเมลไม่ถูกต้อง (เช่น example@kkumail.com)');
+    return;
+  }
+
+  if (!password) {
+    showPasswordError('กรุณากรอกรหัสผ่าน');
+    return;
+  }
+
+  const { data, error } = await supabaseClient.auth.signInWithPassword({
+    email: email,
+    password: password
+  });
+
+  if (error) {
+    console.error(error);
+    showAlertError('อีเมลหรือรหัสผ่านไม่ถูกต้อง กรุณาตรวจสอบข้อมูลอีกครั้ง');
+    return;
+  }
+
+  console.log('Login success:', data);
+
+  const alertBox = document.getElementById('alertBox');
+  const alertMessage = document.getElementById('alertMessage');
+
+  alertBox.className =
+    'rounded-xl bg-tertiary-fixed p-space-sm transition-all duration-200';
+
+  alertMessage.textContent =
+    'เข้าสู่ระบบสำเร็จ กำลังพาไปยังหน้าหลัก...';
+
+  alertMessage.className =
+    'font-body-sm text-body-sm font-semibold text-on-tertiary-fixed-variant';
+
+  alertBox.classList.remove('hidden');
+
+  setTimeout(() => {
+    window.location.href = 'home.html';
+  }, 1000);
+}
 
   function showEmailError(msg) {
     const errorEl = document.getElementById('emailError');
