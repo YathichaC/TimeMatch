@@ -6,9 +6,10 @@ async function loadNavbarUser() {
     } = await supabaseClient.auth.getUser();
 
     if (userError || !user) {
-        console.log("Navbar: ยังไม่ได้เข้าสู่ระบบ");
-        return;
-    }
+    console.log("Navbar: ยังไม่ได้เข้าสู่ระบบ");
+    window.location.href = "login.html";
+    return;
+}
 
     // ดึงข้อมูล Profile
     const { data: profile, error: profileError } = await supabaseClient

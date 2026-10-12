@@ -98,10 +98,10 @@
         <!-- Profile Information -->
         <div class="hidden sm:flex flex-col text-left">
 
-          <span class="font-body-md text-body-md
+          <span id="navbarUserName" class="font-body-md text-body-md
                        text-on-surface font-semibold
                        leading-tight">
-            Chidchanok P.
+            กำลังโหลด...
           </span>
 
           <span class="font-label-tag text-label-tag
@@ -147,7 +147,7 @@
 <div class="flex items-center gap-2 pl-1 py-1 rounded-lg hover:bg-brand-bg cursor-pointer transition-colors">
 <img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-2 ring-brand-teal/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqgSZrPrmthM_yNn9ZeDivP8p9aqewa0eq2TtvSG0UzqK8G4Zh4oxoeQlpJ0Q0NEZZLXV9omAx-eIbL_P35eHL2M1kXShSogByYMGJOAKgSQniO1RhXno_F5IWqFKSIdVOGa-PQNbWNDyzL7DOG05EUmkvBkCjVqadx0Gx8Gi1bc17A5Tr_INcf3vJ_TmSq0sBTY_yTINWxoyxG0_ons0AcH_UH0KsGv6K6w7WS6K-HCloSULavEp1DQ">
 <div class="hidden md:flex flex-col text-left">
-<span class="text-xs font-semibold text-brand-text leading-tight">Chidchanok P.</span>
+<span class="text-xs font-semibold text-brand-text leading-tight">กำลังโหลด...</span>
 <span class="text-[11px] text-brand-muted leading-tight">Student CS</span>
 </div>
 <span class="material-symbols-outlined text-brand-muted text-base">expand_more</span>
@@ -203,7 +203,11 @@
 </label>
 <div class="relative flex items-center">
 <span class="material-symbols-outlined absolute left-3.5 text-[#4f9d9d] text-lg pointer-events-none">calendar_today</span>
-<input class="w-full h-11 pl-10 pr-4 rounded-xl bg-slate-50/50 border border-slate-200 text-slate-800 text-sm outline-none focus:bg-white focus:border-[#4f9d9d] focus:ring-2 focus:ring-[#4f9d9d]/20 transition-all font-medium" id="startDate" type="text" value="18 ต.ค. 2026">
+<input
+    class="w-full h-11 pl-10 pr-4 rounded-xl bg-slate-50/50 border border-slate-200 text-slate-800 text-sm outline-none focus:bg-white focus:border-[#4f9d9d] focus:ring-2 focus:ring-[#4f9d9d]/20 transition-all font-medium"
+    id="startDate"
+    type="date"
+    required>
 </div>
 </div>
 <div class="flex flex-col gap-1.5">
@@ -212,15 +216,128 @@
 </label>
 <div class="relative flex items-center">
 <span class="material-symbols-outlined absolute left-3.5 text-[#4f9d9d] text-lg pointer-events-none">event_available</span>
-<input class="w-full h-11 pl-10 pr-4 rounded-xl bg-slate-50/50 border border-slate-200 text-slate-800 text-sm outline-none focus:bg-white focus:border-[#4f9d9d] focus:ring-2 focus:ring-[#4f9d9d]/20 transition-all font-medium" id="endDate" type="text" value="22 ต.ค. 2026">
+<input
+    class="w-full h-11 pl-10 pr-4 rounded-xl bg-slate-50/50 border border-slate-200 text-slate-800 text-sm outline-none focus:bg-white focus:border-[#4f9d9d] focus:ring-2 focus:ring-[#4f9d9d]/20 transition-all font-medium"
+    id="endDate"
+    type="date"
+    required>
 </div>
 </div>
 </div>
 <!-- Duration Selection -->
 <div class="flex flex-col gap-2.5 pt-1">
 <label class="text-xs font-semibold text-slate-600"><span class="flex items-center gap-1.5"><svg class="w-3.5 h-3.5 text-[#4f9d9d]" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>ต้องการเวลาต่อเนื่องอย่างน้อย</span></label>
-<div class="flex flex-wrap items-center gap-2" id="durationChipsGroup"><button class="duration-btn px-4 py-2 rounded-xl bg-slate-100/80 hover:bg-slate-200/70 text-slate-700 text-xs sm:text-sm font-medium border border-transparent transition-all flex items-center gap-1.5" onclick="selectDuration(this)" type="button"><svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 15 15"></polyline></svg>30 นาที</button><button class="duration-btn px-4 py-2 rounded-xl bg-slate-100/80 hover:bg-slate-200/70 text-slate-700 text-xs sm:text-sm font-medium border border-transparent transition-all flex items-center gap-1.5" onclick="selectDuration(this)" type="button"><svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 15 15"></polyline></svg>1 ชั่วโมง</button><button class="duration-btn px-4 py-2 rounded-xl bg-slate-100/80 hover:bg-slate-200/70 text-slate-700 text-xs sm:text-sm font-medium border border-transparent transition-all flex items-center gap-1.5" onclick="selectDuration(this)" type="button"><svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 15 15"></polyline></svg>1 ชั่วโมง 30 นาที</button><button class="duration-btn active-chip px-4 py-2 rounded-xl bg-[#4f9d9d] text-white text-xs sm:text-sm font-medium shadow-sm border border-[#4f9d9d] flex items-center gap-1.5 transition-all" onclick="selectDuration(this)" type="button"><svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg><span class="">2 ชั่วโมง</span></button><button class="duration-btn px-4 py-2 rounded-xl bg-slate-100/80 hover:bg-slate-200/70 text-slate-700 text-xs sm:text-sm font-medium border border-transparent transition-all flex items-center gap-1.5" onclick="selectDuration(this)" type="button"><svg class="w-3.5 h-3.5 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>กำหนดเอง</button></div>
+<div class="flex flex-wrap items-center gap-2" id="durationChipsGroup">
+
+    <!-- 30 นาที -->
+    <button
+        class="duration-btn px-4 py-2 rounded-xl bg-slate-100/80 hover:bg-slate-200/70 text-slate-700 text-xs sm:text-sm font-medium border border-transparent transition-all flex items-center gap-1.5"
+        data-minutes="30"
+        onclick="selectDuration(this)"
+        type="button">
+
+        <svg class="w-3.5 h-3.5 text-slate-400"
+             fill="none"
+             stroke="currentColor"
+             viewBox="0 0 24 24"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 15 15"></polyline>
+        </svg>
+
+        30 นาที
+    </button>
+
+
+    <!-- 1 ชั่วโมง -->
+    <button
+        class="duration-btn px-4 py-2 rounded-xl bg-slate-100/80 hover:bg-slate-200/70 text-slate-700 text-xs sm:text-sm font-medium border border-transparent transition-all flex items-center gap-1.5"
+        data-minutes="60"
+        onclick="selectDuration(this)"
+        type="button">
+
+        <svg class="w-3.5 h-3.5 text-slate-400"
+             fill="none"
+             stroke="currentColor"
+             viewBox="0 0 24 24"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 15 15"></polyline>
+        </svg>
+
+        1 ชั่วโมง
+    </button>
+
+
+    <!-- 1 ชั่วโมง 30 นาที -->
+    <button
+        class="duration-btn px-4 py-2 rounded-xl bg-slate-100/80 hover:bg-slate-200/70 text-slate-700 text-xs sm:text-sm font-medium border border-transparent transition-all flex items-center gap-1.5"
+        data-minutes="90"
+        onclick="selectDuration(this)"
+        type="button">
+
+        <svg class="w-3.5 h-3.5 text-slate-400"
+             fill="none"
+             stroke="currentColor"
+             viewBox="0 0 24 24"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 15 15"></polyline>
+        </svg>
+
+        1 ชั่วโมง 30 นาที
+    </button>
+
+
+    <!-- 2 ชั่วโมง : ค่าเริ่มต้น -->
+    <button
+        class="duration-btn active-chip px-4 py-2 rounded-xl bg-[#4f9d9d] text-white text-xs sm:text-sm font-medium shadow-sm border border-[#4f9d9d] flex items-center gap-1.5 transition-all"
+        data-minutes="120"
+        onclick="selectDuration(this)"
+        type="button">
+
+        <svg class="w-3.5 h-3.5 text-white"
+             fill="none"
+             stroke="currentColor"
+             viewBox="0 0 24 24"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+            <polyline points="20 6 9 17 4 12"></polyline>
+        </svg>
+
+        <span>2 ชั่วโมง</span>
+    </button>
+
+
+    <!-- กำหนดเอง -->
+    <button
+        class="duration-btn px-4 py-2 rounded-xl bg-slate-100/80 hover:bg-slate-200/70 text-slate-700 text-xs sm:text-sm font-medium border border-transparent transition-all flex items-center gap-1.5"
+        onclick="selectDuration(this)"
+        type="button">
+
+        <svg class="w-3.5 h-3.5 text-slate-400"
+             fill="none"
+             stroke="currentColor"
+             viewBox="0 0 24 24"
+             stroke-width="2"
+             stroke-linecap="round"
+             stroke-linejoin="round">
+            <path d="M12 20h9"></path>
+            <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path>
+        </svg>
+
+        กำหนดเอง
+    </button>
+
 </div>
+
 </section>
 <!-- SECTION 3: สมาชิกในกลุ่ม -->
 <section class="flex flex-col gap-6 py-8 border-t border-slate-100">
@@ -245,56 +362,21 @@
 </div>
 </div>
 <!-- Members List -->
+<!-- Members List -->
 <div class="flex flex-col gap-2.5">
-<div class="flex items-center justify-between pb-1">
-<span class="text-xs font-semibold text-slate-600" id="memberCountLabel">สมาชิกในกลุ่ม (3 คน)</span>
-</div>
-<div class="flex flex-col gap-2" id="membersContainer">
-<!-- Member 1: Creator -->
-<div class="rounded-xl p-3 bg-slate-50/70 border border-slate-100 flex items-center justify-between gap-3">
-<div class="flex items-center gap-3 min-w-0">
-<img alt="Chidchanok" class="w-9 h-9 rounded-full object-cover shrink-0 ring-2 ring-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqgSZrPrmthM_yNn9ZeDivP8p9aqewa0eq2TtvSG0UzqK8G4Zh4oxoeQlpJ0Q0NEZZLXV9omAx-eIbL_P35eHL2M1kXShSogByYMGJOAKgSQniO1RhXno_F5IWqFKSIdVOGa-PQNbWNDyzL7DOG05EUmkvBkCjVqadx0Gx8Gi1bc17A5Tr_INcf3vJ_TmSq0sBTY_yTINWxoyxG0_ons0AcH_UH0KsGv6K6w7WS6K-HCloSULavEp1DQ">
-<div class="flex flex-col min-w-0">
-<div class="flex items-center gap-2">
-<span class="text-sm font-semibold text-slate-800 truncate">ชิดชนก ชนะพา</span>
-<span class="bg-teal-50 text-[#3f8585] border border-teal-200 text-[11px] font-medium px-2 py-0.5 rounded-full inline-flex items-center gap-0.5">
-                    ผู้สร้างกลุ่ม
-                  </span>
-</div>
-<span class="text-xs text-slate-500 font-mono truncate">chidchanok.p@kkumail.com</span>
-</div>
-</div>
-<span class="text-slate-300 text-xs px-2 select-none" title="ผู้สร้างกลุ่ม">–</span>
-</div>
-<!-- Member 2: Yathicha -->
-<div class="member-row rounded-xl p-3 bg-slate-50/70 border border-slate-100 flex items-center justify-between gap-3 transition-colors hover:bg-slate-100/50">
-<div class="flex items-center gap-3 min-w-0">
-<div class="w-9 h-9 rounded-full bg-[#7BA7D9] text-white flex items-center justify-center font-display font-semibold text-xs shrink-0">
-                YS
-              </div>
-<div class="flex flex-col min-w-0">
-<span class="text-sm font-semibold text-slate-800 truncate">ญาทิชา สุวรรณรัตน์</span>
-<span class="text-xs text-slate-500 font-mono truncate">yathicha.s@kkumail.com</span>
-</div>
-</div>
-<button aria-label="ลบสมาชิก" class="w-8 h-8 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 flex items-center justify-center transition-colors" onclick="removeMemberRow(this)" type="button">
-<span class="material-symbols-outlined text-lg">close</span>
-</button>
-</div>
-<!-- Member 3: Narin -->
-<div class="member-row rounded-xl p-3 bg-slate-50/70 border border-slate-100 flex items-center justify-between gap-3 transition-colors hover:bg-slate-100/50">
-<div class="flex items-center gap-3 min-w-0">
-<img alt="Narin" class="w-9 h-9 rounded-full object-cover shrink-0 ring-2 ring-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhswqGLs2WEUw-Gab7qx6Qf0n-ERD34_S97DqgSdQZSV7XWU1MEfKSjOEP8smtRuDE-blOh9sYMALCWYHrCugSaRKebUTf7Ue0jgQgHlqutclVubEqCir7mL3A_tCJKjVsme9lld8abT7pWZK-hfckdFt0cyrCNn4FDuZF8BKJwipDvfFl7Uh04lbQ5W90VFnO054rvPSURTHvX-1LCrvgl_-l31hopKd83I59A15R-d6JUBVoFSdf3Q">
-<div class="flex flex-col min-w-0">
-<span class="text-sm font-semibold text-slate-800 truncate">นรินทร์วุฒิ ว่องไว</span>
-<span class="text-xs text-slate-500 font-mono truncate">narin.w@kkumail.com</span>
-</div>
-</div>
-<button aria-label="ลบสมาชิก" class="w-8 h-8 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 flex items-center justify-center transition-colors" onclick="removeMemberRow(this)" type="button">
-<span class="material-symbols-outlined text-lg">close</span>
-</button>
-</div>
-</div>
+
+    <div class="flex items-center justify-between pb-1">
+        <span
+            class="text-xs font-semibold text-slate-600"
+            id="memberCountLabel">
+            สมาชิกในกลุ่ม (1 คน)
+        </span>
+    </div>
+
+    <div class="flex flex-col gap-2" id="membersContainer">
+        <!-- ผู้สร้างกลุ่มจะถูกโหลดจาก Supabase -->
+    </div>
+
 </div>
 <!-- Friendly Subtle Info Box -->
 
@@ -328,45 +410,206 @@
 
   // Remove Member Row
   function removeMemberRow(button) {
-    const row = button.closest('.member-row');
-    if (row) {
-      row.remove();
-      updateMemberCount();
-    }
-  }
 
+    const row = button.closest(".member-row");
+
+    if (!row) return;
+
+    const email = row.dataset.email;
+
+    const index =
+        pendingMemberEmails.indexOf(email);
+
+    if (index !== -1) {
+        pendingMemberEmails.splice(index, 1);
+    }
+
+    row.remove();
+
+    updateMemberCount();
+}
+  // โหลดข้อมูลผู้สร้างกลุ่มจาก Supabase
+async function loadCreatorMember() {
+
+    const {
+        data: { user },
+        error: userError
+    } = await supabaseClient.auth.getUser();
+
+    if (userError || !user) {
+        console.error("ไม่พบผู้ใช้:", userError);
+        return;
+    }
+
+    const { data: profile, error: profileError } =
+        await supabaseClient
+            .from("profiles")
+            .select("full_name, email")
+            .eq("id", user.id)
+            .single();
+
+    if (profileError) {
+        console.error("โหลด Profile ไม่สำเร็จ:", profileError);
+        return;
+    }
+
+    const container =
+        document.getElementById("membersContainer");
+
+    if (!container) return;
+
+    const name = profile.full_name || "ผู้ใช้งาน";
+    const email = profile.email || user.email || "";
+
+    // ทำตัวอักษรสำหรับ Avatar
+    const initials = name
+        .split(" ")
+        .map(part => part.charAt(0))
+        .join("")
+        .substring(0, 2)
+        .toUpperCase();
+
+      container.innerHTML = `
+    <div
+        id="creatorMemberRow"
+        class="rounded-xl p-3 bg-slate-50/70 border border-slate-100
+               flex items-center justify-between gap-3">
+
+        <div class="flex items-center gap-3 min-w-0">
+
+            <div
+                class="w-9 h-9 rounded-full bg-[#4f9d9d]
+                       text-white flex items-center justify-center
+                       font-display font-semibold text-xs shrink-0">
+                ${initials}
+            </div>
+
+            <div class="flex flex-col min-w-0">
+
+                <div class="flex items-center gap-2">
+
+                    <span class="text-sm font-semibold text-slate-800 truncate">
+                        ${name}
+                    </span>
+
+                    <span
+                        class="bg-teal-50 text-[#3f8585]
+                               border border-teal-200
+                               text-[11px] font-medium
+                               px-2 py-0.5 rounded-full">
+                        ผู้สร้างกลุ่ม
+                    </span>
+
+                </div>
+
+                <span class="text-xs text-slate-500 font-mono truncate">
+                    ${email}
+                </span>
+
+            </div>
+
+        </div>
+
+        <span
+            class="text-slate-300 text-xs px-2 select-none"
+            title="ผู้สร้างกลุ่ม">
+            –
+        </span>
+
+    </div>
+`;
+
+    updateMemberCount();
+}
+
+loadCreatorMember();
+const pendingMemberEmails = [];
   // Add Member
   function addMember() {
-    const input = document.getElementById('newMemberEmail');
-    const email = input.value.trim();
-    if (!email) {
-      input.focus();
-      return;
-    }
-    const namePrefix = email.split('@')[0];
-    const initials = namePrefix.substring(0, 2).toUpperCase();
-    const container = document.getElementById('membersContainer');
 
-    const newRow = document.createElement('div');
-    newRow.className = 'member-row rounded-xl p-3 bg-slate-50/70 border border-slate-100 flex items-center justify-between gap-3 transition-colors hover:bg-slate-100/50';
+    const input = document.getElementById("newMemberEmail");
+    const email = input.value.trim().toLowerCase();
+
+    if (!email) {
+        input.focus();
+        return;
+    }
+
+    // ตรวจรูปแบบ Email
+    if (!input.checkValidity()) {
+        alert("กรุณากรอกอีเมลให้ถูกต้อง");
+        input.focus();
+        return;
+    }
+
+    // ป้องกันเพิ่มซ้ำ
+    if (pendingMemberEmails.includes(email)) {
+        alert("เพิ่มอีเมลนี้แล้ว");
+        return;
+    }
+
+    pendingMemberEmails.push(email);
+
+    const namePrefix = email.split("@")[0];
+
+    const initials = namePrefix
+        .substring(0, 2)
+        .toUpperCase();
+
+    const container =
+        document.getElementById("membersContainer");
+
+    const newRow = document.createElement("div");
+
+    newRow.className =
+        "member-row rounded-xl p-3 bg-slate-50/70 border border-slate-100 flex items-center justify-between gap-3 transition-colors hover:bg-slate-100/50";
+
+    newRow.dataset.email = email;
+
     newRow.innerHTML = `
-      <div class="flex items-center gap-3 min-w-0">
-        <div class="w-9 h-9 rounded-full bg-[#4f9d9d] text-white flex items-center justify-center font-display font-semibold text-xs shrink-0">
-          ${initials}
+        <div class="flex items-center gap-3 min-w-0">
+
+            <div class="w-9 h-9 rounded-full bg-[#7BA7D9]
+                        text-white flex items-center justify-center
+                        font-display font-semibold text-xs shrink-0">
+                ${initials}
+            </div>
+
+            <div class="flex flex-col min-w-0">
+
+                <span class="text-sm font-semibold text-slate-800 truncate">
+                    ${namePrefix}
+                </span>
+
+                <span class="text-xs text-slate-500 font-mono truncate">
+                    ${email}
+                </span>
+
+            </div>
+
         </div>
-        <div class="flex flex-col min-w-0">
-          <span class="text-sm font-semibold text-slate-800 truncate">${namePrefix}</span>
-          <span class="text-xs text-slate-500 font-mono truncate">${email}</span>
-        </div>
-      </div>
-      <button type="button" onclick="removeMemberRow(this)" class="w-8 h-8 rounded-lg text-slate-400 hover:text-rose-600 hover:bg-rose-50 flex items-center justify-center transition-colors" aria-label="ลบสมาชิก">
-        <span class="material-symbols-outlined text-lg">close</span>
-      </button>
+
+        <button
+            type="button"
+            onclick="removeMemberRow(this)"
+            class="w-8 h-8 rounded-lg text-slate-400
+                   hover:text-rose-600 hover:bg-rose-50
+                   flex items-center justify-center transition-colors"
+            aria-label="ลบสมาชิก">
+
+            <span class="material-symbols-outlined text-lg">
+                close
+            </span>
+
+        </button>
     `;
+
     container.appendChild(newRow);
-    input.value = '';
+
+    input.value = "";
+
     updateMemberCount();
-  }
+}
 
   function updateMemberCount() {
     const count = document.querySelectorAll('#membersContainer > div').length;
@@ -376,18 +619,191 @@
     }
   }
 
-  // Submit & Show Toast
-  function submitCreateGroup() {
-    const toast = document.getElementById('toastNotification');
-    if (toast) {
-      toast.classList.remove('-translate-y-16', 'opacity-0', 'pointer-events-none');
-      toast.classList.add('translate-y-0', 'opacity-100');
-      setTimeout(() => {
-        toast.classList.add('-translate-y-16', 'opacity-0', 'pointer-events-none');
-        toast.classList.remove('translate-y-0', 'opacity-100');
-      }, 3500);
+  async function submitCreateGroup() {
+
+    // =========================
+    // รับค่าจากฟอร์ม
+    // =========================
+    const groupName =
+        document.getElementById("groupName").value.trim();
+
+    const groupDescription =
+        document.getElementById("groupDescription").value.trim();
+
+    const startDate =
+        document.getElementById("startDate").value;
+
+    const endDate =
+        document.getElementById("endDate").value;
+
+    const selectedDuration =
+        document.querySelector("#durationChipsGroup .active-chip");
+
+    const durationMinutes =
+        selectedDuration?.dataset.minutes
+            ? Number(selectedDuration.dataset.minutes)
+            : null;
+
+
+    // =========================
+    // ตรวจสอบข้อมูล
+    // =========================
+    if (!groupName) {
+        alert("กรุณากรอกชื่อกลุ่ม");
+        return;
     }
-  }
+
+    if (!startDate || !endDate) {
+        alert("กรุณาเลือกวันที่เริ่มต้นและวันที่สิ้นสุด");
+        return;
+    }
+
+    if (endDate < startDate) {
+        alert("วันที่สิ้นสุดต้องไม่น้อยกว่าวันที่เริ่มต้น");
+        return;
+    }
+
+    if (!durationMinutes) {
+        alert("กรุณาเลือกระยะเวลาที่ต้องการนัดหมาย");
+        return;
+    }
+
+
+    // =========================
+    // ตรวจสอบ User
+    // =========================
+    const {
+        data: { user },
+        error: userError
+    } = await supabaseClient.auth.getUser();
+
+    if (userError || !user) {
+        console.error("User error:", userError);
+        window.location.href = "login.html";
+        return;
+    }
+
+
+    // =========================
+    // สร้าง Join Code
+    // =========================
+    const joinCode =
+        Math.random()
+            .toString(36)
+            .substring(2, 8)
+            .toUpperCase();
+
+
+    // =========================
+    // สร้างกลุ่ม
+    // =========================
+    const { data: group, error: groupError } =
+        await supabaseClient
+            .from("groups")
+            .insert({
+                name: groupName,
+                description: groupDescription || null,
+                join_code: joinCode,
+                created_by: user.id,
+
+                start_date: startDate,
+                end_date: endDate,
+                duration_minutes: durationMinutes
+            })
+            .select()
+            .single();
+
+
+    if (groupError) {
+        console.error("Create group error:", groupError);
+        alert("สร้างกลุ่มไม่สำเร็จ");
+        return;
+    }
+
+    console.log("GROUP CREATED:", group);
+
+
+    // =========================
+    // เพิ่มผู้สร้างเป็น Owner
+    // =========================
+    const { error: memberError } =
+        await supabaseClient
+            .from("group_members")
+            .insert({
+                group_id: group.id,
+                user_id: user.id,
+                role: "owner"
+            });
+
+
+    if (memberError) {
+        console.error("Add owner error:", memberError);
+        alert(
+            "สร้างกลุ่มสำเร็จ แต่เพิ่มผู้สร้างเป็นสมาชิกไม่สำเร็จ"
+        );
+        return;
+    }
+
+    console.log("OWNER ADDED");
+    // =========================
+// เพิ่มสมาชิกที่กรอกอีเมลไว้
+// =========================
+for (const email of pendingMemberEmails) {
+
+    const { error: addMemberError } =
+        await supabaseClient.rpc(
+            "add_group_member_by_email",
+            {
+                p_group_id: group.id,
+                p_email: email
+            }
+        );
+
+    if (addMemberError) {
+        console.error(
+            `เพิ่มสมาชิก ${email} ไม่สำเร็จ:`,
+            addMemberError
+        );
+
+        alert(
+            `ไม่สามารถเพิ่ม ${email} ได้\n` +
+            `กรุณาตรวจสอบว่าอีเมลนี้สมัคร TimeMatch แล้ว`
+        );
+
+        return;
+    }
+}
+
+console.log("ALL MEMBERS ADDED");
+
+    // =========================
+    // แสดง Toast
+    // =========================
+    const toast =
+        document.getElementById("toastNotification");
+
+    if (toast) {
+
+        toast.classList.remove(
+            "-translate-y-16",
+            "opacity-0",
+            "pointer-events-none"
+        );
+
+        toast.classList.add(
+            "translate-y-0",
+            "opacity-100"
+        );
+    }
+
+
+    // =========================
+    // ไปหน้ากลุ่มของฉัน
+    // =========================
+    setTimeout(() => {
+        window.location.href = "my-groups.html";
+    }, 1500);
+}
 </script>
 <!-- Unified Footer -->
 <footer class="w-full bg-brand-card border-t border-brand-border mt-auto">
@@ -511,4 +927,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/supabase.js"></script>
+<script src="js/navbar.js"></script>
 </body></html>
