@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ยืนยันอีเมล | TimeMatch</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700&family=Prompt:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = { theme: { extend: { colors: { primary: '#09696A', 'primary-container': '#4F9D9D', background: '#F4FAFF', 'surface-container-low': '#E9F6FD', 'on-surface': '#111D23', 'on-surface-variant': '#3F4948' }, fontFamily: { heading: ['Plus Jakarta Sans', 'Prompt', 'sans-serif'], body: ['Inter', 'Prompt', 'sans-serif'] } } } };
+    </script>
+</head>
+
+<body
+    class="min-h-screen bg-background text-on-surface font-body antialiased flex items-center justify-center px-4 py-12 overflow-x-hidden">
+    <main class="relative w-full max-w-md">
+        <div class="absolute -top-24 -left-16 w-72 h-72 bg-primary/10 blur-3xl rounded-full pointer-events-none"></div>
+        <div
+            class="absolute -bottom-24 -right-12 w-72 h-72 bg-primary-container/15 blur-3xl rounded-full pointer-events-none">
+        </div>
+        <section class="relative bg-white rounded-2xl shadow-xl p-6 sm:p-10 space-y-6" aria-labelledby="page-title">
+            <a href="index.html" class="flex items-center gap-3 w-fit">
+                <img src="images/logo.png" alt="TimeMatch Logo" class="w-10 h-10 object-contain rounded-lg" />
+                <span class="flex flex-col">
+                    <span class="font-heading text-lg font-bold text-primary">TimeMatch</span>
+                    <span class="text-xs text-on-surface-variant">วิทยาลัยการคอมพิวเตอร์</span>
+                </span>
+            </a>
+
+            <div class="flex flex-col items-center text-center gap-3 pt-2" aria-live="polite">
+                <div id="statusIcon"
+                    class="w-20 h-20 rounded-full bg-surface-container-low text-primary flex items-center justify-center">
+                    <span id="statusSymbol" class="material-symbols-outlined text-5xl">mark_email_unread</span>
+                </div>
+                <h1 id="page-title" class="font-heading text-2xl font-bold">ยืนยันอีเมลของคุณ</h1>
+                <p id="statusMessage" class="text-sm leading-7 text-on-surface-variant">กรุณาเปิดอีเมลนักศึกษา
+                    แล้วคลิกลิงก์ยืนยันบัญชี TimeMatch</p>
+            </div>
+
+            <div id="emailPanel"
+                class="bg-surface-container-low rounded-xl p-4 text-sm text-on-surface-variant leading-6">
+                <div class="flex items-start gap-2"><span
+                        class="material-symbols-outlined text-primary">info</span><span>หากยังไม่พบอีเมล
+                        กรุณาตรวจสอบโฟลเดอร์ Spam หรือ Junk ด้วย</span></div>
+            </div>
+
+            <form id="resendForm" class="space-y-3">
+                <label for="email" class="block text-sm font-medium">ส่งอีเมลยืนยันอีกครั้ง</label>
+                <input id="email" type="email" autocomplete="email" required placeholder="example@kkumail.com"
+                    class="w-full bg-surface-container-low rounded-xl px-4 py-3 text-sm outline-none focus:ring-2 focus:ring-primary" />
+                <button id="resendButton" type="submit"
+                    class="w-full rounded-xl border border-primary text-primary font-semibold py-3 hover:bg-surface-container-low transition-colors">ส่งลิงก์ยืนยันอีกครั้ง</button>
+                <p id="resendMessage" class="text-xs leading-5 text-on-surface-variant" role="status"></p>
+            </form>
+
+            <a href="login.html"
+                class="flex items-center justify-center gap-2 w-full rounded-xl bg-primary hover:bg-[#004F50] text-white font-semibold py-3 transition-colors">
+                <span id="actionText">กลับไปหน้าเข้าสู่ระบบ</span>
+                <span class="material-symbols-outlined text-lg">arrow_forward</span>
+            </a>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="js/supabase.js"></script>
+    <script>
+        const titleEl = document.getElementById('page-title');
+        const messageEl = document.getElementById('statusMessage');
+        const symbolEl = document.getElementById('statusSymbol');
+        const iconEl = document.getElementById('statusIcon');
+        const formEl = document.getElementById('resendForm');
+        const emailPanel = document.getElementById('emailPanel');
+        const actionText = document.getElementById('actionText');
+
+        function setStatus(kind, title, message) {
+            titleEl.textContent = title;
+            messageEl.textContent = message;
+            symbolEl.textContent = kind === 'success' ? 'check_circle' : kind === 'error' ? 'error_outline' : kind === 'loading' ? 'hourglass_top' : 'mark_email_unread';
+            iconEl.className = 'w-20 h-20 rounded-full flex items-center justify-center ' + (kind === 'error' ? 'bg-red-50 text-red-700' : 'bg-surface-container-low text-primary');
+            formEl.classList.toggle('hidden', kind === 'success' || kind === 'loading');
+            emailPanel.classList.toggle('hidden', kind === 'success' || kind === 'loading');
+            actionText.textContent = kind === 'success' ? 'ไปหน้าเข้าสู่ระบบ' : 'กลับไปหน้าเข้าสู่ระบบ';
+        }
+
+        async function handleConfirmation() {
+            const params = new URLSearchParams(location.search);
+            const hashParams = new URLSearchParams(location.hash.slice(1));
+            const errorText = params.get('error_description') || hashParams.get('error_description');
+            if (errorText || params.get('error') || hashParams.get('error')) {
+                setStatus('error', 'ไม่สามารถยืนยันอีเมลได้', 'ลิงก์อาจหมดอายุหรือไม่ถูกต้อง กรุณาขอลิงก์ใหม่');
+                return;
+            }
+
+            const tokenHash = params.get('token_hash');
+            const type = params.get('type');
+            if (tokenHash) {
+                if (type !== 'signup' && type !== 'email') {
+                    setStatus('error', 'ลิงก์ไม่ถูกต้อง', 'กรุณาขอลิงก์ยืนยันอีเมลใหม่');
+                    return;
+                }
+                setStatus('loading', 'กำลังยืนยันอีเมล...', 'โปรดรอสักครู่');
+                const { error } = await supabaseClient.auth.verifyOtp({ token_hash: tokenHash, type });
+                if (error) {
+                    setStatus('error', 'ยืนยันอีเมลไม่สำเร็จ', 'ลิงก์อาจหมดอายุหรือถูกใช้งานแล้ว กรุณาลองเข้าสู่ระบบหรือขอลิงก์ใหม่');
+                    return;
+                }
+                history.replaceState(null, '', location.pathname);
+                setStatus('success', 'ยืนยันอีเมลสำเร็จ!', 'บัญชี TimeMatch ของคุณได้รับการยืนยันแล้ว สามารถเข้าสู่ระบบได้เลย');
+                return;
+            }
+
+            // Support Supabase's default confirmation link, which may return session tokens in the URL fragment.
+            if (hashParams.has('access_token') && hashParams.get('type') === 'signup') {
+                setStatus('loading', 'กำลังตรวจสอบการยืนยัน...', 'โปรดรอสักครู่');
+                const { data, error } = await supabaseClient.auth.getSession();
+                if (!error && data.session) {
+                    history.replaceState(null, '', location.pathname);
+                    setStatus('success', 'ยืนยันอีเมลสำเร็จ!', 'บัญชี TimeMatch ของคุณได้รับการยืนยันแล้ว สามารถเข้าสู่ระบบได้เลย');
+                } else {
+                    setStatus('error', 'ตรวจสอบการยืนยันไม่สำเร็จ', 'กรุณาลองเข้าสู่ระบบหรือขอลิงก์ใหม่');
+                }
+                return;
+            }
+            setStatus('pending', 'ตรวจสอบอีเมลของคุณ', 'เราได้ส่งลิงก์ยืนยันบัญชีไปยังอีเมลที่ใช้สมัครสมาชิกแล้ว กรุณาคลิกลิงก์ในอีเมล');
+        }
+
+        document.getElementById('resendForm').addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const email = document.getElementById('email').value.trim().toLowerCase();
+            const info = document.getElementById('resendMessage');
+            const button = document.getElementById('resendButton');
+            if (!/^[^\s@]+@kkumail\.com$/.test(email)) {
+                info.textContent = 'กรุณาใช้อีเมล @kkumail.com เท่านั้น';
+                return;
+            }
+            button.disabled = true;
+            button.textContent = 'กำลังส่ง...';
+            info.textContent = '';
+            try {
+                const { error } = await supabaseClient.auth.resend({
+                    type: 'signup', email,
+                    options: { emailRedirectTo: new URL('confirm-email.html', location.href).href.split('#')[0].split('?')[0] }
+                });
+                info.textContent = error ? 'ไม่สามารถส่งอีเมลได้ในขณะนี้ กรุณารอสักครู่แล้วลองใหม่' : 'หากบัญชีนี้รอยืนยันอีเมล ระบบจะส่งลิงก์ให้อีกครั้ง กรุณาตรวจสอบกล่องจดหมาย';
+            } catch (err) {
+                info.textContent = 'เกิดข้อผิดพลาดในการเชื่อมต่อ กรุณาลองใหม่';
+            } finally {
+                button.disabled = false;
+                button.textContent = 'ส่งลิงก์ยืนยันอีกครั้ง';
+            }
+        });
+        handleConfirmation().catch(() => setStatus('error', 'เกิดข้อผิดพลาด', 'ไม่สามารถตรวจสอบสถานะการยืนยันได้ กรุณาลองใหม่'));
+    </script>
+</body>
+
+</html>
