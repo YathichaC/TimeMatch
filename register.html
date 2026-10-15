@@ -352,7 +352,7 @@
           document.getElementById('email').focus();
           return;
         }
-        
+
         const password = document.getElementById('password').value;
         const confirmPassword = document.getElementById('confirmPassword').value;
 
@@ -375,7 +375,7 @@
           email: email,
           password: password,
           options: {
-            emailRedirectTo: 'http://127.0.0.1:5500/TimeMatch/login.html',
+            emailRedirectTo: new URL('confirm-email.html', window.location.href).href,
             data: {
               full_name: fullName,
               student_id: studentId
@@ -393,7 +393,7 @@
         showSuccessToast();
 
         setTimeout(() => {
-          window.location.href = 'login.html';
+          window.location.href = `confirm-email.html?email=${encodeURIComponent(email)}`;
         }, 1500);
       });
     </script>
