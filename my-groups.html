@@ -90,30 +90,8 @@
 
       </nav>
 
-      <!-- RIGHT : NOTIFICATION + PROFILE -->
+      <!-- RIGHT : PROFILE -->
       <div class="flex items-center gap-4 shrink-0">
-
-        <!-- NOTIFICATION -->
-        <button type="button" aria-label="Notifications" class="relative w-10 h-10
-               flex items-center justify-center
-               rounded-full
-               text-on-surface-variant
-               hover:text-on-surface
-               hover:bg-surface-container
-               transition-colors" onclick="alert('ระบบแจ้งเตือนยังไม่เปิดใช้งาน')">
-
-          <span class="material-symbols-outlined text-[22px]">
-            notifications
-          </span>
-
-          <!-- Notification Dot -->
-          <span id="notification-dot" class="hidden absolute top-1.5 right-1.5
-             w-2 h-2 rounded-full
-             bg-error ring-2 ring-surface">
-          </span>
-
-        </button>
-
 
         <!-- PROFILE -->
         <a href="profile.html" class="flex items-center gap-2
@@ -140,12 +118,6 @@
                        text-on-surface font-semibold
                        leading-tight">
               กำลังโหลด...
-            </span>
-
-            <span class="font-label-tag text-label-tag
-                       text-on-surface-variant
-                       leading-tight">
-              CS Student
             </span>
 
           </div>
@@ -201,9 +173,19 @@
           const modal = document.getElementById(modalId);
           if (modal) {
             if (show) {
+              if (modalId === 'modal-join-code') {
+                const input = document.getElementById('joinCodeInput');
+
+                if (input) {
+                  input.value = '';
+                  setTimeout(() => input.focus(), 100);
+                }
+              }
+
               modal.classList.remove('hidden');
               modal.classList.add('flex');
-            } else {
+            }
+            else {
               modal.classList.add('hidden');
               modal.classList.remove('flex');
             }
@@ -359,20 +341,24 @@
           </div>
           <!-- Action Buttons -->
           <div class="flex items-center gap-space-sm flex-wrap">
-            <button
-              class="flex items-center gap-space-xs px-space-md py-2.5 rounded-xl bg-surface-container-lowest text-on-surface hover:bg-surface-container-low transition-all font-body-md text-body-md font-medium shadow-sm active:scale-[0.98]"
-              onclick="toggleModal('modal-join-code', true)">
-              <span class="material-symbols-outlined text-[18px] text-secondary">vpn_key</span>
-              <span class="">เข้าร่วมด้วยโค้ด</span>
-            </button>
-            <a href="create-group.html" class="flex items-center gap-space-xs px-space-lg py-2.5
-         rounded-xl bg-primary-container hover:bg-primary
-         text-on-primary transition-all
-         font-headline-sm text-body-md font-semibold
-         shadow-sm hover:shadow active:scale-[0.98]">
+            <button type="button" class="flex items-center gap-space-xs px-5 py-3 rounded-2xl
+         bg-surface-container-lowest text-primary
+         font-headline-sm text-body-md
+         hover:bg-surface-container-low
+         transition-all duration-200 shadow-sm" onclick="toggleModal('modal-join-code', true)">
 
-              <span class="material-symbols-outlined text-[20px]">add</span>
-              <span>สร้างกลุ่มใหม่</span>
+              <span class="material-symbols-outlined text-[20px]">pin</span>
+              <span>เข้าร่วมด้วยโค้ด</span>
+            </button>
+            <a href="create-group.html" class="flex items-center gap-space-xs px-6 py-3 rounded-2xl
+          bg-primary text-on-primary
+          font-headline-sm text-body-md
+          hover:bg-on-primary-fixed-variant
+          transition-all duration-200
+          shadow-sm active:scale-95">
+
+              <span class="material-symbols-outlined text-[20px]">add_circle</span>
+              <span>สร้างกลุ่ม</span>
 
             </a>
 
@@ -941,59 +927,76 @@
           </div>
 
         </div>
+
         <!-- MODAL: Join by Code -->
-        <div class="hidden fixed inset-0 z-50 bg-inverse-surface/40 backdrop-blur-xs items-center justify-center p-4"
-          id="modal-join-code">
-          <div
-            class="bg-surface-container-lowest rounded-2xl shadow-2xl max-w-md w-full p-space-xl flex flex-col gap-space-lg relative animate-in fade-in zoom-in-95 duration-200">
-            <!-- Close Button -->
-            <button
-              class="absolute top-space-md right-space-md w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors"
-              onclick="toggleModal('modal-join-code', false)">
-              <span class="material-symbols-outlined text-[20px]">close</span>
-            </button>
-            <!-- Modal Header -->
-            <div class="flex flex-col gap-1 text-center items-center">
-              <div class="w-14 h-14 rounded-2xl bg-secondary-fixed flex items-center justify-center text-2xl mb-2">
+        <div id="modal-join-code" class="hidden fixed inset-0 z-50 items-center justify-center
+         p-gutter bg-inverse-surface/40 backdrop-blur-sm">
+
+          <div class="w-full max-w-md bg-surface-container-lowest
+           rounded-3xl p-space-lg shadow-xl relative
+           animate-in fade-in zoom-in-95 duration-200">
+
+            <!-- Header -->
+            <div class="flex items-center justify-between mb-space-md">
+              <div class="w-12 h-12 rounded-2xl bg-surface-container
+               flex items-center justify-center text-2xl">
                 👋
               </div>
-              <h3 class="font-headline-sm text-headline-sm font-bold text-on-surface">
-                มีโค้ดจากเพื่อนแล้วใช่มั้ย?
-              </h3>
-              <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed max-w-xs">
-                ใส่รหัส 6 หลักที่เพื่อนส่งมาให้เพื่อเข้าสู่กลุ่มทำงานร่วมกัน
-              </p>
+
+              <button type="button" class="p-2 rounded-full text-on-surface-variant
+               hover:text-on-surface hover:bg-surface-container
+               transition-colors" onclick="toggleModal('modal-join-code', false)">
+                <span class="material-symbols-outlined text-[20px]">close</span>
+              </button>
             </div>
-            <!-- Form Input -->
-            <div class="flex flex-col gap-2">
-              <label class="font-label-tag text-label-tag font-semibold uppercase text-on-surface-variant">
-                รหัสกลุ่ม (Group Code)
-              </label>
-              <div class="relative flex items-center">
-                <span class="material-symbols-outlined absolute left-space-md text-[20px] text-secondary">tag</span>
-                <input id="joinCodeInput"
-                  class="w-full bg-surface-container-low rounded-xl pl-11 pr-space-md py-3 font-label-code text-body-lg text-on-surface font-semibold tracking-wider placeholder-on-surface-variant/40 outline-none ring-2 ring-primary-container"
-                  placeholder="กรอกรหัสกลุ่ม 6 ตัว" type="text" maxlength="6" autocomplete="off">
+
+            <h3 class="font-headline-md text-headline-md text-inverse-surface mb-1">
+              มีโค้ดจากเพื่อนแล้วใช่มั้ย?
+            </h3>
+
+            <p class="font-body-md text-body-md text-on-surface-variant mb-space-lg">
+              ใส่โค้ด 6 หลักที่เพื่อนส่งให้ แล้วเข้าไปรวมกลุ่มได้ทันทีเลย
+            </p>
+
+            <!-- Input -->
+            <div class="space-y-space-md">
+              <div class="space-y-1.5">
+                <label for="joinCodeInput" class="block font-headline-sm text-body-sm text-inverse-surface">
+                  รหัสกลุ่ม (Group Code)
+                </label>
+
+                <input id="joinCodeInput" type="text" maxlength="6" autocomplete="off" placeholder="เช่น AB12CD" class="w-full px-4 py-3 rounded-2xl
+                 bg-surface-container-low font-label-code
+                 text-body-lg text-inverse-surface
+                 placeholder:text-outline uppercase tracking-wider
+                 focus:outline-none focus:bg-surface-container-lowest
+                 focus:ring-2 focus:ring-primary transition-all" oninput="this.value = this.value.toUpperCase()"
+                  onkeydown="if (event.key === 'Enter') {
+            event.preventDefault();
+            joinGroupByCode();
+          }">
               </div>
 
-            </div>
-            <!-- Actions -->
-            <div class="flex items-center gap-space-sm pt-2">
-              <button
-                class="flex-1 py-2.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface font-body-md text-body-md font-medium transition-colors"
-                onclick="toggleModal('modal-join-code', false)">
-                ยกเลิก
-              </button>
-              <button id="joinGroupBtn"
-                class="flex-1 py-2.5 rounded-xl bg-primary-container hover:bg-primary text-on-primary font-headline-sm text-body-md font-semibold shadow-sm transition-all flex items-center justify-center gap-1.5"
-                onclick="joinGroupByCode()">
+              <span class="block font-body-sm text-body-sm text-outline">
+                กรอกรหัสกลุ่ม 6 ตัวอักษรที่ได้รับจากเพื่อน
+              </span>
 
-                <span>เข้าร่วมกลุ่ม</span>
+              <!-- Actions -->
+              <div class="flex items-center justify-end gap-space-sm pt-space-xs">
+                <button type="button" class="px-5 py-2.5 rounded-xl font-headline-sm
+                 text-body-md text-on-surface-variant
+                 hover:bg-surface-container transition-colors" onclick="toggleModal('modal-join-code', false)">
+                  ยกเลิก
+                </button>
 
-                <span class="material-symbols-outlined text-[18px]">
-                  arrow_forward
-                </span>
-              </button>
+                <button id="joinGroupBtn" type="button" class="px-6 py-2.5 rounded-xl bg-primary
+                 text-on-primary font-headline-sm text-body-md
+                 hover:bg-on-primary-fixed-variant
+                 transition-colors shadow-sm
+                 disabled:opacity-50 disabled:cursor-not-allowed" onclick="joinGroupByCode()">
+                  ค้นหากลุ่ม →
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -1551,112 +1554,114 @@
       window.filterGroups?.();
     }
 
-
+    let isJoiningGroup = false;
 
     async function joinGroupByCode() {
+      if (isJoiningGroup) return;
 
-      const input =
-        document.getElementById("joinCodeInput");
+      const input = document.getElementById("joinCodeInput");
+      const button = document.getElementById("joinGroupBtn");
 
-      const button =
-        document.getElementById("joinGroupBtn");
+      const joinCode = input.value.trim().toUpperCase();
 
-      const joinCode =
-        input.value.trim().toUpperCase();
-
-      // ยังไม่ได้กรอก
+      // ตรวจสอบรหัสกลุ่ม
       if (!joinCode) {
         alert("กรุณากรอกรหัสกลุ่ม");
         input.focus();
         return;
       }
 
-      // ระบบเราใช้รหัส 6 ตัว
-      if (joinCode.length !== 6) {
-        alert("กรุณากรอกรหัสกลุ่มให้ครบ 6 ตัว");
+      if (!/^[A-Z0-9]{6}$/.test(joinCode)) {
+        alert("รหัสกลุ่มต้องมีตัวอักษรภาษาอังกฤษหรือตัวเลขรวม 6 ตัว");
         input.focus();
         return;
       }
 
-      button.disabled = true;
-      button.classList.add(
-        "opacity-60",
-        "cursor-not-allowed"
-      );
+      // ป้องกันการกดซ้ำ
+      isJoiningGroup = true;
+
+      if (button) {
+        button.disabled = true;
+        button.textContent = "กำลังเข้าร่วม...";
+      }
 
       try {
+        // ตรวจสอบผู้ใช้
+        const {
+          data: { user },
+          error: authError
+        } = await supabaseClient.auth.getUser();
 
-        const { data: groupId, error } =
-          await supabaseClient.rpc(
-            "join_group_by_code",
-            {
-              p_join_code: joinCode
-            }
-          );
-
-        if (error) {
-
-          console.error(
-            "JOIN GROUP ERROR:",
-            error
-          );
-
-          if (
-            error.message.includes(
-              "Group not found"
-            )
-          ) {
-            alert("ไม่พบกลุ่มจากรหัสนี้");
-          }
-
-          else if (
-            error.message.includes(
-              "Already a member"
-            )
-          ) {
-            alert(
-              "คุณเป็นสมาชิกของกลุ่มนี้อยู่แล้ว"
-            );
-          }
-
-          else {
-            alert(
-              "ไม่สามารถเข้าร่วมกลุ่มได้ กรุณาลองใหม่"
-            );
-          }
-
+        if (authError || !user) {
+          window.location.href = "login.html";
           return;
         }
 
-        console.log(
-          "JOIN GROUP SUCCESS:",
-          groupId
+        // เข้าร่วมกลุ่มผ่าน Supabase RPC
+        const { data: groupId, error } = await supabaseClient.rpc(
+          "join_group_by_code",
+          { p_join_code: joinCode }
         );
 
-        window.location.href =
-          `group-detail.html?id=${groupId}`;
+        if (error) {
+          console.error("JOIN GROUP ERROR:", error);
+
+          const errorMessage = (error.message || "").toLowerCase();
+
+          let message = "ไม่สามารถเข้าร่วมกลุ่มได้ กรุณาลองใหม่อีกครั้ง";
+
+          if (
+            errorMessage.includes("already") ||
+            errorMessage.includes("duplicate")
+          ) {
+            message = "คุณเป็นสมาชิกของกลุ่มนี้อยู่แล้ว";
+          } else if (
+            errorMessage.includes("not found") ||
+            errorMessage.includes("invalid")
+          ) {
+            message = "ไม่พบกลุ่มที่ใช้รหัสนี้ กรุณาตรวจสอบรหัสอีกครั้ง";
+          }
+
+          alert(message);
+          return;
+        }
+
+        // เข้าร่วมสำเร็จ
+        alert("เข้าร่วมกลุ่มสำเร็จ!");
+
+        window.location.href = `group-detail.html?id=${groupId}`;
 
       } catch (error) {
-
-        console.error(
-          "JOIN GROUP ERROR:",
-          error
-        );
-
-        alert(
-          "เกิดข้อผิดพลาด กรุณาลองใหม่"
-        );
+        console.error("UNEXPECTED JOIN ERROR:", error);
+        alert("เกิดข้อผิดพลาดในการเชื่อมต่อ กรุณาลองใหม่อีกครั้ง");
 
       } finally {
+        isJoiningGroup = false;
 
-        button.disabled = false;
-
-        button.classList.remove(
-          "opacity-60",
-          "cursor-not-allowed"
-        );
+        if (button) {
+          button.disabled = false;
+          button.textContent = "ค้นหากลุ่ม →";
+        }
       }
     }
+    // ปิด Modal เมื่อกด Escape
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape") {
+        const modal = document.getElementById("modal-join-code");
+
+        if (modal && !modal.classList.contains("hidden")) {
+          toggleModal("modal-join-code", false);
+        }
+      }
+    });
+
+    // ปิด Modal เมื่อคลิกพื้นที่ด้านนอกกล่อง
+    document.getElementById("modal-join-code")?.addEventListener("click", function (event) {
+      if (event.target === this) {
+        toggleModal("modal-join-code", false);
+      }
+    });
+
 
     loadMyGroups();
   </script>

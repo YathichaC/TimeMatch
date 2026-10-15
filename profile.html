@@ -80,37 +80,14 @@
                     กลุ่มของฉัน
                 </a>
 
-                <a href="#" class="nav-link px-5 py-2 rounded-full transition-colors" data-nav="how-it-works">
+                <a href="index.html#how-it-works" class="nav-link px-5 py-2 rounded-full transition-colors" data-nav="how-it-works">
                     วิธีใช้งาน
                 </a>
 
             </nav>
 
-            <!-- RIGHT : NOTIFICATION + PROFILE -->
+            <!-- RIGHT : PROFILE -->
             <div class="flex items-center gap-4 shrink-0">
-
-                <!-- NOTIFICATION -->
-                <button type="button" aria-label="Notifications" class="relative w-10 h-10
-               flex items-center justify-center
-               rounded-full
-               text-on-surface-variant
-               hover:text-on-surface
-               hover:bg-surface-container
-               transition-colors">
-
-                    <span class="material-symbols-outlined text-[22px]">
-                        notifications
-                    </span>
-
-                    <!-- Notification Dot -->
-                    <span class="absolute top-1.5 right-1.5
-                     w-2 h-2 rounded-full
-                     bg-error
-                     ring-2 ring-surface">
-                    </span>
-
-                </button>
-
 
                 <!-- PROFILE -->
                 <a href="profile.html" class="flex items-center gap-2
@@ -118,10 +95,14 @@
                 hover:bg-surface-container
                 transition-colors">
 
-                    <!-- Profile Image -->
-                    <img alt="Profile" class="w-9 h-9 rounded-full object-cover
-                 ring-2 ring-surface-container-high"
-                        src="https://lh3.googleusercontent.com/aida/AEtjO1XlSnEB9jG8W6hzP2SDsNo5fMsYan7ciLYMAMFtKI47o6bFNHpvRFvXIz3fUIDOAXBNUWyZBXDD-z2wYdi95qm7KniOrn1pM6FFJJGewawlf-GEnHOmTvwyapRy_IflwSoNDLxys_kvaXeMwTvsN4xCRucsaYjcUeEW3IBJDU450zXyM873CkE084R6Y1-sNAj3oEQardVcCoZiZpMvIViliAeFjocmYk2x8tpkxzblSwPlVpZxOwoeRsyT">
+                    <!-- Profile Icon -->
+                    <div class="w-9 h-9 rounded-full bg-primary-fixed
+         flex items-center justify-center
+         ring-2 ring-surface-container-high">
+                        <span class="material-symbols-outlined text-primary text-[24px]">
+                            person
+                        </span>
+                    </div>
 
                     <!-- Profile Information -->
                     <div class="hidden sm:flex flex-col text-left">
@@ -130,12 +111,6 @@
     text-on-surface font-semibold
     leading-tight">
                             กำลังโหลด...
-                        </span>
-
-                        <span class="font-label-tag text-label-tag
-                       text-on-surface-variant
-                       leading-tight">
-                            CS Student
                         </span>
 
                     </div>
@@ -162,16 +137,7 @@
             <div
                 class="w-full bg-surface-container-lowest rounded-3xl p-6 md:p-8 shadow-sm border border-surface-variant/40 flex flex-col sm:flex-row items-center sm:items-center justify-between gap-6">
                 <div class="flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
-                    <div class="relative flex-shrink-0">
-                        <div
-                            class="w-24 h-24 sm:w-28 sm:h-28 rounded-full overflow-hidden ring-4 ring-primary-fixed/50 shadow-md bg-surface-container-low flex items-center justify-center">
-                            <img alt="ชิดชนก ชนะพา" class="w-full h-full object-cover" id="userAvatarImg"
-                                src="https://lh3.googleusercontent.com/aida/AEtjO1XlSnEB9jG8W6hzP2SDsNo5fMsYan7ciLYMAMFtKI47o6bFNHpvRFvXIz3fUIDOAXBNUWyZBXDD-z2wYdi95qm7KniOrn1pM6FFJJGewawlf-GEnHOmTvwyapRy_IflwSoNDLxys_kvaXeMwTvsN4xCRucsaYjcUeEW3IBJDU450zXyM873CkE084R6Y1-sNAj3oEQardVcCoZiZpMvIViliAeFjocmYk2x8tpkxzblSwPlVpZxOwoeRsyT">
-                        </div><button aria-label="เปลี่ยนรูปโปรไฟล์"
-                            class="absolute bottom-0 right-0 p-2 rounded-full bg-primary text-on-primary shadow-md hover:bg-primary/90 transition-transform active:scale-95"
-                            onclick="openModal('avatarModal')" type="button"><span
-                                class="material-symbols-outlined text-base leading-none block">photo_camera</span></button>
-                    </div>
+                    
                     <div class="flex flex-col gap-1.5">
                         <div class="flex flex-col sm:flex-row items-center gap-2">
                             <h2 class="font-headline-md text-xl md:text-2xl font-bold text-on-surface"
@@ -195,13 +161,13 @@
             </div>
             <div class="flex items-center gap-2 p-1.5 bg-surface-container-low rounded-2xl w-fit self-center"
                 role="tablist"><button
-                    class="px-5 py-2 rounded-xl font-headline-sm text-body-sm font-medium transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-2"
+                    class="px-5 py-2 rounded-xl font-headline-sm text-body-sm font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm flex items-center gap-2"
                     id="tab-btn-info" onclick="switchMainTab('info')" role="tab" type="button"><span
                         class="material-symbols-outlined text-lg">person</span>ข้อมูลส่วนตัว</button><button
-                    class="px-5 py-2 rounded-xl font-headline-sm text-body-sm font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm flex items-center gap-2"
+                    class="px-5 py-2 rounded-xl font-headline-sm text-body-sm font-medium transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-2"
                     id="tab-btn-security" onclick="switchMainTab('security')" role="tab" type="button"><span
                         class="material-symbols-outlined text-lg">security</span>บัญชีและความปลอดภัย</button></div>
-            <div class="flex-col gap-space-lg hidden" id="pane-info">
+            <div class="flex-col gap-space-lg flex" id="pane-info">
                 <div
                     class="bg-surface-container-lowest rounded-3xl p-6 md:p-8 shadow-sm border border-surface-variant/40">
                     <div class="flex items-center justify-between pb-5 mb-6 border-b border-surface-variant/40">
@@ -288,7 +254,7 @@
                     </form>
                 </div>
             </div>
-            <div class="flex-col gap-space-lg flex" id="pane-security">
+            <div class="flex-col gap-space-lg hidden" id="pane-security">
                 <div
                     class="bg-surface-container-lowest rounded-3xl p-6 md:p-8 shadow-sm border border-surface-variant/40 flex flex-col gap-6">
                     <div class="flex items-start justify-between pb-5 border-b border-surface-variant/40">
@@ -583,6 +549,7 @@
 
             // เรียกโหลด Profile เมื่อเปิดหน้า
             loadProfile();
+            switchMainTab('info');
         </script>
         <script>function switchMainTab(tab) { var btnInfo = document.getElementById('tab-btn-info'); var btnSec = document.getElementById('tab-btn-security'); var paneInfo = document.getElementById('pane-info'); var paneSec = document.getElementById('pane-security'); if (tab === 'info') { paneInfo.classList.remove('hidden'); paneInfo.classList.add('flex'); paneSec.classList.add('hidden'); paneSec.classList.remove('flex'); btnInfo.className = 'px-5 py-2 rounded-xl font-headline-sm text-body-sm font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm flex items-center gap-2'; btnSec.className = 'px-5 py-2 rounded-xl font-headline-sm text-body-sm font-medium transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-2'; } else { paneSec.classList.remove('hidden'); paneSec.classList.add('flex'); paneInfo.classList.add('hidden'); paneInfo.classList.remove('flex'); btnSec.className = 'px-5 py-2 rounded-xl font-headline-sm text-body-sm font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm flex items-center gap-2'; btnInfo.className = 'px-5 py-2 rounded-xl font-headline-sm text-body-sm font-medium transition-all text-on-surface-variant hover:text-on-surface flex items-center gap-2'; } } function toggleEditMode(forceState) { var view = document.getElementById('infoViewMode'); var edit = document.getElementById('infoEditMode'); var heroBtnText = document.getElementById('heroEditBtnText'); var shouldEdit = (forceState !== undefined) ? forceState : view.classList.contains('grid'); if (shouldEdit) { switchMainTab('info'); view.classList.remove('grid'); view.classList.add('hidden'); edit.classList.remove('hidden'); edit.classList.add('flex'); heroBtnText.innerText = 'กำลังแก้ไข...'; } else { edit.classList.remove('flex'); edit.classList.add('hidden'); view.classList.remove('hidden'); view.classList.add('grid'); heroBtnText.innerText = 'แก้ไขโปรไฟล์'; } }
             async function saveProfileChanges(e) {

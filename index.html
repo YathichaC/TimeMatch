@@ -82,10 +82,7 @@
                     data-section="how-it-works">
                     วิธีใช้งาน
                 </a>
-                <a href="my-groups.html" id="nav-my-groups"
-                    class="hidden nav-link px-5 py-2 rounded-full transition-colors">
-                    กลุ่มของฉัน
-                </a>
+                
 
 
 
@@ -117,7 +114,7 @@
           bg-primary-container hover:bg-primary
           text-white text-body-md font-semibold
           transition-colors shadow-sm">
-                กลับหน้าหลัก
+                เข้าสู่ระบบของฉัน
             </a>
         </div>
     </header>
@@ -465,13 +462,11 @@
 
                 console.log("เข้าสู่ระบบแล้ว:", data.user.email);
 
-                const groupsLink = document.getElementById("nav-my-groups");
+                
                 const authButtons = document.getElementById("navbar-auth");
                 const dashboardButton = document.getElementById("navbar-dashboard");
 
-                if (groupsLink) {
-                    groupsLink.classList.remove("hidden");
-                }
+                
 
                 if (authButtons) {
                     authButtons.classList.add("hidden");

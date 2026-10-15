@@ -62,8 +62,7 @@
       <!-- LEFT : LOGO -->
       <a href="index.html" class="flex items-center gap-2 shrink-0">
 
-        <img alt="TimeMatch Logo" class="h-8 w-8 object-contain"
-          src="https://lh3.googleusercontent.com/aida/AEtjO1WdLqtWtZk7hffCrpEFHvyz_ar8IJD_L4LqNlCgRrf_GyxErMf4immcMbahuljbEODGFcHxcJtGc5rW6S8FakgEq31q-ACI_-5oiNQZbZi1WCiNXtOLUu0v0FuB_YkBEFCOJL3KWvjjwQYH2NCJKdScUCEj-DydOrmWnIO3S1nQJL6LMJpJO-58YupR_wXSuA2Ghwh9l28AG5zDMFqHDFjKSqdkwX596MP8rbXM-nsWFHluAPZdV2g2bVM">
+        <img alt="TimeMatch Logo" class="h-8 w-8 object-contain" src="images/logo.png">
 
         <span class="font-headline-sm text-headline-sm
                    text-on-surface font-bold">
@@ -85,37 +84,15 @@
           กลุ่มของฉัน
         </a>
 
-        <a href="#" class="nav-link px-5 py-2 rounded-full transition-colors" data-nav="how-it-works">
+        <a href="index.html#how-it-works" class="nav-link px-5 py-2 rounded-full transition-colors"
+          data-nav="how-it-works">
           วิธีใช้งาน
         </a>
 
       </nav>
 
-      <!-- RIGHT : NOTIFICATION + PROFILE -->
+      <!-- RIGHT : PROFILE -->
       <div class="flex items-center gap-4 shrink-0">
-
-        <!-- NOTIFICATION -->
-        <button type="button" aria-label="Notifications" class="relative w-10 h-10
-               flex items-center justify-center
-               rounded-full
-               text-on-surface-variant
-               hover:text-on-surface
-               hover:bg-surface-container
-               transition-colors">
-
-          <span class="material-symbols-outlined text-[22px]">
-            notifications
-          </span>
-
-          <!-- Notification Dot -->
-          <span class="absolute top-1.5 right-1.5
-                     w-2 h-2 rounded-full
-                     bg-error
-                     ring-2 ring-surface">
-          </span>
-
-        </button>
-
 
         <!-- PROFILE -->
         <a href="profile.html" class="flex items-center gap-2
@@ -123,10 +100,14 @@
                 hover:bg-surface-container
                 transition-colors">
 
-          <!-- Profile Image -->
-          <img alt="Profile" class="w-9 h-9 rounded-full object-cover
-                 ring-2 ring-surface-container-high"
-            src="https://lh3.googleusercontent.com/aida/AEtjO1XlSnEB9jG8W6hzP2SDsNo5fMsYan7ciLYMAMFtKI47o6bFNHpvRFvXIz3fUIDOAXBNUWyZBXDD-z2wYdi95qm7KniOrn1pM6FFJJGewawlf-GEnHOmTvwyapRy_IflwSoNDLxys_kvaXeMwTvsN4xCRucsaYjcUeEW3IBJDU450zXyM873CkE084R6Y1-sNAj3oEQardVcCoZiZpMvIViliAeFjocmYk2x8tpkxzblSwPlVpZxOwoeRsyT">
+          <!-- Profile Icon -->
+          <div class="w-9 h-9 rounded-full bg-primary-fixed
+         flex items-center justify-center
+         ring-2 ring-surface-container-high">
+            <span class="material-symbols-outlined text-primary text-[24px]">
+              person
+            </span>
+          </div>
 
           <!-- Profile Information -->
           <div class="hidden sm:flex flex-col text-left">
@@ -135,12 +116,6 @@
                        text-on-surface font-semibold
                        leading-tight">
               กำลังโหลด...
-            </span>
-
-            <span class="font-label-tag text-label-tag
-                       text-on-surface-variant
-                       leading-tight">
-              CS Student
             </span>
 
           </div>
@@ -253,7 +228,7 @@
                     id="startDate" name="startDate" style="box-shadow: inset 0 0 0 1px #bec9c8;" type="date"
                     value="2026-10-01">
                 </div>
-                <span class="font-label-code text-label-code text-on-surface-variant">แสดงผล: 1 ต.ค. 2026</span>
+
               </div>
               <!-- End Date -->
               <div class="flex flex-col gap-space-xs">
@@ -270,8 +245,7 @@
                     id="endDate" name="endDate" style="box-shadow: inset 0 0 0 1px #bec9c8;" type="date"
                     value="2026-10-07">
                 </div>
-                <span class="font-label-code text-label-code text-on-surface-variant">แสดงผล: 7 ต.ค. 2026 (รวม 7
-                  วัน)</span>
+
               </div>
             </div>
             <!-- Warning Box: Date Change Notice -->
@@ -342,7 +316,41 @@
                 <span class="">2 ชั่วโมง</span>
               </button>
               <!-- Custom -->
+              <!-- Custom Duration -->
+              <button
+                class="duration-btn px-space-md py-2 rounded-full font-body-sm text-body-sm transition-all duration-150 bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container shadow-sm flex items-center gap-1.5"
+                data-custom="true" type="button">
+                <span class="material-symbols-outlined text-[16px] hidden">check</span>
+                <span>กำหนดเอง</span>
+              </button>
+            </div>
+            <div id="customDurationContainer" class="hidden mt-3">
+              <label class="block text-sm font-semibold text-slate-600 mb-2">
+                ระยะเวลาที่ต้องการ
+              </label>
 
+              <div class="flex items-center gap-3">
+                <select id="customHours"
+                  class="h-11 px-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-sm">
+                  <option value="0">0 ชั่วโมง</option>
+                  <option value="1">1 ชั่วโมง</option>
+                  <option value="2">2 ชั่วโมง</option>
+                  <option value="3">3 ชั่วโมง</option>
+                  <option value="4">4 ชั่วโมง</option>
+                  <option value="5">5 ชั่วโมง</option>
+                  <option value="6">6 ชั่วโมง</option>
+                  <option value="7">7 ชั่วโมง</option>
+                  <option value="8">8 ชั่วโมง</option>
+                </select>
+
+                <select id="customMinutes"
+                  class="h-11 px-4 rounded-xl bg-slate-50 border border-slate-200 text-slate-800 text-sm">
+                  <option value="0">0 นาที</option>
+                  <option value="15">15 นาที</option>
+                  <option value="30">30 นาที</option>
+                  <option value="45">45 นาที</option>
+                </select>
+              </div>
             </div>
             <!-- Explanatory Caption -->
 
@@ -463,12 +471,23 @@
                 const check = btn.querySelector('.material-symbols-outlined');
                 if (check) check.classList.remove('hidden');
 
-                const durationVal = btn.getAttribute('data-duration');
-                if (durationVal === '30') durationText.textContent = '30 นาที';
-                else if (durationVal === '60') durationText.textContent = '1 ชั่วโมง';
-                else if (durationVal === '90') durationText.textContent = '1 ชั่วโมง 30 นาที';
-                else if (durationVal === '120') durationText.textContent = '2 ชั่วโมง';
-                else durationText.textContent = 'ระยะเวลากำหนดเอง';
+                const customContainer =
+                  document.getElementById('customDurationContainer');
+
+                const customHours =
+                  document.getElementById('customHours');
+
+                const customMinutes =
+                  document.getElementById('customMinutes');
+
+                if (btn.dataset.custom === 'true') {
+                  customContainer.classList.remove('hidden');
+                  customHours.focus();
+                } else {
+                  customContainer.classList.add('hidden');
+                  customHours.value = '0';
+                  customMinutes.value = '0';
+                }
               });
             });
 
@@ -518,13 +537,24 @@
                   ".duration-btn.bg-primary-container"
                 );
 
-              const durationMinutes =
-                selectedDurationBtn
-                  ? Number(
-                    selectedDurationBtn.dataset.duration
-                  )
-                  : null;
+              let durationMinutes = null;
 
+              if (selectedDurationBtn?.dataset.custom === "true") {
+                const hours = Number(
+                  document.getElementById("customHours").value
+                );
+
+                const minutes = Number(
+                  document.getElementById("customMinutes").value
+                );
+
+                durationMinutes = (hours * 60) + minutes;
+
+              } else if (selectedDurationBtn?.dataset.duration) {
+                durationMinutes = Number(
+                  selectedDurationBtn.dataset.duration
+                );
+              }
 
               // ===== Validation =====
 
@@ -882,14 +912,36 @@
       // ===== แสดงระยะเวลานัดหมายจริง =====
       const durationButtons =
         document.querySelectorAll(".duration-btn");
+      const savedDuration = Number(group.duration_minutes);
 
+      const standardDurations = [30, 60, 90, 120];
+
+      const isCustomDuration =
+        !standardDurations.includes(savedDuration);
+
+      const customContainer =
+        document.getElementById("customDurationContainer");
+
+      if (isCustomDuration && savedDuration > 0) {
+        document.getElementById("customHours").value =
+          String(Math.floor(savedDuration / 60));
+
+        document.getElementById("customMinutes").value =
+          String(savedDuration % 60);
+
+        customContainer.classList.remove("hidden");
+      } else {
+        customContainer.classList.add("hidden");
+      }
       durationButtons.forEach(button => {
 
         const buttonDuration =
           Number(button.dataset.duration);
 
         const isSelected =
-          buttonDuration === group.duration_minutes;
+          button.dataset.custom === "true"
+            ? isCustomDuration
+            : buttonDuration === savedDuration;
 
         const checkIcon =
           button.querySelector(

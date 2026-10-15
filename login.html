@@ -147,7 +147,10 @@ async function validateForm() {
     showEmailError('รูปแบบอีเมลไม่ถูกต้อง (เช่น example@kkumail.com)');
     return;
   }
-
+  if (!email.toLowerCase().endsWith('@kkumail.com')) {
+  showEmailError('กรุณาใช้อีเมล @kkumail.com เท่านั้น');
+  return;
+}
   if (!password) {
     showPasswordError('กรุณากรอกรหัสผ่าน');
     return;
