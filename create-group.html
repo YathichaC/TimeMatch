@@ -476,6 +476,34 @@
             <span class="">สร้างกลุ่มเรียบร้อยแล้ว 🎉 กำลังไปยังหน้ารายละเอียดกลุ่ม...</span>
         </div>
         <script>
+            // กำหนดวันที่ต่ำสุดเป็นวันปัจจุบัน
+            function getTodayLocal() {
+                const now = new Date();
+
+                const year = now.getFullYear();
+                const month = String(now.getMonth() + 1).padStart(2, "0");
+                const day = String(now.getDate()).padStart(2, "0");
+
+                return `${year}-${month}-${day}`;
+            }
+
+            const startDateInput = document.getElementById("startDate");
+            const endDateInput = document.getElementById("endDate");
+
+            // ห้ามเลือกวันที่ย้อนหลัง
+            startDateInput.min = getTodayLocal();
+            endDateInput.min = getTodayLocal();
+
+            // วันที่สิ้นสุดต้องไม่ก่อนวันที่เริ่มต้น
+            startDateInput.addEventListener("change", function () {
+                endDateInput.min = startDateInput.value > getTodayLocal()
+                    ? startDateInput.value
+                    : getTodayLocal();
+
+                if (endDateInput.value && endDateInput.value < endDateInput.min) {
+                    endDateInput.value = "";
+                }
+            });
             // Duration Chip toggle
 
             function selectDuration(btn) {
@@ -773,7 +801,13 @@
                     alert("กรุณาเลือกวันที่เริ่มต้นและวันที่สิ้นสุด");
                     return;
                 }
+                // ตรวจสอบวันที่ปัจจุบันก่อนสร้างกลุ่ม
+                const today = getTodayLocal();
 
+                if (startDate < today || endDate < today) {
+                    alert("ไม่สามารถสร้างกลุ่มโดยใช้วันที่ย้อนหลังได้");
+                    return;
+                }
                 if (endDate < startDate) {
                     alert("วันที่สิ้นสุดต้องไม่น้อยกว่าวันที่เริ่มต้น");
                     return;
