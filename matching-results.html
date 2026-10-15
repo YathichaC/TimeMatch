@@ -604,7 +604,6 @@
             return;
           }
 
-
           const {
             data: { user },
             error: userError
@@ -795,13 +794,53 @@
             return;
           }
 
-
           console.log(
             "บันทึกนัดหมายสำเร็จ:",
             meeting
           );
 
+          // ส่งอีเมลแจ้งสมาชิกทุกคนหลังบันทึกนัดหมายสำเร็จ
+          try {
+            const { data, error: emailError } =
+              await supabaseClient.functions.invoke(
+                "notify-meeting-confirmed",
+                {
+                  body: {
+                    meetingId: meeting.id
+                  }
+                }
+              );
+
+            if (emailError || !data?.ok) {
+              console.error(
+                "ส่งอีเมลแจ้งสมาชิกไม่สำเร็จ:",
+                emailError || data
+              );
+
+              // ไม่ยกเลิกนัดหมาย เพราะบันทึกสำเร็จแล้ว
+              alert(
+                "ยืนยันนัดหมายสำเร็จ แต่ส่งอีเมลแจ้งสมาชิกไม่สำเร็จ"
+              );
+            } else {
+              console.log(
+                "ส่งอีเมลแจ้งสมาชิกสำเร็จ:",
+                data
+              );
+            }
+          } catch (emailException) {
+            console.error(
+              "เกิดข้อผิดพลาดขณะส่งอีเมล:",
+              emailException
+            );
+
+            // นัดหมายยังคงถูกบันทึกไว้
+            alert(
+              "ยืนยันนัดหมายสำเร็จ แต่ระบบส่งอีเมลขัดข้อง"
+            );
+          }
+
           closeConfirmModal();
+
 
 
           // แสดง Toast
