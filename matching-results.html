@@ -591,6 +591,24 @@
         }
 
         async function confirmAppointment() {
+          // ป้องกันการยืนยันนัดหมายที่เริ่มไปแล้ว
+          if (selectedMatchingResult) {
+            const { date, start_time } = selectedMatchingResult;
+
+            const meetingStart = new Date(
+              `${date}T${start_time}`
+            );
+
+            if (meetingStart.getTime() <= Date.now()) {
+              alert(
+                "ช่วงเวลานัดหมายนี้ผ่านไปแล้ว กรุณาคำนวณหาเวลาใหม่"
+              );
+
+              closeConfirmModal();
+              window.location.reload();
+              return;
+            }
+          }
           if (!currentUserIsOwner) {
             alert("เฉพาะผู้สร้างกลุ่มเท่านั้นที่ยืนยันนัดหมายได้");
             return;
@@ -1531,7 +1549,13 @@
 
 
       const matchingResults = [];
+      // ตรวจสอบว่าช่วงเวลานัดหมายยังไม่ผ่านเวลาปัจจุบัน
+      function isFutureMatchingSlot(date, startTime) {
+        const slotDateTime = new Date(`${date}T${startTime}:00`);
+        const now = new Date();
 
+        return slotDateTime.getTime() >= now.getTime();
+      }
 
       // ตรวจแต่ละ common slot ว่าสามารถต่อกัน
       // ได้ครบตาม duration หรือไม่
@@ -1574,7 +1598,7 @@
         }
 
 
-        if (isValid) {
+        if (isValid && isFutureMatchingSlot(date, startTime)) {
 
           const endMinutes =
             startMinutes +
