@@ -63,8 +63,7 @@
       <!-- LEFT : LOGO -->
       <a href="index.html" class="flex items-center gap-2 shrink-0">
 
-        <img alt="TimeMatch Logo" class="h-8 w-8 object-contain"
-          src="https://lh3.googleusercontent.com/aida/AEtjO1WdLqtWtZk7hffCrpEFHvyz_ar8IJD_L4LqNlCgRrf_GyxErMf4immcMbahuljbEODGFcHxcJtGc5rW6S8FakgEq31q-ACI_-5oiNQZbZi1WCiNXtOLUu0v0FuB_YkBEFCOJL3KWvjjwQYH2NCJKdScUCEj-DydOrmWnIO3S1nQJL6LMJpJO-58YupR_wXSuA2Ghwh9l28AG5zDMFqHDFjKSqdkwX596MP8rbXM-nsWFHluAPZdV2g2bVM">
+        <img alt="TimeMatch Logo" class="h-8 w-8 object-contain" src="images/logo.png">
 
         <span class="font-headline-sm text-headline-sm
                    text-on-surface font-bold">
@@ -86,37 +85,15 @@
           กลุ่มของฉัน
         </a>
 
-        <a href="#" class="nav-link px-5 py-2 rounded-full transition-colors" data-nav="how-it-works">
+        <a href="index.html#how-it-works" class="nav-link px-5 py-2 rounded-full transition-colors"
+          data-nav="how-it-works">
           วิธีใช้งาน
         </a>
 
       </nav>
 
-      <!-- RIGHT : NOTIFICATION + PROFILE -->
+      <!-- RIGHT : PROFILE -->
       <div class="flex items-center gap-4 shrink-0">
-
-        <!-- NOTIFICATION -->
-        <button type="button" aria-label="Notifications" class="relative w-10 h-10
-               flex items-center justify-center
-               rounded-full
-               text-on-surface-variant
-               hover:text-on-surface
-               hover:bg-surface-container
-               transition-colors">
-
-          <span class="material-symbols-outlined text-[22px]">
-            notifications
-          </span>
-
-          <!-- Notification Dot -->
-          <span class="absolute top-1.5 right-1.5
-                     w-2 h-2 rounded-full
-                     bg-error
-                     ring-2 ring-surface">
-          </span>
-
-        </button>
-
 
         <!-- PROFILE -->
         <a href="profile.html" class="flex items-center gap-2
@@ -124,10 +101,14 @@
                 hover:bg-surface-container
                 transition-colors">
 
-          <!-- Profile Image -->
-          <img alt="Profile" class="w-9 h-9 rounded-full object-cover
-                 ring-2 ring-surface-container-high"
-            src="https://lh3.googleusercontent.com/aida/AEtjO1XlSnEB9jG8W6hzP2SDsNo5fMsYan7ciLYMAMFtKI47o6bFNHpvRFvXIz3fUIDOAXBNUWyZBXDD-z2wYdi95qm7KniOrn1pM6FFJJGewawlf-GEnHOmTvwyapRy_IflwSoNDLxys_kvaXeMwTvsN4xCRucsaYjcUeEW3IBJDU450zXyM873CkE084R6Y1-sNAj3oEQardVcCoZiZpMvIViliAeFjocmYk2x8tpkxzblSwPlVpZxOwoeRsyT">
+          <!-- Profile Icon -->
+          <div class="w-9 h-9 rounded-full bg-primary-fixed
+         flex items-center justify-center
+         ring-2 ring-surface-container-high">
+            <span class="material-symbols-outlined text-primary text-[24px]">
+              person
+            </span>
+          </div>
 
           <!-- Profile Information -->
           <div class="hidden sm:flex flex-col text-left">
@@ -138,11 +119,7 @@
               กำลังโหลด...
             </span>
 
-            <span class="font-label-tag text-label-tag
-                       text-on-surface-variant
-                       leading-tight">
-              CS Student
-            </span>
+
 
           </div>
 
@@ -173,19 +150,7 @@
                 class="material-symbols-outlined text-headline-sm transition-transform duration-200 group-hover:-translate-x-1">arrow_back</span>
               <span class="font-body-md text-body-md font-medium">กลับไปหน้ารวมกลุ่ม</span>
             </a>
-            <!-- Mode Toggle Switch (Interactive Demo) -->
-            <div class="inline-flex items-center bg-surface-container-high p-1 rounded-full shadow-inner">
-              <button
-                class="px-3.5 py-1.5 rounded-full font-label-tag text-label-tag font-semibold transition-all text-on-surface-variant hover:text-on-surface"
-                id="mode-new" type="button">
-                ✨ โหมด: กรอกครั้งแรก
-              </button>
-              <button
-                class="px-3.5 py-1.5 rounded-full font-label-tag text-label-tag font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm"
-                id="mode-edit" type="button">
-                ✏️ โหมด: แก้ไขเวลาเดิม
-              </button>
-            </div>
+
           </div>
           <!-- 2. PAGE HEADER & GROUP PARAMETERS -->
           <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 pb-6">
@@ -218,15 +183,7 @@
                   </p>
                 </div>
               </div>
-              <div
-                class="flex items-center gap-2 px-3.5 py-2 rounded-xl bg-tertiary-fixed text-on-tertiary-fixed-variant shadow-sm">
-                <span class="material-symbols-outlined text-tertiary text-[20px]">group</span>
-                <div>
-                  <p class="font-label-tag text-[0.625rem] text-tertiary-container uppercase tracking-wider">
-                    สถานะสมาชิกกลุ่ม</p>
-                  <p class="font-body-sm text-body-sm font-semibold text-on-tertiary-fixed">ส่งแล้ว 4/5</p>
-                </div>
-              </div>
+
             </div>
           </div>
           <!-- 3. INSTRUCTION & LEGEND BANNER -->
@@ -265,24 +222,7 @@
           <!-- 4. QUICK ACTIONS TOOLBAR -->
           <div class="flex flex-wrap items-center justify-between gap-3 mb-4">
             <div class="flex flex-wrap items-center gap-2">
-              <button
-                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-secondary-fixed text-on-surface-variant hover:text-on-secondary-fixed-variant font-label-tag text-label-tag transition-all duration-150"
-                id="btn-select-all-monday" type="button">
-                <span class="material-symbols-outlined text-[16px]">select_all</span>
-                <span class="">เลือกทั้งวัน (จ. 1 ต.ค.)</span>
-              </button>
-              <button
-                class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-surface-container-high hover:bg-secondary-fixed text-on-surface-variant hover:text-on-secondary-fixed-variant font-label-tag text-label-tag transition-all duration-150"
-                id="btn-select-afternoons" type="button">
-                <span class="material-symbols-outlined text-[16px]">wb_twilight</span>
-                <span class="">เลือกทุกช่วงบ่าย (13:00 - 17:00)</span>
-              </button>
-              <button
-                class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg text-outline hover:text-error hover:bg-error-container/20 font-label-tag text-label-tag transition-all duration-150"
-                id="btn-clear-table" type="button">
-                <span class="material-symbols-outlined text-[16px]">refresh</span>
-                <span class="">ล้างทั้งหมด</span>
-              </button>
+
             </div>
 
           </div>
@@ -524,8 +464,8 @@
               </div>
               <div>
                 <p class="font-headline-sm text-headline-sm font-bold text-on-surface">บันทึกเวลาว่างเรียบร้อยแล้ว ✨</p>
-                <p class="font-body-sm text-body-sm text-on-surface-variant">สถานะของคุณอัปเดตเป็น “กรอกเวลาว่างแล้ว
-                  (5/5 คน)”</p>
+                <p class="font-body-sm text-body-sm text-on-surface-variant">สถานะของคุณอัปเดตเป็น “กรอกเวลาว่างแล้ว”
+                </p>
               </div>
             </div>
           </div>
@@ -574,13 +514,14 @@
           };
 
           // Generate 30-min intervals from 09:00 to 20:00
-          const TIMES = [];
-          for (let hour = 9; hour <= 20; hour++) {
-            const hh = hour.toString().padStart(2, '0');
-            TIMES.push(`${hh}:00`);
-            if (hour < 20) {
-              TIMES.push(`${hh}:30`);
-            }
+          // ช่วงเวลา 09:00–00:00 (ช่องสุดท้าย 23:30–00:00)
+          const times = [];
+
+          for (let hour = 9; hour <= 23; hour++) {
+            const hh = String(hour).padStart(2, "0");
+
+            times.push(`${hh}:00`);
+            times.push(`${hh}:30`);
           }
 
           // Pre-filled selection as specified:
@@ -680,20 +621,7 @@
             isMouseDown = false;
           });
 
-          // Select entire Day Helper
-          window.selectEntireDay = function (day) {
-            const allSelected = TIMES.every(t => selectedSlots.has(`${day}_${t}`));
-            TIMES.forEach(t => {
-              const k = `${day}_${t}`;
-              if (allSelected) {
-                selectedSlots.delete(k);
-              } else {
-                selectedSlots.add(k);
-              }
-            });
-            hasUnsavedChanges = true;
-            updateAllViews();
-          };
+
 
           // Render Mobile Slots for Current Tab
           function renderMobileSlots() {
@@ -819,31 +747,30 @@
           }
 
           function updateAllViews() {
-            // renderDesktopGrid(); // ปิดตารางระบบเก่า
+            renderDesktopGrid();
             renderMobileSlots();
             updateSummaryCards();
           }
 
-          // Quick Action Buttons
-          document.getElementById('btn-select-all-monday')?.addEventListener('click', () => {
-            selectEntireDay('mon');
-          });
 
-          document.getElementById('btn-select-afternoons')?.addEventListener('click', () => {
-            const afternoonTimes = ['13:00', '13:30', '14:00', '14:30', '15:00', '15:30', '16:00', '16:30'];
-            DAYS.forEach(day => {
-              afternoonTimes.forEach(t => selectedSlots.add(`${day}_${t}`));
-            });
-            hasUnsavedChanges = true;
-            updateAllViews();
-          });
+
+
 
           const clearHandler = () => {
             selectedSlots.clear();
             hasUnsavedChanges = true;
-            updateAllViews();
+
+            // วาดตารางเดิมใหม่ โดยไม่มีช่องที่ถูกเลือก
+            if (currentGroupStartDate && currentGroupEndDate) {
+              renderAvailabilityGrid(
+                currentGroupStartDate,
+                currentGroupEndDate
+              );
+            }
+
+            updateSummaryCards();
           };
-          document.getElementById('btn-clear-table')?.addEventListener('click', clearHandler);
+
           document.getElementById('btn-bottom-clear')?.addEventListener('click', clearHandler);
 
           // Mobile Tabs
@@ -854,25 +781,7 @@
             });
           });
 
-          // Mode Switch Demo
-          const modeNewBtn = document.getElementById('mode-new');
-          const modeEditBtn = document.getElementById('mode-edit');
 
-          modeNewBtn?.addEventListener('click', () => {
-            modeNewBtn.className = 'px-3.5 py-1.5 rounded-full font-label-tag text-label-tag font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm';
-            modeEditBtn.className = 'px-3.5 py-1.5 rounded-full font-label-tag text-label-tag font-semibold transition-all text-on-surface-variant hover:text-on-surface';
-            selectedSlots.clear();
-            hasUnsavedChanges = false;
-            updateAllViews();
-          });
-
-          modeEditBtn?.addEventListener('click', () => {
-            modeEditBtn.className = 'px-3.5 py-1.5 rounded-full font-label-tag text-label-tag font-semibold transition-all bg-surface-container-lowest text-primary shadow-sm';
-            modeNewBtn.className = 'px-3.5 py-1.5 rounded-full font-label-tag text-label-tag font-semibold transition-all text-on-surface-variant hover:text-on-surface';
-            //prefillDefaultSlots();
-            hasUnsavedChanges = false;
-            updateAllViews();
-          });
 
           // Save Flow & Toast
           const btnSave = document.getElementById("btn-save-availability");
@@ -888,11 +797,7 @@
               return;
             }
 
-            // ต้องเลือกอย่างน้อย 1 ช่วงเวลา
-            if (selectedSlots.size === 0) {
-              alert("กรุณาเลือกเวลาว่างอย่างน้อย 1 ช่วงเวลา");
-              return;
-            }
+
 
             const {
               data: { user },
@@ -948,9 +853,15 @@
             }
 
             // 2. บันทึกเวลาชุดใหม่
-            const { error: insertError } = await supabaseClient
-              .from("availabilities")
-              .insert(rows);
+            let insertError = null;
+
+            if (rows.length > 0) {
+              const result = await supabaseClient
+                .from("availabilities")
+                .insert(rows);
+
+              insertError = result.error;
+            }
 
             if (insertError) {
               console.error("บันทึกเวลาว่างไม่สำเร็จ:", insertError);
@@ -961,6 +872,9 @@
             console.log("SAVE SUCCESS");
 
             hasUnsavedChanges = false;
+            // กลับไปหน้ารายละเอียดกลุ่มหลังบันทึกสำเร็จ
+            window.location.href =
+              `group-detail.html?id=${encodeURIComponent(groupId)}`;
 
             if (toastSuccess) {
               toastSuccess.classList.remove(
@@ -1197,16 +1111,13 @@
       container.innerHTML = "";
       const times = [];
 
-      for (let hour = 9; hour <= 20; hour++) {
-
+      for (let hour = 9; hour <= 23; hour++) {
         const hh = String(hour).padStart(2, "0");
 
         times.push(`${hh}:00`);
-
-        if (hour < 20) {
-          times.push(`${hh}:30`);
-        }
+        times.push(`${hh}:30`);
       }
+
       times.forEach(time => {
 
         const row = document.createElement("div");
